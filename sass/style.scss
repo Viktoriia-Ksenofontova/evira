@@ -47,25 +47,17 @@
 
 // Hero
 .hero {
-  background-repeat: no-repeat;
-
+  // background-repeat: no-repeat;
+  background-color: #3b3b3b;
   @media (max-width: 767px) {
     border-radius: 0 0 252px 252px;
     padding: 0 0 20px 0;
-    background-image: linear-gradient(
-      rgba(17, 17, 17, 0.73),
-      rgba(17, 17, 17, 0.73)
-    );
     .inner {
       padding: 0;
     }
   }
 
   @media screen and (min-width: 768px) {
-    background-image: linear-gradient(
-      rgba(17, 17, 17, 0.73),
-      rgba(17, 17, 17, 0.73)
-    );
     .inner {
       display: flex;
       padding-right: 0;
@@ -75,7 +67,6 @@
 
 .hero__main {
   margin: 0;
-  // padding: 0;
   background-repeat: no-repeat;
   @media screen and (max-width: 767px) {
     padding: 125px 15px 0 15px;
@@ -449,10 +440,7 @@
     margin-bottom: 43px;
   }
 }
-// .wpcf7 {
-//   margin-left: auto;
-//   margin-right: auto;
-// }
+
 .wpcf7-form {
   @media screen and (min-width: 768px) {
     display: flex;
@@ -465,8 +453,7 @@
     padding-right: 15px;
   }
   @media screen and (min-width: 1320px) {
-    width: 934px;
-    padding: 0;
+    justify-content: center;
   }
 }
 

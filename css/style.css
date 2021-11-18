@@ -428,7 +428,6 @@ body {
 }
 
 .header {
-  background: transparent;
   padding: 15px 0 20px 0;
   width: 100%;
   background-color: #3b3b3b;
@@ -894,15 +893,13 @@ button:focus {
 }
 
 .hero {
-  background-repeat: no-repeat;
+  background-color: #3b3b3b;
 }
 
 @media (max-width: 767px) {
   .hero {
     border-radius: 0 0 252px 252px;
     padding: 0 0 20px 0;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(17, 17, 17, 0.73)), to(rgba(17, 17, 17, 0.73)));
-    background-image: linear-gradient(rgba(17, 17, 17, 0.73), rgba(17, 17, 17, 0.73));
   }
   .hero .inner {
     padding: 0;
@@ -910,10 +907,6 @@ button:focus {
 }
 
 @media screen and (min-width: 768px) {
-  .hero {
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(17, 17, 17, 0.73)), to(rgba(17, 17, 17, 0.73)));
-    background-image: linear-gradient(rgba(17, 17, 17, 0.73), rgba(17, 17, 17, 0.73));
-  }
   .hero .inner {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1425,8 +1418,9 @@ button:focus {
 
 @media screen and (min-width: 1320px) {
   .wpcf7-form {
-    width: 934px;
-    padding: 0;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 
