@@ -1,0 +1,12 @@
+.button {
+  background: #ef7f1a;
+  border-radius: 60px;
+  font-weight: 500;
+  color: #fff;
+  border: none;
+  outline: none;
+  &:hover,
+  &:focus {
+    background-color: #df7e26;
+  }
+}

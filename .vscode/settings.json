@@ -1,0 +1,17 @@
+{
+    "liveSassCompile.settings.formats": [
+        {
+            "format": "expanded",
+            "extensionName": ".css",
+            "savePath": "css",
+            "autoprefix":"last 5 versions"
+        }
+    ],
+    "liveSassCompile.settings.excludeList": [
+        "**/node_modules/**",
+        ".vscode/**"
+    ],
+    "liveSassCompile.settings.showOutputWindow": false;
+    "liveSassCompile.settings.generateMap": true,
+    "liveServer.settings.port": 1235
+}

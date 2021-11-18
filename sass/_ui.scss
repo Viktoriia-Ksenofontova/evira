@@ -1,0 +1,13 @@
+button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: #c0c0c0;
+	border-radius: 3px;
+	margin: 10px;
+	padding: 10px;
+}
+
+button:focus {
+	background: #8f8f8f;
+}

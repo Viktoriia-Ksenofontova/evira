@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script><![endif]-->
+    <title>TD Evira</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="images/favicon/favicon.png" type="image/png">
+    <link rel="apple-touch-icon" href="images/favicon/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/favicon/apple-touch-icon-114x114.png">
+    <!-- Конец favicon -->
+
+    <!-- Окрасить окно и статус бар мобильных браузеров -->
+    <!-- Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content="#fff">
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#fff">
+    <!-- iOS Safari -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="#fff">
+    <!-- Конец Окрасить окно и статус бар мобильных браузеров -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+
+
+    <link href="css/preloader.css" rel="stylesheet">
+    <script>
+        window.addEventListener('load', function () {
+            document.querySelector('.pre-loader').style.display = 'none';
+            document.querySelector('body').classList.remove("overflowed");
+        });
+    </script>
+
+</head>
+
+<body >
+    <div class="pre-loader">
+        <div class="loader">
+        </div>
+    </div>
+    <header class="header animate__animated animate__fadeInDown">
+        <div w3-include-html="header.html"></div> 
+    </header>
+    <main class="main hasAnimation" data-animate="animate__zoomIn">
+        <section class="hero"> 
+            <div class="inner">
+                <div class="hero__main">
+                <h1 class="hero__title"> Жалюзи от <br> производителя <br> на заказ </h1>
+                <h2 class="hero__subtitle">Срок изготовления от 3-х до 10-ти дней</h2>
+                <button class="button hero__button" type="button">Бесплатный замер</button>
+                </div>
+                <div class="hero__decorate">
+                    <div class="hero__text">
+                    <strong> Сервис от <br> “А” до “Я”</strong>
+                    <p>Мы приезжаем, делаем замеры. А вы в это время занимаетесь выбором материала и цвета</p>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+<!-- Category section -->
+            <section class="category">
+                <div class="inner">
+                <h2 class="category__title">Продукция и цены</h2>
+                <div class="category__list">
+                    <div class="category__list__item">
+                        <img src="/images/content/category/vertical.jpg" 
+                        alt="фото вертикальных жалюзей" />
+                        <h3> Вертикальные <br> тканевые </h3>
+                        <p class="category__price"> от <span> 2000 </span> грн м2 </p>
+                        <p class="category__description"> Небольшое описание вертикальных тканевых. Небольшое описание продукции. Небольшое описание вертикальных тканевых.</p>
+                        <button class="button category__button" type="button">Рассчитать <br>стоимость</button>                    
+                    </div>
+                    <div class="category__list__item">
+                        <img src="/images/content/category/horizontal.jpg" 
+                        alt="фото горизонтальных жалюзей"/>
+                        <h3> Горизонтальные <br> алюминиевыее </h3>
+                        <p class="category__price"> от <span> 2000 </span> грн м2 </p>
+                        <p class="category__description"> Небольшое описание вертикальных тканевых. Небольшое описание продукции. Небольшое описание вертикальных тканевых.
+                        </p>
+                        <button class="button category__button" type="button">Рассчитать <br>стоимость</button>
+                    </div>
+                    <div class="category__list__item">
+                        <img src="/images/content/category/bambukovye.jpg" alt="фото горизонтальных бамбуовых жалюзей" width=396 />
+                        <h3> Горизонтальные <br> бамбуковые </h3>
+                        <p class="category__price"> от <span> 2000 </span> грн м2 </p>
+                        <p class="category__description"> Небольшое описание вертикальных тканевых. Небольшое описание продукции. Небольшое описание вертикальных
+                            тканевых.
+                        </p>
+                        <button class="button category__button" type="button">Рассчитать <br> стоимость</button>
+                    </div>
+                    <div class="category__list__item">
+                        <img src="/images/content/category/day-night.jpg" alt="фото жалюзей день-ночь" width=396 />
+                        <h3> Тканевые роллеты <br>день-ночь </h3>
+                        <p class="category__price"> от <span> 2000 </span> грн м2 </p>
+                        <p class="category__description"> Небольшое описание вертикальных тканевых. Небольшое описание продукции. Небольшое описание вертикальных
+                            тканевых.
+                        </p>
+                        <button class="button category__button" type="button">Рассчитать <br> стоимость</button>
+                    </div>
+                    <div class="category__list__item">
+                        <img src="/images/content/category/fabric.jpg" alt="фото тканевых жалюзей" width=396 />
+                        <h3> Тканевые <br> роллеты </h3>
+                        <p class="category__price"> от <span> 2000 </span> грн м2 </p>
+                        <p class="category__description"> Небольшое описание вертикальных тканевых. Небольшое описание продукции. Небольшое описание вертикальных
+                            тканевых.
+                        </p>
+                        <button class="button category__button" type="button">Рассчитать <br> стоимость</button>
+                    </div>
+                </div>
+                </div>
+            </section>
+            
+            <!-- Measuring section -->
+            <section class="measuring">
+                <div class="inner">
+                <h2 class="measuring__title">Вызов замерщика</h2>
+                <p class="measuring__text">
+                Вызовите замерщика бесплатно. Он покажет актуальный каталог тканей, посчитает точную стоимость и ответит на все Ваши
+                вопросы</p>
+                
+                <div role="form" class="wpcf7" dir="ltr" lang="ru-RU">
+                    <form action="" method="post" class="wpcf7-form invalid" novalidate="novalidate" data-status="invalid">
+                        <span class="wpcf7-form-control-wrap your-name">
+                            <input type="text" name="your-name" value="" size="40"
+                                class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required wpcf7-not-valid measuring__inpput"
+                                aria-required="true" aria-invalid="true" placeholder="Ваше имя *"
+                                aria-describedby="wpcf7-f311-o4-ve-your-name">
+                            <span class="wpcf7-not-valid-tip" aria-hidden="true"> Поле обязательно для заполнения.</span>
+                        </span>
+                        <span class="wpcf7-form-control-wrap phone">
+                            <input type="tel" name="phone" value="" size="40"
+                                class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required phone wpcf7-not-valid measuring__inpput"
+                                aria-required="true" aria-invalid="true" placeholder="Ваш телефон *" aria-describedby="wpcf7-f311-o4-ve-phone">
+                            <span class="wpcf7-not-valid-tip" aria-hidden="true"> Поле обязательно для заполнения.</span>
+                        </span>
+                        <input type="submit" value="Отправить"
+                            class="wpcf7-form-control has-spinner wpcf7-submit btn btn-red button measuring__button">
+                    </form>
+                </div>
+
+                </div>
+            </section>
+
+            
+
+            <!-- Galery section -->
+            <section>
+                <h2> Галерея</h2>
+                <div>
+                    <img src="/images/content/galery/richard.jpg" alt="фото горионтальных жалюзей" width=396 />
+                    <img src="/images/content/galery/vertical.jpg" alt="фото вертикальных жалюзей" width=396/>
+                    <img src="/images/content/galery/horizontal.jpg" alt="фото горизонтальных жалюзей" width=396/>
+                    <img src="/images/content/galery/white_fabric.jpg" alt="фото тканевых жалюзей" width=396 />
+                    <img src="/images/content/galery/bheatha.jpg" alt="фото горизонтальных жалюзей с лампой" width=396/>
+                </div>
+            </section>
+
+            <!-- Calculate section -->
+            <section class="calculate"> 
+                <h2> Рассчитать стоимость </h2>
+                <p>Мы сами производим свою продукцию, поэтому у нас дешевле.
+            Воспользуйтесь формой предварительного расчета и убедитесь в этом сами.
+                </p>
+                <button type="button">Рассчитать стоимость</button>
+            </section>
+            
+            <!-- Process section -->
+            <section class="process">
+            <h2> Как мы работаем </h2>
+            <ul>
+                <li>
+                    <span>01</span>
+                    <h3>Звонок</h3>
+                    <p>Позвоните нам по телефону 
+                    <span>(050) 729-44-37</span> 
+                    или закажите бесплатный замер, заполнив форму</p>
+                    <button type="button">Бесплатный замер</button>
+                </li>
+                <li>
+                    <span>02</span>
+                    <h3>Замеры</h3>
+                    <p>Замерщик приезжает с каталогами цветов и материалов, снимает размеры изделия и заполняет бланк заказа
+                    </p>
+                </li>
+                <li>
+                    <span>03</span>
+                    <h3>Предоплата</h3>
+                    <p>Менеджер согласовывает детали заказа, стоимость и сроки изготовление. Делается предоплата
+                    </p>
+                </li>
+                <li>
+                    <span>04</span>
+                    <h3>Монтаж</h3>
+                    <p>Доставка и монтаж изделия под ключ, окончательный расчет. Гарантия 1 год </p>
+                </li>
+            </ul>
+            </section>
+
+            <!-- Assortiment section -->
+            <section>
+                <h2>В наличии более 2500 цветов и материалов</h2>
+                <p> Вы сможете ознакомиться с ними, записавшись на бесплатный замер. Наш сотрудник возьмет с собой актуальные каталоги и
+                образцы материалов
+                </p>
+                <form>
+                    <input type="text" placeholder="Ваше имя *">
+                    <input type="tel" placeholder="Ваш телефон *">
+                    <input type="submit" value="Отправить">
+                </form>
+            </section>
+
+            <!-- Benefits section -->
+            <section>
+                <h2>Наши преимущества</h2>
+                <ul>
+                    <li>
+                        <img src="/images/content/benefits/thumbs-up.jpg" width="112"/>
+                        <p>Более 10 лет на рынке</p>
+                        <span>01</span>
+                    </li>
+                    <li>
+                        <img src="/images/content/benefits/production.jpg" width="112"/>
+                        <p>Собственный цех</p>
+                        <span>02</span>
+                    </li>
+                    <li>
+                        <img src="/images/content/benefits/calc.jpg" width="112" />
+                        <p>Индивидальный расчет</p>
+                        <span>03</span>
+                    </li>
+                    <li>
+                        <img src="/images/content/benefits/assortiment.jpg" width="112" />
+                        <p>Широкий выбор материалов</p>
+                        <span>04</span>
+                    </li>
+                    <li>
+                        <img src="/images/content/benefits/komplekt.jpg" width="112" />
+                        <p>Сертифицированные ткани и комплектующие</p>
+                        <span>05</span>
+                    </li>
+                    <li>
+                        <img src="/images/content/benefits/contract.jpg" width="112" />
+                        <p>Заключение договора и предоплата сразу на объекте</p>
+                        <span>06</span>
+                    </li>
+                    <li>
+                        <img src="/images/content/benefits/assembling.jpg" width="112" />
+                        <p>Профессиональный монтаж</p>
+                        <span>07</span>
+                    </li>
+                    <li>
+                        <img src="/images/content/benefits/garantiya.jpg" width="112" />
+                        <p>Гарантия на продукцию до 5 лет</p>
+                        <span>08</span>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- Clients mention -->
+            <section>
+                <h2>Отзывы наших клиентов</h2>
+                <!-- TODO -->
+            </section>
+
+            <!-- About us -->
+            <section class="about">
+                <div class="about__text">
+                    <h2> О нас </h2>
+                    <p>
+                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
+                        aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim
+                        ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione
+                        voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur,
+                        adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim
+                        ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi
+                        consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui
+                        dolorem eum fugiat quo voluptas nulla pariatur? Ut enim ad minima veniam, quis nostrum exercitationem Ut enim ad minima
+                        veniam, quis nostrum exercitationem
+                    </p>
+                </div>
+                <div class="about__adress">
+                    <!-- <h2>Контакты</h2> -->
+                    <address>
+                        <ul>
+                            <li>
+                                <a href="">
+                                    <img src="/images/icons/icon_adress.svg" width="52" alt="геолокация" />
+                                    Херсон, ул.Нефтяников, 2
+                                    <span>Показать на карте</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="tel:+380507294437">
+                                    <img src="/images/icons/icon_phones.svg" width="52" alt="телефонная трубка" />
+                                    (050) 729-44-37</a>
+                            </li>
+                            <li>
+                                <a href="mailto:TDEvira@ukr.net">
+                                    <img src="/images/icons/icon_mail.svg" width="52" alt="конверт" />
+                                    TDEvira@ukr.net</a>
+                            </li>
+                        </ul>
+                    </address>
+                    <ul class="social__list">
+                        <li> <a> <svg width="52" height="52">
+                            <use href="/images/icons/symbol-defs.svg#icon-facebook"></use></svg>
+                            Facebook </a></li>
+                        <li> <a> <svg width="52" height="52">
+                            <use href="/images/icons/symbol-defs.svg#icon-instagram"></use></svg>
+                            Instagram </a></li>
+                    </ul>
+                    <button>Написать нам</button>
+                </div>
+            </section>
+
+            <!-- <div class="block">
+                
+				<div class="block__item block__item--green"></div>
+				<div class="block__item"></div>
+
+			</div>
+			<button class="show__popup-btn" data-popup="firstPopup">Тип деятельности</button> -->
+        
+    </main>
+    <footer class="footer hasAnimation" data-animate="animate__fadeInUp">
+        <div w3-include-html="footer.html"></div>
+    </footer>
+    <div class="popup" id="firstPopup">
+        <div class="popup__inner">
+            <div class="popup__content animate__animated" data-animatedin="animate__fadeInDown"
+                data-animatedout="animate__fadeOutDown">
+                <button class="popup__close close-popup">X</button>
+                <h1>Выберите тип предпринимательской деятельности:</h1>
+                <button class="show__popup-btn close-popup" data-popup="secondPopup">Физ.лицо</button>
+                <button class="show__popup-btn close-popup" data-popup="thirdPopup">Юр.лицо</button>
+            </div>
+        </div>
+    </div>
+    <div class="popup" id="secondPopup">
+        <div class="popup__inner">
+            <div class="popup__content animate__animated" data-animatedin="animate__fadeInLeft"
+                data-animatedout="animate__fadeOutRight">
+                <button class="popup__close close-popup">X</button>
+                <h1>Физ.лицо</h1>
+                <div class="form">
+                    <form action="">
+                        <input type="text">
+                        <input type="tel">
+                        <input type="password">
+                        <input type="submit">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="popup" id="thirdPopup">
+        <div class="popup__inner">
+            <div class="popup__content animate__animated" data-animatedin="animate__fadeInRight"
+                data-animatedout="animate__fadeOutLeft">
+                <button class="popup__close close-popup">X</button>
+                <h1>Юр.лицо</h1>
+                <div class="form">
+                    <form action="">
+                        <input type="text">
+                        <input type="tel">
+                        <input type="password">
+                        <input type="submit">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<link href="css/slick-theme.min.css" rel="stylesheet">
+<link href="css/animate.min.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+
+<script src="js/jquery.min.js"></script>
+<script src="js/slick.min.js"></script>
+<script src="js/jquery.maskedinput.min.js"></script>
+<script src="js/jquery.validate.min.js"></script>
+<script src="js/jquery.viewportchecker.js"></script>
+<script src="js/popup.js"></script>
+<script src="js/main.js"></script>
+<script src="js/menu-button.js"></script>
+<script>
+    function includeHTML() {
+        var z, i, elmnt, file, xhttp;
+        /*loop through a collection of all HTML elements:*/
+        z = document.getElementsByTagName("*");
+        for (i = 0; i < z.length; i++) {
+            elmnt = z[i];
+            /*search for elements with a certain atrribute:*/
+            file = elmnt.getAttribute("w3-include-html");
+            if (file) {
+                /*make an HTTP request using the attribute value as the file name:*/
+                xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function () {
+                    if (this.readyState == 4) {
+                        if (this.status == 200) { elmnt.innerHTML = this.responseText; }
+                        if (this.status == 404) { elmnt.innerHTML = "Page not found."; }
+                        /*remove the attribute, and call this function once more:*/
+                        elmnt.removeAttribute("w3-include-html");
+                        includeHTML();
+                    }
+                }
+                xhttp.open("GET", file, true);
+                xhttp.send();
+                /*exit the function:*/
+                return;
+            }
+        }
+    };
+    includeHTML();
+</script>
+
+</html>
