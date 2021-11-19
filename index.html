@@ -45,12 +45,16 @@
         <div class="loader">
         </div>
     </div>
+    
     <header class="header animate__animated animate__fadeInDown">
         <div w3-include-html="header.html"></div> 
     </header>
+   
     <main class="main hasAnimation" data-animate="animate__zoomIn">
         <section class="hero"> 
+            
             <div class="inner">
+            <div class="hero__background"> </div>
                 <div class="hero__main">
                 <h1 class="hero__title"> Жалюзи от <br> производителя <br> на заказ </h1>
                 <h2 class="hero__subtitle">Срок изготовления от 3-х до 10-ти дней</h2>
@@ -64,6 +68,7 @@
                 </div>
                 
             </div>
+            
         </section>
 <!-- Category section -->
             <section class="category">
@@ -149,59 +154,73 @@
                 </div>
             </section>
 
-            
-
             <!-- Galery section -->
-            <section>
-                <h2> Галерея</h2>
-                <div>
-                    <img src="/images/content/galery/richard.jpg" alt="фото горионтальных жалюзей" width=396 />
-                    <img src="/images/content/galery/vertical.jpg" alt="фото вертикальных жалюзей" width=396/>
-                    <img src="/images/content/galery/horizontal.jpg" alt="фото горизонтальных жалюзей" width=396/>
-                    <img src="/images/content/galery/white_fabric.jpg" alt="фото тканевых жалюзей" width=396 />
-                    <img src="/images/content/galery/bheatha.jpg" alt="фото горизонтальных жалюзей с лампой" width=396/>
+            <section class="galery">
+                <div class="inner">
+                <h2 class="galery__title"> Галерея</h2>
+                <div class="galery__imagesList">
+                    <div class="galery__imagesItem">
+                        <img src="/images/content/galery/richard.jpg" alt="фото горионтальных жалюзей"/>
+                    </div>
+                    <div class="galery__imagesItem">
+                        <img src="/images/content/galery/vertical.jpg" alt="фото вертикальных жалюзей"/>
+                     </div>
+                    <div class="galery__imagesItem">
+                        <img src="/images/content/galery/horizontal.jpg" alt="фото горизонтальных жалюзей"/>
+                    </div>
+                     <div class="galery__imagesItem">
+                         <img src="/images/content/galery/white_fabric.jpg" alt="фото тканевых жалюзей" />
+                        </div>
+                    <div class="galery__imagesItem"> 
+                        <img src="/images/content/galery/bheatha.jpg" alt="фото горизонтальных жалюзей с лампой"/>
+                    </div>
+                </div>
                 </div>
             </section>
 
             <!-- Calculate section -->
             <section class="calculate"> 
-                <h2> Рассчитать стоимость </h2>
-                <p>Мы сами производим свою продукцию, поэтому у нас дешевле.
+                <div class="inner">
+                <h2 class="calculate__title"> Рассчитать стоимость </h2>
+                <p class="calculate__text">Мы сами производим свою продукцию, поэтому у нас дешевле.
             Воспользуйтесь формой предварительного расчета и убедитесь в этом сами.
                 </p>
-                <button type="button">Рассчитать стоимость</button>
+                <button type="button" class="button calculate__button">Рассчитать стоимость</button>
+                </div>
             </section>
             
             <!-- Process section -->
             <section class="process">
-            <h2> Как мы работаем </h2>
-            <ul>
-                <li>
-                    <span>01</span>
-                    <h3>Звонок</h3>
-                    <p>Позвоните нам по телефону 
+                <div class="inner">
+            <h2 class="process__title"> Как мы работаем </h2>
+            <ul class="process__list">
+                <li class="process__item">
+                    <span class="process__number">01</span>
+                    <h3 class="process__subtitle">Звонок</h3>
+                    <p class="process__description">Позвоните нам по телефону 
                     <span>(050) 729-44-37</span> 
                     или закажите бесплатный замер, заполнив форму</p>
-                    <button type="button">Бесплатный замер</button>
+                    <button type="button" class="button process__button" >Бесплатный замер</button>
                 </li>
-                <li>
-                    <span>02</span>
-                    <h3>Замеры</h3>
-                    <p>Замерщик приезжает с каталогами цветов и материалов, снимает размеры изделия и заполняет бланк заказа
+                <li class="process__item">
+                    <span class="process__number">02</span>
+                    <h3 class="process__subtitle">Замеры</h3>
+                    <p class="process__description">Замерщик приезжает с каталогами цветов и материалов, снимает размеры изделия и заполняет бланк заказа
                     </p>
                 </li>
-                <li>
-                    <span>03</span>
-                    <h3>Предоплата</h3>
-                    <p>Менеджер согласовывает детали заказа, стоимость и сроки изготовление. Делается предоплата
+                <li class="process__item">
+                    <span class="process__number">03</span>
+                    <h3 class="process__subtitle">Предоплата</h3>
+                    <p class="process__description">Менеджер согласовывает детали заказа, стоимость и сроки изготовление. Делается предоплата
                     </p>
                 </li>
-                <li>
-                    <span>04</span>
-                    <h3>Монтаж</h3>
-                    <p>Доставка и монтаж изделия под ключ, окончательный расчет. Гарантия 1 год </p>
+                <li class="process__item">
+                    <span class="process__number">04</span>
+                    <h3 class="process__subtitle">Монтаж</h3>
+                    <p class="process__description">Доставка и монтаж изделия под ключ, окончательный расчет. Гарантия 1 год </p>
                 </li>
             </ul>
+            </div>
             </section>
 
             <!-- Assortiment section -->
@@ -392,6 +411,7 @@
 <script src="js/popup.js"></script>
 <script src="js/main.js"></script>
 <script src="js/menu-button.js"></script>
+<script src="js/category.js"></script>
 <script>
     function includeHTML() {
         var z, i, elmnt, file, xhttp;

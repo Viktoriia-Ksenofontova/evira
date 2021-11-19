@@ -2,6 +2,7 @@
   padding: 15px 0 20px 0;
   width: 100%;
   background-color: #3b3b3b;
+  z-index: 99;
   &.is-open {
     height: 100%;
   }
@@ -10,11 +11,13 @@
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 99;
     background-color: transparent;
   }
-  @media screen and (min-width: 1320px) {
+  @media screen and (min-width: 768px) {
     height: 116px;
+    position: relative;
+  }
+  @media screen and (min-width: 1320px) {
     .change-lang {
       display: none;
     }
