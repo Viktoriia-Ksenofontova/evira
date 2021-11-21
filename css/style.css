@@ -535,6 +535,7 @@ body {
   padding: 15px 0 20px 0;
   width: 100%;
   background-color: #3b3b3b;
+  border: none;
   z-index: 99;
 }
 
@@ -1000,6 +1001,54 @@ button:focus {
   -webkit-overflow-scrolling: touch;
 }
 
+@media screen and (min-width: 768px) {
+  .slick-dots > li {
+    width: 34px;
+    height: 34px;
+    margin-left: 8px;
+    margin-right: 8px;
+  }
+}
+
+.slick-dots > li > .dot {
+  display: block;
+  border: 3px solid #ef7f1a;
+  border-radius: 50%;
+}
+
+@media screen and (max-width: 767px) {
+  .slick-dots > li > .dot {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .slick-dots > li > .dot {
+    border-width: 4px;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .slick-dots > .slick-active {
+    width: 37px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .slick-dots > .slick-active {
+    width: 68px;
+  }
+}
+
+.slick-dots > .slick-active > .dot {
+  width: 100%;
+  background-color: #ef7f1a;
+  border-radius: 17px;
+}
+
 .hero {
   background-color: #3b3b3b;
 }
@@ -1023,20 +1072,28 @@ button:focus {
   }
 }
 
+@media screen and (min-width: 1320px) {
+  .hero {
+    background-repeat: no-repeat;
+    background-image: url(/images/backgrounds/hero-desk-back.png);
+    background-position: bottom left;
+  }
+}
+
 .hero__background {
   position: absolute;
   top: 0;
   right: 0;
   background-repeat: no-repeat;
   border-radius: 0px 0px 0 483px;
+  background-size: cover;
 }
 
 @media screen and (max-width: 767px) {
   .hero__background {
     height: 306px;
-    width: 320px;
-    background-position: top right;
-    background-size: cover;
+    width: 100%;
+    background-position: center right;
     background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(17, 17, 17, 0.73)), to(rgba(17, 17, 17, 0.73))), url(/images/backgrounds/hero-mobile.jpg);
     background-image: linear-gradient(rgba(17, 17, 17, 0.73), rgba(17, 17, 17, 0.73)), url(/images/backgrounds/hero-mobile.jpg);
   }
@@ -1047,7 +1104,6 @@ button:focus {
     top: -116px;
     height: 831px;
     width: 50%;
-    background-size: cover;
     background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(17, 17, 17, 0.73)), to(rgba(17, 17, 17, 0.73))), url(/images/backgrounds/hero-tablet.jpg);
     background-image: linear-gradient(rgba(17, 17, 17, 0.73), rgba(17, 17, 17, 0.73)), url(/images/backgrounds/hero-tablet.jpg);
   }
@@ -1073,12 +1129,11 @@ button:focus {
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1319px) {
   .hero__main {
-    width: 50%;
+    width: 46%;
+    height: 740px;
     padding-top: 106px;
-    padding-bottom: 232px;
-    background-size: contain;
     background-image: url(/images/backgrounds/hero-tablet-back.png);
     background-position: bottom;
   }
@@ -1086,7 +1141,9 @@ button:focus {
 
 @media screen and (min-width: 1320px) {
   .hero__main {
-    background-image: url(/images/backgrounds/hero-desk-back.png);
+    width: 50%;
+    padding-top: 95px;
+    height: 740px;
   }
 }
 
@@ -1305,6 +1362,24 @@ button:focus {
   }
 }
 
+@media screen and (max-width: 767px) {
+  .category__list {
+    padding-bottom: 23px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .category__list {
+    padding-bottom: 54px;
+  }
+}
+
+@media screen and (min-width: 1320px) {
+  .category__list {
+    padding-bottom: 66px;
+  }
+}
+
 .category__list__item {
   position: relative;
   background: #ffffff;
@@ -1449,6 +1524,8 @@ button:focus {
   color: #ffffff;
   background-size: cover;
   background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: 30%;
 }
 
 @media screen and (max-width: 767px) {
@@ -1545,9 +1622,11 @@ button:focus {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
@@ -1555,9 +1634,6 @@ button:focus {
 
 @media screen and (min-width: 992px) {
   .wpcf7-form {
-    -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: flex-end;
     padding-left: 15px;
     padding-right: 15px;
   }
@@ -1591,12 +1667,20 @@ button:focus {
   }
 }
 
-@media screen and (min-width: 768px) {
+.your-name,
+.phone,
+.your-name > span,
+.phone > span {
+  display: block;
+}
+
+@media screen and (max-width: 767px) {
   .your-name,
   .phone,
   .your-name > span,
   .phone > span {
-    display: block;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -1610,15 +1694,10 @@ button:focus {
 .measuring__button {
   width: 286px;
   height: 78px;
-  margin: 0;
+  margin: 20px 0 0 0;
+  padding: 0;
   font-size: 20px;
   line-height: 24px;
-}
-
-@media screen and (max-width: 767px) {
-  .measuring__button {
-    margin-top: 20px;
-  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 991px) {
@@ -1679,6 +1758,24 @@ button:focus {
 
 .galery__imagesList {
   margin: 0;
+}
+
+@media screen and (max-width: 767px) {
+  .galery__imagesList {
+    padding-bottom: 23px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .galery__imagesList {
+    padding-bottom: 54px;
+  }
+}
+
+@media screen and (min-width: 1320px) {
+  .galery__imagesList {
+    padding-bottom: 66px;
+  }
 }
 
 .galery__imagesItem {

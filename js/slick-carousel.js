@@ -1,0 +1,26 @@
+$(document).ready(function () {
+
+    $('.category__list').slick({
+        dots: true,
+        infinite: true,
+        arrows: false,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        variableWidth: true,
+       customPaging: function(slider, i) {
+         return '<span class="dot"></span>';
+    },
+    });
+
+    $('.galery__imagesList').slick({
+        dots: true,
+        infinite: true,
+        arrows: false,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        variableWidth: true,
+        customPaging: function(slider, i) {
+         return '<span class="dot"></span>';
+    },
+    })
+});
