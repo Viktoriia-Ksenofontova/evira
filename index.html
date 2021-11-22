@@ -134,14 +134,16 @@
                     <form action="" method="post" class="wpcf7-form invalid" novalidate="novalidate" data-status="invalid">
                         <span class="wpcf7-form-control-wrap your-name">
                             <input type="text" name="your-name" value="" size="40"
-                                class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required wpcf7-not-valid measuring__inpput"
+                                class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required wpcf7-not-valid 
+                                measuring__input"
                                 aria-required="true" aria-invalid="true" placeholder="Ваше имя *"
                                 aria-describedby="wpcf7-f311-o4-ve-your-name">
                             <span class="wpcf7-not-valid-tip" aria-hidden="true"> Поле обязательно для заполнения.</span>
                         </span>
                         <span class="wpcf7-form-control-wrap phone">
                             <input type="tel" name="phone" value="" size="40"
-                                class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required phone wpcf7-not-valid measuring__inpput"
+                                class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required phone wpcf7-not-valid 
+                                measuring__input"
                                 aria-required="true" aria-invalid="true" placeholder="Ваш телефон *" aria-describedby="wpcf7-f311-o4-ve-phone">
                             <span class="wpcf7-not-valid-tip" aria-hidden="true"> Поле обязательно для заполнения.</span>
                         </span>
@@ -194,98 +196,167 @@
             <h2 class="process__title"> Как мы работаем </h2>
             <ul class="process__list">
                 <li class="process__item">
+                    <div class="process__decorate"></div>
                     <span class="process__number">01</span>
                     <h3 class="process__subtitle">Звонок</h3>
-                    <p class="process__description">Позвоните нам по телефону 
-                    <span>(050) 729-44-37</span> 
-                    или закажите бесплатный замер, заполнив форму</p>
-                    <button type="button" class="button process__button" >Бесплатный замер</button>
+                    
+                        <p class="process__description">Позвоните нам по телефону 
+                        <span>(050)&nbsp;729-44-37</span> 
+                        или закажите бесплатный замер, заполнив форму</p>
+                        <button type="button" class="button process__button" >Бесплатный замер</button>
+                    
                 </li>
                 <li class="process__item">
+                    <div class="process__decorate"></div>
                     <span class="process__number">02</span>
                     <h3 class="process__subtitle">Замеры</h3>
+                    
                     <p class="process__description">Замерщик приезжает с каталогами цветов и материалов, снимает размеры изделия и заполняет бланк заказа
                     </p>
+                    
                 </li>
                 <li class="process__item">
+                    <div class="process__decorate"></div>
                     <span class="process__number">03</span>
                     <h3 class="process__subtitle">Предоплата</h3>
+                    
                     <p class="process__description">Менеджер согласовывает детали заказа, стоимость и сроки изготовление. Делается предоплата
                     </p>
+                   
                 </li>
                 <li class="process__item">
+                    <div class="process__decorate"></div>
                     <span class="process__number">04</span>
                     <h3 class="process__subtitle">Монтаж</h3>
+                    
                     <p class="process__description">Доставка и монтаж изделия под ключ, окончательный расчет. Гарантия 1 год </p>
+                    
                 </li>
             </ul>
             </div>
             </section>
 
             <!-- Assortiment section -->
-            <section>
-                <h2>В наличии более 2500 цветов и материалов</h2>
-                <p> Вы сможете ознакомиться с ними, записавшись на бесплатный замер. Наш сотрудник возьмет с собой актуальные каталоги и
+            <section class="assortiment">
+                <div class="inner">
+                <h2 class="assortiment__title">В наличии более 2500 цветов и <br>материалов</h2>
+                <p class="assortiment__text"> Вы сможете ознакомиться с ними, записавшись на бесплатный замер. Наш сотрудник возьмет с собой актуальные каталоги и
                 образцы материалов
                 </p>
-                <form>
-                    <input type="text" placeholder="Ваше имя *">
-                    <input type="tel" placeholder="Ваш телефон *">
-                    <input type="submit" value="Отправить">
-                </form>
+
+                <div role="form" class="wpcf7" dir="ltr" lang="ru-RU">
+                    <form action="" method="post" class="wpcf7-form invalid" novalidate="novalidate" data-status="invalid">
+                        <span class="wpcf7-form-control-wrap your-name">
+                        <input type="text" name="your-name" value="" size="40"
+                class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required wpcf7-not-valid 
+                assortiment__input"
+                aria-required="true" aria-invalid="true" placeholder="Ваше имя *"
+                aria-describedby="wpcf7-f311-o4-ve-your-name">
+                        <span class="wpcf7-not-valid-tip" aria-hidden="true"> Поле обязательно для заполнения.</span>
+                        </span>
+                        <span class="wpcf7-form-control-wrap phone">
+            <input type="tel" name="phone" value="" size="40"
+                class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required phone wpcf7-not-valid 
+                assortiment__input"
+                aria-required="true" aria-invalid="true" placeholder="Ваш телефон *"
+                aria-describedby="wpcf7-f311-o4-ve-phone">
+            <span class="wpcf7-not-valid-tip" aria-hidden="true"> Поле обязательно для заполнения.</span>
+        </span>
+        <input type="submit" value="Отправить"
+            class="wpcf7-form-control has-spinner wpcf7-submit btn btn-red button 
+            assortiment__button">
+            </form>
+            </div>
+                </div>
             </section>
 
             <!-- Benefits section -->
-            <section id="benefits">
-                <h2>Наши преимущества</h2>
-                <ul>
-                    <li>
-                        <img src="/images/content/benefits/thumbs-up.jpg" width="112"/>
-                        <p>Более 10 лет на рынке</p>
+            <section id="benefits" class="benefits">
+                <div class="inner">
+                <h2 class="benefits__title">Наши преимущества</h2>
+                <ul class="benefits__list">
+                    <li class="benefits__item">
+                        <img src="/images/content/benefits/thumbs-up.jpg"/>
+                        <p class="benefits__description">Более 10 лет на рынке</p>
                         <span>01</span>
                     </li>
-                    <li>
+                    <li class="benefits__item">
                         <img src="/images/content/benefits/production.jpg" width="112"/>
-                        <p>Собственный цех</p>
+                        <p class="benefits__description">Собственный цех</p>
                         <span>02</span>
                     </li>
-                    <li>
+                    <li class="benefits__item">
                         <img src="/images/content/benefits/calc.jpg" width="112" />
-                        <p>Индивидальный расчет</p>
+                        <p class="benefits__description">Индивидальный расчет</p>
                         <span>03</span>
                     </li>
-                    <li>
+                    <li class="benefits__item">
                         <img src="/images/content/benefits/assortiment.jpg" width="112" />
-                        <p>Широкий выбор материалов</p>
+                        <p class="benefits__description">Широкий выбор материалов</p>
                         <span>04</span>
                     </li>
-                    <li>
+                    <li class="benefits__item">
                         <img src="/images/content/benefits/komplekt.jpg" width="112" />
-                        <p>Сертифицированные ткани и комплектующие</p>
+                        <p class="benefits__description">Сертифицированные ткани и комплектующие</p>
                         <span>05</span>
                     </li>
-                    <li>
+                    <li class="benefits__item">
                         <img src="/images/content/benefits/contract.jpg" width="112" />
-                        <p>Заключение договора и предоплата сразу на объекте</p>
+                        <p class="benefits__description">Заключение договора и предоплата сразу на объекте</p>
                         <span>06</span>
                     </li>
-                    <li>
+                    <li class="benefits__item">
                         <img src="/images/content/benefits/assembling.jpg" width="112" />
-                        <p>Профессиональный монтаж</p>
+                        <p class="benefits__description">Профессиональный монтаж</p>
                         <span>07</span>
                     </li>
-                    <li>
+                    <li class="benefits__item">
                         <img src="/images/content/benefits/garantiya.jpg" width="112" />
-                        <p>Гарантия на продукцию до 5 лет</p>
+                        <p class="benefits__description">Гарантия на продукцию до 5 лет</p>
                         <span>08</span>
                     </li>
                 </ul>
+                </div>
             </section>
 
             <!-- Clients reviews -->
-            <section id="reviews">
-                <h2>Отзывы наших клиентов</h2>
-                <!-- TODO -->
+            <section id="reviews" class="reviews">
+                <div class="reviews__background"></div>
+                <div class="inner">
+                <h2 class="reviews__title">Отзывы наших клиентов</h2>
+                <div class="reviews__list">
+                    <div class="reviews__item">
+                        <span>31 март 2020</span>
+                        <h3 class="reviews__name">Маргарита Архипова</h3>
+                        <p class="reviews__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                        aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        </div>
+                    <div class="reviews__item">
+                        <span>31 март 2020</span>
+                        <h3 class="reviews__name">Маргарита Архипова</h3>
+                        <p class="reviews__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                            aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        </p>
+                    </div>
+                    <div class="reviews__item">
+                        <span>31 март 2020</span>
+                        <h3 class="reviews__name">Маргарита Архипова</h3>
+                        <p class="reviews__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                            consequat.
+                        </p>
+                    </div>
+                    <div class="reviews__item">
+                        <span>31 март 2020</span>
+                        <h3 class="reviews__name">Маргарита Архипова</h3>
+                        <p class="reviews__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                            consequat.
+                        </p>
+                    </div>
+                </div>
+                <button type="button" class="button reviews_button">Оставить отзыв</button>
+                </div>
             </section>
 
             <!-- About us -->

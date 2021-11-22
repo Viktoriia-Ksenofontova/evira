@@ -19,8 +19,17 @@ $(document).ready(function () {
         slidesToShow: 3,
         slidesToScroll: 1,
         variableWidth: true,
-        customPaging: function(slider, i) {
-         return '<span class="dot"></span>';
-    },
+        customPaging: function (slider, i) {
+            return '<span class="dot"></span>';
+        },
+    });
+
+    $('.reviews__list').slick({
+        
+        infinite: true,
+        arrows: false,
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        variableWidth: true,
     })
 });
