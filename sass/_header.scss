@@ -164,7 +164,21 @@
 }
 
 .menu__button__icons {
-  fill: #ef7f1a;
+  .icon__menu {
+    fill: #ef7f1a;
+  }
+  .icon__close {
+    stroke: #ef7f1a;
+  }
+  &:hover,
+  &:focus {
+    .icon__menu {
+      fill: #fff;
+    }
+    .icon__close {
+      stroke: #fff;
+    }
+  }
   @media screen and (max-width: 991px) {
     width: 39px;
     height: 24px;
@@ -185,10 +199,7 @@
   background-color: transparent;
   &:hover,
   &:focus {
-    outline: none;
-    .menu__button__icons {
-      fill: #fff;
-    }
+    background-color: transparent;
   }
   @media screen and (min-width: 1320px) {
     display: none;
@@ -203,12 +214,6 @@
   }
   .icon__menu {
     display: none;
-  }
-  &:hover,
-  &:focus {
-    .icon-close {
-      fill: #fff;
-    }
   }
 }
 .change-lang {

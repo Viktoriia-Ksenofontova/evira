@@ -46,7 +46,7 @@
         </div>
     </div>
     
-    <header class="header animate__animated animate__fadeInDown">
+    <header class="header">
         <div w3-include-html="header.html"></div> 
     </header>
    
@@ -131,21 +131,28 @@
                 вопросы</p>
                 
                 <div role="form" class="wpcf7" dir="ltr" lang="ru-RU">
-                    <form action="" method="post" class="wpcf7-form invalid" novalidate="novalidate" data-status="invalid">
+                    <form action="" method="post" class="wpcf7-form invalid"  autoComplete="off" novalidate="novalidate" data-status="invalid">
                         <span class="wpcf7-form-control-wrap your-name">
-                            <input type="text" name="your-name" value="" size="40"
+                            <label class="labelForm">                            
+                                <input type="text" name="your-name" value="" size="40"
                                 class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required wpcf7-not-valid 
                                 measuring__input"
-                                aria-required="true" aria-invalid="true" placeholder="Ваше имя *"
+                                aria-required="true" aria-invalid="true"
                                 aria-describedby="wpcf7-f311-o4-ve-your-name">
-                            <span class="wpcf7-not-valid-tip" aria-hidden="true"> Поле обязательно для заполнения.</span>
+                            <span class="wpcf7-not-valid-tip inputError" aria-hidden="true"> Поле обязательно для заполнения.</span>
+                            <span class="nameInput">Ваше имя *</span>
+                        </label>
                         </span>
                         <span class="wpcf7-form-control-wrap phone">
+                            <label class="labelForm">
                             <input type="tel" name="phone" value="" size="40"
                                 class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required phone wpcf7-not-valid 
                                 measuring__input"
-                                aria-required="true" aria-invalid="true" placeholder="Ваш телефон *" aria-describedby="wpcf7-f311-o4-ve-phone">
-                            <span class="wpcf7-not-valid-tip" aria-hidden="true"> Поле обязательно для заполнения.</span>
+                                aria-required="true" aria-invalid="true" 
+                                aria-describedby="wpcf7-f311-o4-ve-phone">
+                            <span class="wpcf7-not-valid-tip inputError" aria-hidden="true"> Поле обязательно для заполнения.</span>
+                            <span class="nameInput">Ваш телефон *</span>
+                        </label>
                         </span>
                         <input type="submit" value="Отправить"
                             class="wpcf7-form-control has-spinner wpcf7-submit btn btn-red button measuring__button">
@@ -245,22 +252,28 @@
                 </p>
 
                 <div role="form" class="wpcf7" dir="ltr" lang="ru-RU">
-                    <form action="" method="post" class="wpcf7-form invalid" novalidate="novalidate" data-status="invalid">
+                    <form action="" method="post" class="wpcf7-form invalid" autoComplete="off" novalidate="novalidate" data-status="invalid">
                         <span class="wpcf7-form-control-wrap your-name">
+                            <label class="labelForm">
                         <input type="text" name="your-name" value="" size="40"
                 class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required wpcf7-not-valid 
                 assortiment__input"
-                aria-required="true" aria-invalid="true" placeholder="Ваше имя *"
+                aria-required="true" aria-invalid="true" 
                 aria-describedby="wpcf7-f311-o4-ve-your-name">
-                        <span class="wpcf7-not-valid-tip" aria-hidden="true"> Поле обязательно для заполнения.</span>
-                        </span>
+                        <span class="wpcf7-not-valid-tip inputError" aria-hidden="true"> Поле обязательно для заполнения.</span>
+                        <span class="nameInput">Ваше имя *</span>
+                    </label>
+                    </span>
                         <span class="wpcf7-form-control-wrap phone">
+                            <label class="labelForm">
             <input type="tel" name="phone" value="" size="40"
                 class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required phone wpcf7-not-valid 
                 assortiment__input"
-                aria-required="true" aria-invalid="true" placeholder="Ваш телефон *"
+                aria-required="true" aria-invalid="true" 
                 aria-describedby="wpcf7-f311-o4-ve-phone">
-            <span class="wpcf7-not-valid-tip" aria-hidden="true"> Поле обязательно для заполнения.</span>
+            <span class="wpcf7-not-valid-tip inputError" aria-hidden="true"> Поле обязательно для заполнения.</span>
+        <span class="nameInput">Ваш телефон *</span>
+        </label>
         </span>
         <input type="submit" value="Отправить"
             class="wpcf7-form-control has-spinner wpcf7-submit btn btn-red button 
@@ -325,44 +338,67 @@
                 <div class="inner">
                 <h2 class="reviews__title">Отзывы наших клиентов</h2>
                 <div class="reviews__list">
-                    <div class="reviews__item">
-                        <span>31 март 2020</span>
+                    <div class="reviews__wrapper">
+                        <div class="reviews__item">
+                        <span>31 марта 2020</span>
                         <h3 class="reviews__name">Маргарита Архипова</h3>
-                        <p class="reviews__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-                        aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <p class="reviews__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+        ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat.</p>
                         </div>
-                    <div class="reviews__item">
+                    </div>
+                    <div class="reviews__wrapper">
+                        <div class="reviews__item">
                         <span>31 март 2020</span>
                         <h3 class="reviews__name">Маргарита Архипова</h3>
                         <p class="reviews__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
                             aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                         </p>
+                        </div>
                     </div>
-                    <div class="reviews__item">
+                    <div class="reviews__wrapper">
+                        <div class="reviews__item">
                         <span>31 март 2020</span>
                         <h3 class="reviews__name">Маргарита Архипова</h3>
                         <p class="reviews__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
                             magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
                             consequat.
                         </p>
+                        </div>
                     </div>
-                    <div class="reviews__item">
+                    <div class="reviews__wrapper">
+                        <div class="reviews__item">
                         <span>31 март 2020</span>
                         <h3 class="reviews__name">Маргарита Архипова</h3>
                         <p class="reviews__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
                             magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
                             consequat.
                         </p>
+                        </div>
                     </div>
                 </div>
                 <button type="button" class="button reviews_button">Оставить отзыв</button>
                 </div>
             </section>
 
+            <!-- Calculate section -->
+            <section class="calculate">
+                <div class="inner">
+                    <h2 class="calculate__title"> Рассчитать стоимость </h2>
+                    <p class="calculate__text">Мы сами производим свою продукцию, поэтому у нас дешевле.
+                        Воспользуйтесь формой предварительного расчета и убедитесь в этом сами.
+                    </p>
+                    <button type="button" class="button calculate__button">Рассчитать стоимость</button>
+                </div>
+            </section>
+
             <!-- About us -->
             <section class="about" id="contacts">
+               
+                <div class="inner">
                 <div class="about__text">
-                    <h2> О нас </h2>
+                    <div class="about__background"></div>
+                    <h2 class="about__title"> О нас </h2>
                     <p>
                         Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
                         aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim
@@ -376,40 +412,62 @@
                     </p>
                 </div>
                 <div class="about__adress">
-                    <!-- <h2>Контакты</h2> -->
+                    <h2 class="adress__title">Контакты</h2>
                     <address>
-                        <ul>
-                            <li>
-                                <a href="">
-                                    <img src="/images/icons/icon_adress.svg" width="52" alt="геолокация" />
-                                    Херсон, ул.Нефтяников, 2
-                                    <span>Показать на карте</span>
+                        <ul class="adress__list">
+                            <li class="adress__item">
+                                <a class="adress__link" href="">
+                                    <img class="about__icons" src="/images/icons/icon_adress.svg" alt="геолокация" />
+                                    <div><p> Херсон, ул.Нефтяников, 2</p>
+                                    <span>Показать на карте</span></div>
+                                   
                                 </a>
                             </li>
-                            <li>
-                                <a href="tel:+380507294437">
-                                    <img src="/images/icons/icon_phones.svg" width="52" alt="телефонная трубка" />
+                            <li class="adress__item">
+                                <a class="adress__link" href="tel:+380507294437">
+                                    <img class="about__icons" src="/images/icons/icon_phones.svg" alt="телефонная трубка" />
                                     (050) 729-44-37</a>
                             </li>
-                            <li>
-                                <a href="mailto:TDEvira@ukr.net">
-                                    <img src="/images/icons/icon_mail.svg" width="52" alt="конверт" />
+                            <li class="adress__item">
+                                <a class="adress__link" href="mailto:TDEvira@ukr.net">
+                                    <img class="about__icons" src="/images/icons/icon_mail.svg" alt="конверт" />
                                     TDEvira@ukr.net</a>
                             </li>
                         </ul>
                     </address>
                     <ul class="social__list">
-                        <li> <a> <svg width="52" height="52">
-                            <use href="/images/icons/symbol-defs.svg#icon-facebook"></use></svg>
-                            Facebook </a></li>
-                        <li> <a> <svg width="52" height="52">
-                            <use href="/images/icons/symbol-defs.svg#icon-instagram"></use></svg>
-                            Instagram </a></li>
+                        <li class="social__item"> 
+                            <a class="social__link"> 
+                                <svg class="about__icons">
+                                    <use href="/images/icons/symbol-defs.svg#icon-facebook"></use>
+                                </svg>
+                            Facebook </a>
+                        </li>
+                        <li class="social__item"> 
+                            <a class="social__link"> 
+                                <svg class="about__icons">
+                                    <use href="/images/icons/symbol-defs.svg#icon-instagram"></use>
+                                </svg>
+                            Instagram </a>
+                        </li>
                     </ul>
-                    <button>Написать нам</button>
+                    <button class="button about__button">Написать нам</button>
+                </div>
                 </div>
             </section>
 
+            <button type="button" class="button__up">
+                вверх
+                <svg>
+                    <use href="/images/icons/symbol-defs.svg#icon-arrow-up"></use>
+                </svg>
+            </button>
+<button type="button" class="button__free-measuring">
+    <svg>
+    <use href="/images/icons/symbol-defs.svg#icon-measuring2"></use>
+    <use class="icon-measuring" href="/images/icons/symbol-defs.svg#icon-measuring"></use>
+    </svg>
+</button>
             <!-- <div class="block">
                 
 				<div class="block__item block__item--green"></div>
@@ -419,7 +477,7 @@
 			<button class="show__popup-btn" data-popup="firstPopup">Тип деятельности</button> -->
         
     </main>
-    <footer class="footer hasAnimation" data-animate="animate__fadeInUp">
+    <footer class="footer " >
         <div w3-include-html="footer.html"></div>
     </footer>
     <div class="popup" id="firstPopup">

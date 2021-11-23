@@ -1,9 +1,39 @@
 .footer {
   background-color: #3c3c3c;
-  height: 76px;
-  padding: 28px 0;
-  color: #ffffff;
+
   .inner {
     display: flex;
+    align-items: center;
+    height: 76px;
+    width: 100%;
+    color: #fff;
+    line-height: 1.25;
+  }
+
+  @media screen and (max-width: 1319px) {
+    .inner {
+      justify-content: center;
+      font-size: 12px;
+    }
+  }
+  @media screen and (min-width: 1320px) {
+    p {
+      margin-right: 416px;
+      font-size: 16px;
+    }
+  }
+}
+
+.footer__button {
+  @media screen and (max-width: 1319px) {
+    display: none;
+  }
+  @media screen and (min-width: 1320px) {
+    display: block;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    font-size: 16px;
+    border-bottom: 1px dashed #ffffff;
   }
 }
