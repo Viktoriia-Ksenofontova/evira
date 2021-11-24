@@ -57,7 +57,7 @@
                 <div class="hero__main">
                 <h1 class="hero__title"> Жалюзи от <br> производителя <br> на заказ </h1>
                 <h2 class="hero__subtitle">Срок изготовления от 3-х до 10-ти дней</h2>
-                <button class="button hero__button" type="button">Бесплатный замер</button>
+                <button class="button hero__button show__popup-btn" type="button" data-popup="toOrderMeasuring">Бесплатный замер</button>
                 </div>
                 <div class="hero__decorate">
                     <div class="hero__text">
@@ -377,7 +377,7 @@
                         </div>
                     </div>
                 </div>
-                <button type="button" class="button reviews_button">Оставить отзыв</button>
+                <button type="button" class="button reviews_button show__popup-btn" data-popup="sendReview">Оставить отзыв</button>
                 </div>
             </section>
 
@@ -455,19 +455,22 @@
                 </div>
                 </div>
             </section>
-
-            <button type="button" class="button__up">
+            
+            <button type="button" class="button__free-measuring">
+                <svg class="icon-back">
+                    <use href="/images/icons/symbol-defs.svg#icon-measuring2"></use>
+                </svg>
+                <svg class="icon-measuring">
+                    <use href="/images/icons/symbol-defs.svg#icon-measuring" width="54px"  height= "54px"></use>
+                </svg>
+            </button>
+            <button type="button" class=" button button__up hidden" id="scrollToTopBtn">
                 вверх
                 <svg>
                     <use href="/images/icons/symbol-defs.svg#icon-arrow-up"></use>
                 </svg>
             </button>
-<button type="button" class="button__free-measuring">
-    <svg>
-    <use href="/images/icons/symbol-defs.svg#icon-measuring2"></use>
-    <use class="icon-measuring" href="/images/icons/symbol-defs.svg#icon-measuring"></use>
-    </svg>
-</button>
+
             <!-- <div class="block">
                 
 				<div class="block__item block__item--green"></div>
@@ -477,52 +480,137 @@
 			<button class="show__popup-btn" data-popup="firstPopup">Тип деятельности</button> -->
         
     </main>
+
+    
     <footer class="footer " >
         <div w3-include-html="footer.html"></div>
     </footer>
-    <div class="popup" id="firstPopup">
+
+    <div class="popup" id="callMe">
         <div class="popup__inner">
             <div class="popup__content animate__animated" data-animatedin="animate__fadeInDown"
                 data-animatedout="animate__fadeOutDown">
-                <button class="popup__close close-popup">X</button>
-                <h1>Выберите тип предпринимательской деятельности:</h1>
-                <button class="show__popup-btn close-popup" data-popup="secondPopup">Физ.лицо</button>
-                <button class="show__popup-btn close-popup" data-popup="thirdPopup">Юр.лицо</button>
+                <button class="popup__close close-popup">
+                    <svg>
+                        <use href="/images/icons/symbol-defs.svg#icon-close" class="popup__close"></use>
+                    </svg>
+                </button>
+                <h1 class="popup__title">Перезвоните мне</h1>
+                <form action="" method="post" class="wpcf7-form invalid"  autoComplete="off" novalidate="novalidate" data-status="invalid">
+                <span class="wpcf7-form-control-wrap your-name">
+                    <label class="labelForm">
+                        <input type="text" 
+                        name="your-name" 
+                        value="" 
+                        size="40" 
+                        class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required wpcf7-not-valid 
+                        popup__input" 
+                        aria-required="true" 
+                        aria-invalid="true"
+                        aria-describedby="wpcf7-f311-o4-ve-your-name">
+                        <span class="nameInput">Ваше имя *</span>
+                    </label>
+                </span>
+                <span class="wpcf7-form-control-wrap phone">
+                    <label class="labelForm">
+                        <input type="tel" 
+                        name="phone" 
+                        value="" 
+                        size="40" 
+                        class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required phone wpcf7-not-valid 
+                        popup__input" 
+                        aria-required="true" 
+                        aria-invalid="true"
+                        aria-describedby="wpcf7-f311-o4-ve-phone">
+                        <span class="nameInput">Ваш телефон *</span>
+                    </label>
+                </span>
+
+                <input type="submit" 
+                value="Отправить" 
+                class="wpcf7-form-control has-spinner wpcf7-submit btn btn-red 
+                button 
+                popup__button">
+                </form>
             </div>
         </div>
     </div>
-    <div class="popup" id="secondPopup">
+
+    <div class="popup" id="toOrderMeasuring">
         <div class="popup__inner">
-            <div class="popup__content animate__animated" data-animatedin="animate__fadeInLeft"
-                data-animatedout="animate__fadeOutRight">
-                <button class="popup__close close-popup">X</button>
-                <h1>Физ.лицо</h1>
-                <div class="form">
-                    <form action="">
-                        <input type="text">
-                        <input type="tel">
-                        <input type="password">
-                        <input type="submit">
-                    </form>
-                </div>
+            <div class="popup__content animate__animated" data-animatedin="animate__fadeInDown"
+                data-animatedout="animate__fadeOutDown">
+                <button class="popup__close close-popup">
+                    <svg>
+                        <use href="/images/icons/symbol-defs.svg#icon-close" class="popup__close"></use>
+                    </svg>
+                </button>
+                <h1 class="popup__title">Заказать <br>бесплатный замер</h1>
+                <form action="" method="post" class="wpcf7-form invalid" autoComplete="off" novalidate="novalidate"
+                    data-status="invalid">
+                    <span class="wpcf7-form-control-wrap your-name">
+                        <label class="labelForm">
+                            <input type="text" name="your-name" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required wpcf7-not-valid 
+                                    popup__input" aria-required="true" aria-invalid="true"
+                                aria-describedby="wpcf7-f311-o4-ve-your-name">
+                            <span class="nameInput">Ваше имя *</span>
+                        </label>
+                    </span>
+                    <span class="wpcf7-form-control-wrap phone">
+                        <label class="labelForm">
+                            <input type="tel" name="phone" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required phone wpcf7-not-valid 
+                                    popup__input" aria-required="true" aria-invalid="true"
+                                aria-describedby="wpcf7-f311-o4-ve-phone">
+                            <span class="nameInput">Ваш телефон *</span>
+                        </label>
+                    </span>
+            
+                    <input type="submit" value="Отправить" class="wpcf7-form-control has-spinner wpcf7-submit btn btn-red 
+                            button 
+                            popup__button">
+                </form>
             </div>
         </div>
     </div>
-    <div class="popup" id="thirdPopup">
+
+    <div class="popup" id="sendReview">
         <div class="popup__inner">
-            <div class="popup__content animate__animated" data-animatedin="animate__fadeInRight"
-                data-animatedout="animate__fadeOutLeft">
-                <button class="popup__close close-popup">X</button>
-                <h1>Юр.лицо</h1>
-                <div class="form">
-                    <form action="">
-                        <input type="text">
-                        <input type="tel">
-                        <input type="password">
-                        <input type="submit">
-                    </form>
-                </div>
+            <div class="popup__content animate__animated" data-animatedin="animate__fadeInDown"
+                data-animatedout="animate__fadeOutDown">
+                <button class="popup__close close-popup">
+                    <svg>
+                        <use href="/images/icons/symbol-defs.svg#icon-close" class="popup__close"></use>
+                    </svg>
+                </button>
+                <h1 class="popup__title">Оставьте <br>Ваш отзыв</h1>
+                <form action="" method="post" class="wpcf7-form invalid" autoComplete="off" novalidate="novalidate"
+                    data-status="invalid">
+                    <span class="wpcf7-form-control-wrap your-name">
+                        <label class="labelForm">
+                            <input type="text" name="your-name" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required wpcf7-not-valid 
+                                                popup__input" aria-required="true" aria-invalid="true"
+                                aria-describedby="wpcf7-f311-o4-ve-your-name">
+                            <span class="nameInput">Ваше имя *</span>
+                        </label>
+                    </span>
+                    <span class="wpcf7-form-control-wrap phone">
+                        <label class="labelForm">
+                            <input type="tel" name="phone" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required phone wpcf7-not-valid popup__input" aria-required="true" aria-invalid="true"
+                                aria-describedby="wpcf7-f311-o4-ve-phone">
+                            <span class="nameInput">Ваш email *</span>
+                        </label>
+                    </span>
+                    <span class="wpcf7-form-control-wrap message">
+                        <label class="labelForm">
+                            <textarea name="message" rows="6" class="popup__textarea" value=""></textarea>
+                            <span class="nameInput">Ваш отзыв *</span>
+                        </label>
+                    </span>
+                    <input type="submit" value="Отправить" class="wpcf7-form-control has-spinner wpcf7-submit btn btn-red 
+                    button popup__button">
+                </form>
             </div>
+                
         </div>
     </div>
 </body>

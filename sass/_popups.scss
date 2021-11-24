@@ -1,46 +1,99 @@
 .popup {
-	display: none;
-	position: fixed;
-	left: 0;
-	top: 0;
-	width: 100%;
-	height: 100%;
-	z-index: 9;
-	background-color: rgba(0, 0, 0, 0.7);
-	overflow: hidden;
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0.7);
+  overflow: hidden;
 
-	.popup__inner {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		width: 100%;
-		height: 100%;
-		padding: 15px;
+  .popup__inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
 
-		.popup__content {
-			background-color: #fff;
-			width: 100%;
-			max-width: 768px;
-			max-height: 100%;
-			overflow-y: auto;
-			padding: 30px;
-			position: relative;
+    .popup__content {
+      background-color: #fff;
+      border: none;
+      outline: none;
+      border-radius: 47px;
+      width: 100%;
+      max-width: 360px;
+      max-height: 100%;
+      overflow-y: auto;
+      padding: 20px;
+      position: relative;
+      text-align: center;
 
-			.popup__close {
-				position: absolute;
-				right: 10px;
-				top: 10px;
-				background-color: transparent;
-				padding: 0;
-				margin: 0;
-				border-radius: 0;
-			}
-		}
-	}
+      .popup__close {
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        background-color: transparent;
+        padding: 0;
+        margin: 0;
+        svg {
+          width: 22px;
+          height: 22px;
+          stroke: #ef7f1a;
+        }
+        &:hover,
+        &:focus {
+          svg {
+            stroke: #000;
+          }
+        }
+      }
+      label {
+        width: 100%;
+        margin-bottom: 20px;
+      }
+    }
+  }
+  .popup__title {
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 1.41;
+    margin-bottom: 20px;
+  }
+  .popup__input,
+  .popup__textarea {
+    width: 100%;
+    background-color: transparent;
+    border-bottom: 1px solid #d7d7d7;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    font-size: 16px;
+    line-height: 1.6;
+    outline: none;
+    cursor: pointer;
+  }
+  .popup__input {
+    height: 34px;
+  }
+  .popup__textarea {
+    margin: 0;
+  }
+  .popup__button {
+    width: 254px;
+    height: 70px;
+    font-size: 20px;
+  }
 
-	@media (max-width: 768px) {
-		.popup__content {
-			max-width: 560px;
-		}
-	}
+  @media (max-width: 768px) {
+    .popup__content {
+      padding-left: 30px;
+      padding-right: 30px;
+      //   max-width: 300px;
+    }
+    .popup__title {
+      font-size: 20px;
+    }
+  }
 }
