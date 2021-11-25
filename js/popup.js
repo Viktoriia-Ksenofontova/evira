@@ -7,6 +7,14 @@ function popupInitialize() {
 		});
 	});
 
+
+	// popup button addNewWindow
+  $(".popup").find('#popup__addWindow').click(function () {
+	  $(".popup__clone").clone().appendTo(".popup__size"); 
+  })
+	// 
+
+
 	$('.popup').find('.close-popup').click(function () {
 		var idPopup = $(this).closest('.popup').attr('id');
 		hidePopup(idPopup);

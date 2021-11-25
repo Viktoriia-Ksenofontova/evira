@@ -53,7 +53,12 @@
     <main class="main hasAnimation" data-animate="animate__zoomIn">
         <section class="hero"> 
             <div class="inner">
-            <div class="hero__background"> </div>
+                <div class="hero__background"> 
+                    <button type="button" class="button__down">
+                        <p>листай вниз </p>
+                        <img src="/images/icons/arrow_down.svg"/>
+                    </button>
+                </div>
                 <div class="hero__main">
                 <h1 class="hero__title"> Жалюзи от <br> производителя <br> на заказ </h1>
                 <h2 class="hero__subtitle">Срок изготовления от 3-х до 10-ти дней</h2>
@@ -67,10 +72,10 @@
                 </div>
                 
             </div>
-            
         </section>
-<!-- Category section -->
-            <section class="category" id="production">
+
+            <!-- Category section -->
+        <section class="category" id="production">
                 <div class="inner">
                 <h2 class="category__title">Продукция и цены</h2>
                 <div class="category__list">
@@ -80,7 +85,9 @@
                         <h3> Вертикальные <br> тканевые </h3>
                         <p class="category__price"> от <span> 2000 </span> грн м2 </p>
                         <p class="category__description"> Небольшое описание вертикальных тканевых. Небольшое описание продукции. Небольшое описание вертикальных тканевых.</p>
-                        <button class="button category__button" type="button">Рассчитать <br>стоимость</button>                    
+                        <button class="button category__button show__popup-btn" type="button" data-popup="calculatePrice">
+                            Рассчитать <br>стоимость
+                        </button>                    
                     </div>
                     <div class="category__list__item">
                         <img src="/images/content/category/horizontal.jpg" 
@@ -89,7 +96,9 @@
                         <p class="category__price"> от <span> 2000 </span> грн м2 </p>
                         <p class="category__description"> Небольшое описание вертикальных тканевых. Небольшое описание продукции. Небольшое описание вертикальных тканевых.
                         </p>
-                        <button class="button category__button" type="button">Рассчитать <br>стоимость</button>
+                        <button class="button category__button show__popup-btn" type="button" data-popup="calculatePrice">
+                            Рассчитать <br>стоимость
+                        </button>
                     </div>
                     <div class="category__list__item">
                         <img src="/images/content/category/bambukovye.jpg" alt="фото горизонтальных бамбуовых жалюзей" width=396 />
@@ -98,7 +107,9 @@
                         <p class="category__description"> Небольшое описание вертикальных тканевых. Небольшое описание продукции. Небольшое описание вертикальных
                             тканевых.
                         </p>
-                        <button class="button category__button" type="button">Рассчитать <br> стоимость</button>
+                        <button class="button category__button show__popup-btn" type="button" data-popup="calculatePrice">
+                            Рассчитать <br> стоимость
+                        </button>
                     </div>
                     <div class="category__list__item">
                         <img src="/images/content/category/day-night.jpg" alt="фото жалюзей день-ночь" width=396 />
@@ -107,7 +118,9 @@
                         <p class="category__description"> Небольшое описание вертикальных тканевых. Небольшое описание продукции. Небольшое описание вертикальных
                             тканевых.
                         </p>
-                        <button class="button category__button" type="button">Рассчитать <br> стоимость</button>
+                        <button class="button category__button show__popup-btn" type="button" data-popup="calculatePrice">
+                            Рассчитать <br> стоимость
+                        </button>
                     </div>
                     <div class="category__list__item">
                         <img src="/images/content/category/fabric.jpg" alt="фото тканевых жалюзей" width=396 />
@@ -116,11 +129,13 @@
                         <p class="category__description"> Небольшое описание вертикальных тканевых. Небольшое описание продукции. Небольшое описание вертикальных
                             тканевых.
                         </p>
-                        <button class="button category__button" type="button">Рассчитать <br> стоимость</button>
+                        <button class="button category__button show__popup-btn" type="button" data-popup="calculatePrice">
+                            Рассчитать <br> стоимость
+                        </button>
                     </div>
                 </div>
                 </div>
-            </section>
+        </section>
             
             <!-- Measuring section -->
             <section class="measuring">
@@ -193,7 +208,7 @@
                 <p class="calculate__text">Мы сами производим свою продукцию, поэтому у нас дешевле.
             Воспользуйтесь формой предварительного расчета и убедитесь в этом сами.
                 </p>
-                <button type="button" class="button calculate__button">Рассчитать стоимость</button>
+                <button type="button" class="button calculate__button show__popup-btn">Рассчитать стоимость</button>
                 </div>
             </section>
             
@@ -210,7 +225,9 @@
                         <p class="process__description">Позвоните нам по телефону 
                         <span>(050)&nbsp;729-44-37</span> 
                         или закажите бесплатный замер, заполнив форму</p>
-                        <button type="button" class="button process__button" >Бесплатный замер</button>
+                        <button type="button" class="button process__button show__popup-btn" data-popup="toOrderMeasuring">
+                            Бесплатный замер
+                        </button>
                     
                 </li>
                 <li class="process__item">
@@ -377,7 +394,9 @@
                         </div>
                     </div>
                 </div>
-                <button type="button" class="button reviews_button show__popup-btn" data-popup="sendReview">Оставить отзыв</button>
+                <button type="button" class="button reviews_button show__popup-btn" data-popup="sendReview">
+                    Оставить отзыв
+                </button>
                 </div>
             </section>
 
@@ -388,7 +407,9 @@
                     <p class="calculate__text">Мы сами производим свою продукцию, поэтому у нас дешевле.
                         Воспользуйтесь формой предварительного расчета и убедитесь в этом сами.
                     </p>
-                    <button type="button" class="button calculate__button">Рассчитать стоимость</button>
+                    <button type="button" class="button calculate__button show__popup-btn" data-popup="calculatePrice">
+                        Рассчитать стоимость
+                    </button>
                 </div>
             </section>
 
@@ -416,12 +437,12 @@
                     <address>
                         <ul class="adress__list">
                             <li class="adress__item">
-                                <a class="adress__link" href="">
+                                <button class="adress__link show__popup-btn"  data-popup="popup__map" type="button">
                                     <img class="about__icons" src="/images/icons/icon_adress.svg" alt="геолокация" />
-                                    <div><p> Херсон, ул.Нефтяников, 2</p>
-                                    <span>Показать на карте</span></div>
-                                   
-                                </a>
+                                    <div class="address_linkToMap"><p> Херсон, ул.Нефтяников, 2</p>
+                                    <span>Показать на карте</span>
+                                    </div>
+                                </button>
                             </li>
                             <li class="adress__item">
                                 <a class="adress__link" href="tel:+380507294437">
@@ -451,12 +472,14 @@
                             Instagram </a>
                         </li>
                     </ul>
-                    <button class="button about__button">Написать нам</button>
+                    <button class="button about__button show__popup-btn" type="button" data-popup="writeUs">
+                        Написать нам
+                    </button>
                 </div>
                 </div>
             </section>
             
-            <button type="button" class="button__free-measuring">
+            <button type="button" class="button__free-measuring show__popup-btn" data-popup="toOrderMeasuring">
                 <svg class="icon-back">
                     <use href="/images/icons/symbol-defs.svg#icon-measuring2"></use>
                 </svg>
@@ -464,20 +487,12 @@
                     <use href="/images/icons/symbol-defs.svg#icon-measuring" width="54px"  height= "54px"></use>
                 </svg>
             </button>
-            <button type="button" class=" button button__up hidden" id="scrollToTopBtn">
+            <button type="button" class="button button__up hidden" id="scrollToTopBtn">
                 вверх
                 <svg>
                     <use href="/images/icons/symbol-defs.svg#icon-arrow-up"></use>
                 </svg>
             </button>
-
-            <!-- <div class="block">
-                
-				<div class="block__item block__item--green"></div>
-				<div class="block__item"></div>
-
-			</div>
-			<button class="show__popup-btn" data-popup="firstPopup">Тип деятельности</button> -->
         
     </main>
 
@@ -498,7 +513,7 @@
                 <h1 class="popup__title">Перезвоните мне</h1>
                 <form action="" method="post" class="wpcf7-form invalid"  autoComplete="off" novalidate="novalidate" data-status="invalid">
                 <span class="wpcf7-form-control-wrap your-name">
-                    <label class="labelForm">
+                    <label class="label__popup">
                         <input type="text" 
                         name="your-name" 
                         value="" 
@@ -512,7 +527,7 @@
                     </label>
                 </span>
                 <span class="wpcf7-form-control-wrap phone">
-                    <label class="labelForm">
+                    <label class="label__popup">
                         <input type="tel" 
                         name="phone" 
                         value="" 
@@ -549,7 +564,7 @@
                 <form action="" method="post" class="wpcf7-form invalid" autoComplete="off" novalidate="novalidate"
                     data-status="invalid">
                     <span class="wpcf7-form-control-wrap your-name">
-                        <label class="labelForm">
+                        <label class="label__popup">
                             <input type="text" name="your-name" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required wpcf7-not-valid 
                                     popup__input" aria-required="true" aria-invalid="true"
                                 aria-describedby="wpcf7-f311-o4-ve-your-name">
@@ -557,7 +572,7 @@
                         </label>
                     </span>
                     <span class="wpcf7-form-control-wrap phone">
-                        <label class="labelForm">
+                        <label class="label__popup">
                             <input type="tel" name="phone" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required phone wpcf7-not-valid 
                                     popup__input" aria-required="true" aria-invalid="true"
                                 aria-describedby="wpcf7-f311-o4-ve-phone">
@@ -586,7 +601,7 @@
                 <form action="" method="post" class="wpcf7-form invalid" autoComplete="off" novalidate="novalidate"
                     data-status="invalid">
                     <span class="wpcf7-form-control-wrap your-name">
-                        <label class="labelForm">
+                        <label class="label__popup">
                             <input type="text" name="your-name" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required wpcf7-not-valid 
                                                 popup__input" aria-required="true" aria-invalid="true"
                                 aria-describedby="wpcf7-f311-o4-ve-your-name">
@@ -594,15 +609,15 @@
                         </label>
                     </span>
                     <span class="wpcf7-form-control-wrap phone">
-                        <label class="labelForm">
+                        <label class="label__popup">
                             <input type="tel" name="phone" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required phone wpcf7-not-valid popup__input" aria-required="true" aria-invalid="true"
                                 aria-describedby="wpcf7-f311-o4-ve-phone">
                             <span class="nameInput">Ваш email *</span>
                         </label>
                     </span>
                     <span class="wpcf7-form-control-wrap message">
-                        <label class="labelForm">
-                            <textarea name="message" rows="6" class="popup__textarea" value=""></textarea>
+                        <label class="label__popup">
+                            <textarea name="message" rows="6" class="popup__textarea wpcf7-form-control wpcf7-text wpcf7-validates-as-required wpcf7-not-valid" value=""></textarea>
                             <span class="nameInput">Ваш отзыв *</span>
                         </label>
                     </span>
@@ -610,9 +625,139 @@
                     button popup__button">
                 </form>
             </div>
-                
         </div>
     </div>
+
+<div class="popup" id="writeUs">
+    <div class="popup__inner">
+        <div class="popup__content animate__animated" data-animatedin="animate__fadeInDown"
+            data-animatedout="animate__fadeOutDown">
+            <button class="popup__close close-popup">
+                <svg>
+                    <use href="/images/icons/symbol-defs.svg#icon-close" class="popup__close"></use>
+                </svg>
+            </button>
+            <h1 class="popup__title">Напишите нам</h1>
+            <form action="" method="post" class="wpcf7-form invalid" autoComplete="off" novalidate="novalidate"
+                data-status="invalid">
+                <span class="wpcf7-form-control-wrap your-name">
+                    <label class="label__popup">
+                        <input type="text" name="your-name" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required wpcf7-not-valid 
+                                                popup__input" aria-required="true" aria-invalid="true"
+                            aria-describedby="wpcf7-f311-o4-ve-your-name">
+                        <span class="nameInput">Ваше имя *</span>
+                    </label>
+                </span>
+                <span class="wpcf7-form-control-wrap phone">
+                    <label class="label__popup">
+                        <input type="tel" name="phone" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required phone wpcf7-not-valid 
+                                        popup__input" aria-required="true" aria-invalid="true"
+                            aria-describedby="wpcf7-f311-o4-ve-phone">
+                        <span class="nameInput">Ваш телефон *</span>
+                    </label>
+                </span>
+                <span class="wpcf7-form-control-wrap message">
+                    <label class="label__popup">
+                        <textarea name="message" rows="6"
+                            class="popup__textarea wpcf7-form-control wpcf7-text wpcf7-validates-as-required wpcf7-not-valid"
+                            value=""></textarea>
+                        <span class="nameInput">Ваш текст *</span>
+                    </label>
+                </span>
+                <input type="submit" value="Отправить" class="wpcf7-form-control has-spinner wpcf7-submit btn btn-red 
+                    button popup__button">
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<div class="popup" id="calculatePrice">
+    <div class="popup__inner">
+        <div class="popup__content animate__animated" data-animatedin="animate__fadeInDown"
+            data-animatedout="animate__fadeOutDown">
+            <button class="popup__close close-popup">
+                <svg>
+                    <use href="/images/icons/symbol-defs.svg#icon-close" class="popup__close"></use>
+                </svg>
+            </button>
+            <h1 class="popup__title">Рассчитать <br>стоимость</h1>
+            <form action="" method="post" class="wpcf7-form invalid" autoComplete="off" novalidate="novalidate"
+                data-status="invalid">
+        <div class="options-wrapper">
+            <div class="options-wrapper-2">
+                <select  value="" name="sistems" class="popup__select">
+                    <option value="default" > Выберите систему* </option>
+                    <option class="popup__option" value="Горизонтальные алюминиевые">Горизонтальные алюминиевые</option>
+                    <option class="popup__option" value="Горизонтальные бамбуковые">Горизонтальные бамбуковые</option>
+                    <option class="popup__option" value="Тканевые роллеты день-ночь">Тканевые роллеты день-ночь</option>
+                    <option class="popup__option" value="Тканевые роллеты">Тканевые роллеты</option>
+                    <option class="popup__option" value="Тканевые вертикальные">Тканевые вертикальные</option>
+                </select>
+                <div class="select-arrow-down"></div>
+            </div>
+        </div>
+<div class="popup__size">
+    <p class="popup__size__text">Введите размеры окна:</p>
+    <div class="popup__clone">
+        <span class="wpcf7-form-control-wrap size">
+        <label htmlFor="width" class="label__popup">
+               <input id="width" type="text" name="width" value="" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required wpcf7-not-valid popup__input" aria-required="true" aria-invalid="true"/>
+        <span class="nameInput">Ширина *</span>
+        </label>
+        </span>
+        <span class="wpcf7-form-control-wrap size">
+        <label htmlFor="height" class="label__popup">
+            <input id="height" type="text" name="height" value="" 
+            class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required wpcf7-not-valid popup__input" aria-required="true" aria-invalid="true"/>
+        <span class="nameInput">Длина *</span>
+        </label>
+        </span>
+    </div>
+</div>
+<button type="button" class="popup__addWindow" id="popup__addWindow"> 
+    Добавить окно 
+</button>
+
+                <span class="wpcf7-form-control-wrap your-name">
+                    <label class="label__popup">
+                        <input type="text" name="your-name" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required wpcf7-not-valid 
+                            popup__input" aria-required="true" aria-invalid="true"
+                            aria-describedby="wpcf7-f311-o4-ve-your-name">
+                        <span class="nameInput">Ваше имя *</span>
+                    </label>
+                </span>
+                <span class="wpcf7-form-control-wrap phone">
+                    <label class="label__popup">
+                        <input type="tel" name="phone" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required phone wpcf7-not-valid 
+                            popup__input" aria-required="true" aria-invalid="true"
+                            aria-describedby="wpcf7-f311-o4-ve-phone">
+                        <span class="nameInput">Ваш телефон *</span>
+                    </label>
+                </span>
+                <input type="submit" value="Отправить" class="wpcf7-form-control has-spinner wpcf7-submit btn btn-red 
+                    button popup__button">
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="popup" id="popup__map">
+    <div class="popup__inner">
+        <div class="popup__content animate__animated" data-animatedin="animate__fadeInDown" data-animatedout="animate__fadeOutDown">
+        <div class="mapouter">
+            <div class="gmap_canvas">
+               <iframe width="360" height="500" id="gmap_canvas"
+                    src="https://maps.google.com/maps?q=%D0%A5%D0%B5%D1%80%D1%81%D0%BE%D0%BD,%20%D1%83%D0%BB.%20%D0%9D%D0%B5%D1%84%D1%82%D1%8F%D0%BD%D0%B8%D0%BA%D0%BE%D0%B2,%202&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                    frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>     
+            </div>
+        </div>
+        </div>
+    </div>
+</div>
+
+
+
 </body>
 
 <link href="css/slick-theme.min.css" rel="stylesheet">

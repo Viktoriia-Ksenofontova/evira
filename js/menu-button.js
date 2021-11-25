@@ -1,11 +1,13 @@
 $(document).ready(function () {
   
   function toggleClassIsOpen() {
-    $(".menu__button").toggleClass("is-open");
-    $('.menu__container').toggleClass("is-open");
-    $('.header').toggleClass("is-open");
-    $("body").toggleClass("overflowed");
-}
+    if ($(window).width() < '1320') {
+      $(".menu__button").toggleClass("is-open");
+      $('.menu__container').toggleClass("is-open");
+      $('.header').toggleClass("is-open");
+      $("body").toggleClass("overflowed");
+    }
+  }
 
   $('.menu__button').click(toggleClassIsOpen);
 
@@ -29,7 +31,6 @@ $(document).ready(function () {
 
 
   function handleScroll() {
-  
   if (rootElement.scrollTop > 500 ) {
     // Show button
     $('#scrollToTopBtn').addClass("visible");
@@ -44,6 +45,11 @@ $(document).ready(function () {
   
   $( window ).scroll(handleScroll);
   
+
 });
 
 
+
+  
+
+  

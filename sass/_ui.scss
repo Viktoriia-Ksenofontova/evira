@@ -2,6 +2,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
+  outline: none;
 }
 
 .button {
@@ -13,7 +14,33 @@ button {
   outline: none;
   &:hover,
   &:focus {
+    outline: none;
     background-color: #df7e26;
+  }
+}
+.button__down {
+  display: none;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 162px;
+    width: 20px;
+    font-size: 16px;
+    color: #ffffff;
+
+    p {
+      writing-mode: vertical-rl;
+      transform: rotate(-180deg);
+    }
+    img {
+      height: 50px;
+      margin-top: 10px;
+    }
   }
 }
 
@@ -75,7 +102,9 @@ button {
   &:hover,
   &:focus {
     background-color: #df7e26;
-    animation: none;
+    .icon-back {
+      animation: none;
+    }
     &:after {
       animation: none;
     }

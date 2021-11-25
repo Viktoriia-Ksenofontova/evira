@@ -105,6 +105,13 @@ main {
       padding-right: 0;
     }
   }
+
+  @media screen and (min-width: 768px) and (max-width: 1319px) {
+    background-image: url(/images/backgrounds/hero-tablet-back.png);
+    background-position: bottom left;
+    background-repeat: no-repeat;
+  }
+
   @media screen and (min-width: 1320px) {
     background-repeat: no-repeat;
     background-image: url(/images/backgrounds/hero-desk-back.png);
@@ -154,7 +161,6 @@ main {
 .hero__main {
   margin: 0;
   position: relative;
-  background-repeat: no-repeat;
   @media screen and (max-width: 767px) {
     padding: 125px 15px 0 15px;
   }
@@ -162,8 +168,6 @@ main {
     width: 46%;
     height: 740px;
     padding-top: 106px;
-    background-image: url(/images/backgrounds/hero-tablet-back.png);
-    background-position: bottom;
   }
   @media screen and (min-width: 1320px) {
     width: 50%;
@@ -227,6 +231,7 @@ main {
   }
 }
 .hero__decorate {
+  background-color: transparent;
   margin: 0;
   @media screen and (min-width: 768px) {
     padding: 64px 15px 0 102px;
@@ -548,7 +553,7 @@ main {
 .labelForm {
   width: 286px;
   position: relative;
-  display: block;
+
   @media screen and (min-width: 768px) {
     margin-right: 30px;
   }
@@ -570,7 +575,6 @@ main {
 
 .your-name,
 .phone,
-.message,
 .labelForm,
 .inputError {
   display: block;
@@ -835,6 +839,7 @@ main {
 
 .process__decorate {
   position: absolute;
+  z-index: -1;
 
   @media screen and (min-width: 992px) {
     top: 0;
@@ -899,6 +904,7 @@ main {
 
   @media screen and (min-width: 768px) {
     position: relative;
+    z-index: 1;
     height: 300px;
     display: flex;
     flex-wrap: wrap;
@@ -1563,7 +1569,9 @@ main {
     margin-top: 42px;
   }
 }
-
+.address_linkToMap {
+  text-align: left;
+}
 .adress__item,
 .social__item {
   @media screen and (max-width: 767px) {

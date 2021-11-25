@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -906,6 +907,7 @@ button {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  outline: none;
 }
 
 .button {
@@ -918,7 +920,46 @@ button {
 }
 
 .button:hover, .button:focus {
+  outline: none;
   background-color: #df7e26;
+}
+
+.button__down {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .button__down {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 162px;
+    width: 20px;
+    font-size: 16px;
+    color: #ffffff;
+  }
+  .button__down p {
+    -webkit-writing-mode: vertical-rl;
+        -ms-writing-mode: tb-rl;
+            writing-mode: vertical-rl;
+    -webkit-transform: rotate(-180deg);
+            transform: rotate(-180deg);
+  }
+  .button__down img {
+    height: 50px;
+    margin-top: 10px;
+  }
 }
 
 .button__up {
@@ -999,6 +1040,9 @@ button {
 
 .button__free-measuring:hover, .button__free-measuring:focus {
   background-color: #df7e26;
+}
+
+.button__free-measuring:hover .icon-back, .button__free-measuring:focus .icon-back {
   -webkit-animation: none;
           animation: none;
 }
@@ -1147,11 +1191,12 @@ button {
           justify-content: center;
   width: 100%;
   height: 100%;
-  padding: 10px;
+  padding: 15px;
 }
 
 .popup .popup__inner .popup__content {
   background-color: #fff;
+  color: #3c3c3c;
   border: none;
   outline: none;
   border-radius: 47px;
@@ -1183,9 +1228,22 @@ button {
   stroke: #000;
 }
 
-.popup .popup__inner .popup__content label {
+.popup .popup__inner .popup__content .message {
   width: 100%;
-  margin-bottom: 20px;
+}
+
+.popup .popup__inner .popup__content .label__popup {
+  position: relative;
+  display: block;
+  width: 100%;
+  margin: 0 auto 20px auto;
+  font-size: 16px;
+}
+
+.popup .popup__inner .popup__content .label__popup:focus-within > .nameInput {
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+  font-size: 9px;
 }
 
 .popup .popup__title {
@@ -1223,14 +1281,127 @@ button {
   font-size: 20px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
+  .popup .popup__title {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 768px) {
   .popup .popup__content {
     padding-left: 30px;
     padding-right: 30px;
   }
-  .popup .popup__title {
-    font-size: 20px;
-  }
+}
+
+.popup__select {
+  width: 100%;
+  margin-bottom: 16px;
+  border-bottom: 1px solid #d7d7d7;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  color: #3c3c3c;
+  background-color: transparent;
+}
+
+.popup__select:hover, .popup__select:focus {
+  outline: none;
+}
+
+.popup__select .popup__option {
+  font-size: 12px;
+}
+
+.popup__clone {
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+}
+
+.popup__addWindow {
+  position: relative;
+  display: block;
+  margin-right: auto;
+  margin-left: 28px;
+  margin-bottom: 20px;
+  padding: 4px 0;
+  outline: none;
+  border: none;
+}
+
+.popup__addWindow:hover, .popup__addWindow:focus {
+  outline: none;
+  border: none;
+}
+
+.popup__addWindow:before {
+  content: '+';
+  font-size: 40px;
+  position: absolute;
+  top: -50%;
+  left: -28px;
+}
+
+.popup__size {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.popup__size p {
+  margin-right: auto;
+  margin-bottom: 20px;
+}
+
+.popup__size .size {
+  width: calc(50% - 10px);
+  position: relative;
+}
+
+.popup__size .size:after {
+  content: 'см';
+  color: #d7d7d7;
+  position: absolute;
+  right: 0;
+  top: 10px;
+}
+
+.popup__size .size > .popup__input {
+  width: 100%;
+}
+
+#popup__map .popup__content {
+  padding: 5px;
+}
+
+#popup__map .mapouter {
+  position: relative;
+  text-align: right;
+  width: 100%;
+  border-radius: 47px;
+}
+
+#popup__map .gmap_canvas {
+  overflow: hidden;
+  background: none !important;
+  width: 100%;
+  border-radius: 47px;
+}
+
+#popup__map iframe {
+  display: block;
 }
 
 .form input {
@@ -1374,6 +1545,14 @@ html {
   }
 }
 
+@media screen and (min-width: 768px) and (max-width: 1319px) {
+  .hero {
+    background-image: url(/images/backgrounds/hero-tablet-back.png);
+    background-position: bottom left;
+    background-repeat: no-repeat;
+  }
+}
+
 @media screen and (min-width: 1320px) {
   .hero {
     background-repeat: no-repeat;
@@ -1422,7 +1601,6 @@ html {
 .hero__main {
   margin: 0;
   position: relative;
-  background-repeat: no-repeat;
 }
 
 @media screen and (max-width: 767px) {
@@ -1436,8 +1614,6 @@ html {
     width: 46%;
     height: 740px;
     padding-top: 106px;
-    background-image: url(/images/backgrounds/hero-tablet-back.png);
-    background-position: bottom;
   }
 }
 
@@ -1533,6 +1709,7 @@ html {
 }
 
 .hero__decorate {
+  background-color: transparent;
   margin: 0;
 }
 
@@ -1953,7 +2130,6 @@ html {
 .labelForm {
   width: 286px;
   position: relative;
-  display: block;
 }
 
 @media screen and (min-width: 768px) {
@@ -1979,7 +2155,6 @@ html {
 
 .your-name,
 .phone,
-.message,
 .labelForm,
 .inputError {
   display: block;
@@ -1988,7 +2163,6 @@ html {
 @media screen and (max-width: 767px) {
   .your-name,
   .phone,
-  .message,
   .labelForm,
   .inputError {
     margin-left: auto;
@@ -2320,6 +2494,7 @@ html {
 
 .process__decorate {
   position: absolute;
+  z-index: -1;
 }
 
 @media screen and (min-width: 992px) {
@@ -2394,6 +2569,7 @@ html {
 @media screen and (min-width: 768px) {
   .process__item {
     position: relative;
+    z-index: 1;
     height: 300px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -3281,6 +3457,10 @@ html {
   .social__list {
     margin-top: 42px;
   }
+}
+
+.address_linkToMap {
+  text-align: left;
 }
 
 @media screen and (max-width: 767px) {

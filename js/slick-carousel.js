@@ -3,6 +3,7 @@ $(document).ready(function () {
     $('.category__list').slick({
         dots: true,
         infinite: true,
+        autoplay:true,
         arrows: false,
         slidesToShow: 3,
         slidesToScroll: 1,
@@ -15,6 +16,7 @@ $(document).ready(function () {
     $('.galery__imagesList').slick({
         dots: true,
         infinite: true,
+        autoplay:true,
         arrows: false,
         slidesToShow: 3,
         slidesToScroll: 1,
@@ -26,6 +28,7 @@ $(document).ready(function () {
 
     $('.reviews__list').slick({
         infinite: true,
+        autoplay:true,
         arrows: false,
         slidesToShow: 2,
         slidesToScroll: 1,
