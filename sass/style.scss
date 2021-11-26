@@ -52,42 +52,7 @@ main {
   }
 }
 
-// custom dots
-.slick-dots > li {
-  @media screen and (min-width: 768px) {
-    width: 34px;
-    height: 34px;
-    margin-left: 8px;
-    margin-right: 8px;
-  }
-}
-.slick-dots > li > .dot {
-  display: block;
-  border: 3px solid #ef7f1a;
-  border-radius: 50%;
-  @media screen and (max-width: 767px) {
-    width: 18px;
-    height: 18px;
-  }
-  @media screen and (min-width: 768px) {
-    border-width: 4px;
-    width: 100%;
-    height: 100%;
-  }
-}
-.slick-dots > .slick-active {
-  @media screen and (max-width: 767px) {
-    width: 37px;
-  }
-  @media screen and (min-width: 768px) {
-    width: 68px;
-  }
-}
-.slick-dots > .slick-active > .dot {
-  width: 100%;
-  background-color: #ef7f1a;
-  border-radius: 17px;
-}
+
 
 // Hero
 .hero {
@@ -1569,6 +1534,14 @@ main {
     margin-top: 42px;
   }
 }
+.adress__link:hover,
+.adress__link:focus {
+  span {
+    color: #ef7f1a;
+    border-bottom-color: transparent;
+  }
+}
+
 .address_linkToMap {
   text-align: left;
 }

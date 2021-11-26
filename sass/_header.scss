@@ -161,6 +161,11 @@
     margin-right: auto;
     margin-left: auto;
   }
+  &:hover,
+  &:focus {
+    color: #ef7f1a;
+    border-bottom-color: transparent;
+  }
 }
 
 .menu__button__icons {

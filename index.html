@@ -54,7 +54,7 @@
         <section class="hero"> 
             <div class="inner">
                 <div class="hero__background"> 
-                    <button type="button" class="button__down">
+                    <button type="button" class="button__down" id="scrollToBottomBtn">
                         <p>листай вниз </p>
                         <img src="/images/icons/arrow_down.svg"/>
                     </button>
@@ -183,19 +183,34 @@
                 <h2 class="galery__title"> Галерея</h2>
                 <div class="galery__imagesList">
                     <div class="galery__imagesItem">
-                        <img src="/images/content/galery/richard.jpg" alt="фото горионтальных жалюзей"/>
+                        <img src="/images/content/galery/richard.jpg" 
+                        alt="фото горионтальных жалюзей"
+                        data-source="/images/content/galery/big_size/richard.jpg"
+                        class="galery_image show__popup-btn" data-popup="popup__galery"/>
                     </div>
                     <div class="galery__imagesItem">
-                        <img src="/images/content/galery/vertical.jpg" alt="фото вертикальных жалюзей"/>
+                        <img src="/images/content/galery/vertical.jpg" 
+                        alt="фото вертикальных жалюзей"
+                        data-source="/images/content/galery/big_size/vertical.jpg"
+                        class="galery_image show__popup-btn" data-popup="popup__galery"/>
                      </div>
                     <div class="galery__imagesItem">
-                        <img src="/images/content/galery/horizontal.jpg" alt="фото горизонтальных жалюзей"/>
+                        <img src="/images/content/galery/horizontal.jpg" 
+                        alt="фото горизонтальных жалюзей"
+                        data-source="/images/content/galery/big_size/horizontal.jpg"
+                        class="galery_image show__popup-btn" data-popup="popup__galery"/>
                     </div>
                      <div class="galery__imagesItem">
-                         <img src="/images/content/galery/white_fabric.jpg" alt="фото тканевых жалюзей" />
+                         <img src="/images/content/galery/white_fabric.jpg" 
+                         alt="фото тканевых жалюзей" 
+                         data-source="/images/content/galery/big_size/white_fabric.jpg"
+                         class="galery_image show__popup-btn" data-popup="popup__galery"/>
                         </div>
                     <div class="galery__imagesItem"> 
-                        <img src="/images/content/galery/bheatha.jpg" alt="фото горизонтальных жалюзей с лампой"/>
+                        <img src="/images/content/galery/bheatha.jpg" 
+                        alt="фото горизонтальных жалюзей с лампой"
+                        data-source="/images/content/galery/big_size/bheatha.jpg"
+                        class="galery_image show__popup-btn" data-popup="popup__galery"/>
                     </div>
                 </div>
                 </div>
@@ -756,7 +771,22 @@
     </div>
 </div>
 
-
+<div class="popup" id="popup__galery">
+    <div class="popup__inner">
+        <button class="popup__galery__button left" id="popup__galery__button__left">
+            <svg class="popup__galery__icon left">
+                <use href="/images/icons/symbol-defs.svg#icon-arrow"></use>
+            </svg>
+        </button>
+        <img class="popup__galery__image" alt="" src=""/>
+       
+        <button class="popup__galery__button right" id="popup__galery__button__right">
+            <svg class="popup__galery__icon right">
+                <use href="/images/icons/symbol-defs.svg#icon-arrow"></use>
+            </svg>
+        </button>
+    </div>
+</div>
 
 </body>
 
