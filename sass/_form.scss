@@ -1,6 +1,103 @@
-.form{
-   input{
-      display: block;
-      margin-bottom: 30px;
-   }
+.form {
+  input {
+    display: block;
+    margin-bottom: 30px;
+  }
+}
+
+.wpcf7-form {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    flex-wrap: wrap;
+  }
+  @media screen and (min-width: 992px) {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  @media screen and (min-width: 1320px) {
+    justify-content: center;
+  }
+}
+
+.labelForm {
+  width: 286px;
+  position: relative;
+  @media screen and (max-width: 767px) {
+    margin-bottom: 30px;
+  }
+  @media screen and (min-width: 768px) {
+    margin-right: 30px;
+  }
+}
+
+.your-name,
+.phone,
+.labelForm,
+.inputError {
+  display: block;
+  @media screen and (max-width: 767px) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+.your-name {
+  @media screen and (max-width: 767px) {
+    margin-bottom: 7px;
+  }
+}
+
+.inputError {
+  color: #ef7f1a;
+  font-size: 9px;
+  line-height: 1.6;
+}
+
+.nameInput {
+  position: absolute;
+  left: 5px;
+  top: 0;
+  transform: translateY(9px);
+  transition: transform 250ms linear;
+  font-size: 16px;
+}
+
+.labelForm:focus-within > .nameInput {
+  transform: translateY(-100%);
+  font-size: 9px;
+}
+// Measuring and assortiment sections form
+.measuring__input,
+.assortiment__input {
+  height: 34px;
+  width: 100%;
+  background-color: transparent;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #fff;
+  outline: none;
+  cursor: pointer;
+}
+
+.measuring__button,
+.assortiment__button {
+  width: 286px;
+  height: 78px;
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  line-height: 24px;
+
+  @media screen and (min-width: 768px) and (max-width: 991px) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  @media screen and (min-width: 768px) {
+    margin-top: 20px;
+  }
 }

@@ -34,6 +34,10 @@ function showPopup(id) {
 	$('#' + id).addClass('opened');
 	$('#' + id).fadeIn();
 	$('#' + id).find('.popup__content').addClass(animatedIn);
+
+	$('.category__list').slick('slickPause');
+	$('.galery__imagesList').slick('slickPause');
+	 $('.reviews__list').slick('slickPause');
 }
 
 function hidePopup(id) {
@@ -49,4 +53,8 @@ function hidePopup(id) {
 		}
 		$('#' + id).find('.popup__content').removeClass(animatedOut);
 	}, 400);
+
+	$('.category__list').slick('slickPlay');
+		$('.galery__imagesList').slick('slickPlay');
+	 $('.reviews__list').slick('slickPlay');
 }

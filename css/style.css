@@ -1168,7 +1168,7 @@ button {
   width: 100%;
   height: 100%;
   z-index: 100;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(60, 60, 60, 0.65);
   overflow: hidden;
 }
 
@@ -1397,22 +1397,39 @@ button {
   display: block;
 }
 
-.popup__galery__image {
-  display: block;
+#popup__galery .popup__inner {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0;
+}
+
+@media screen and (min-width: 768px) {
+  #popup__galery .popup__inner {
+    padding: 15px;
+  }
+}
+
+#popup__galery .popup__galery__image {
   max-height: 500px;
   -webkit-box-shadow: 5px 5px 57px rgba(0, 0, 0, 0.72);
           box-shadow: 5px 5px 57px rgba(0, 0, 0, 0.72);
 }
 
 @media screen and (max-width: 767px) {
-  .popup__galery__image {
+  #popup__galery .popup__galery__image {
     width: 100%;
     position: relative;
   }
 }
 
 @media screen and (min-width: 768px) {
-  .popup__galery__image {
+  #popup__galery .popup__galery__image {
+    max-width: calc(100% - 246px);
     margin-right: 36px;
     margin-left: 36px;
   }
@@ -1424,12 +1441,10 @@ button {
   -webkit-box-shadow: 5px 5px 17px rgba(0, 0, 0, 0.19);
           box-shadow: 5px 5px 17px rgba(0, 0, 0, 0.19);
   border-radius: 198px;
-  width: 72px;
   height: 47px;
 }
 
 .popup__galery__button .popup__galery__icon {
-  width: 30px;
   fill: #ef7f1a;
 }
 
@@ -1459,9 +1474,154 @@ button {
   }
 }
 
+@media screen and (min-width: 768px) {
+  .popup__galery__button {
+    width: 72px;
+  }
+  .popup__galery__button .popup__galery__icon {
+    width: 30px;
+  }
+}
+
 .form input {
   display: block;
   margin-bottom: 30px;
+}
+
+@media screen and (min-width: 768px) {
+  .wpcf7-form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .wpcf7-form {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+@media screen and (min-width: 1320px) {
+  .wpcf7-form {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+.labelForm {
+  width: 286px;
+  position: relative;
+}
+
+@media screen and (max-width: 767px) {
+  .labelForm {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .labelForm {
+    margin-right: 30px;
+  }
+}
+
+.your-name,
+.phone,
+.labelForm,
+.inputError {
+  display: block;
+}
+
+@media screen and (max-width: 767px) {
+  .your-name,
+  .phone,
+  .labelForm,
+  .inputError {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .your-name {
+    margin-bottom: 7px;
+  }
+}
+
+.inputError {
+  color: #ef7f1a;
+  font-size: 9px;
+  line-height: 1.6;
+}
+
+.nameInput {
+  position: absolute;
+  left: 5px;
+  top: 0;
+  -webkit-transform: translateY(9px);
+          transform: translateY(9px);
+  -webkit-transition: -webkit-transform 250ms linear;
+  transition: -webkit-transform 250ms linear;
+  transition: transform 250ms linear;
+  transition: transform 250ms linear, -webkit-transform 250ms linear;
+  font-size: 16px;
+}
+
+.labelForm:focus-within > .nameInput {
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+  font-size: 9px;
+}
+
+.measuring__input,
+.assortiment__input {
+  height: 34px;
+  width: 100%;
+  background-color: transparent;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #fff;
+  outline: none;
+  cursor: pointer;
+}
+
+.measuring__button,
+.assortiment__button {
+  width: 286px;
+  height: 78px;
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .measuring__button,
+  .assortiment__button {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .measuring__button,
+  .assortiment__button {
+    margin-top: 20px;
+  }
 }
 
 /*==========  Desktop First  ========== */
@@ -2104,126 +2264,6 @@ html {
   }
 }
 
-@media screen and (min-width: 768px) {
-  .wpcf7-form {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: flex-end;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-  }
-}
-
-@media screen and (min-width: 992px) {
-  .wpcf7-form {
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-}
-
-@media screen and (min-width: 1320px) {
-  .wpcf7-form {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-}
-
-.labelForm {
-  width: 286px;
-  position: relative;
-}
-
-@media screen and (min-width: 768px) {
-  .labelForm {
-    margin-right: 30px;
-  }
-}
-
-.measuring__input {
-  height: 34px;
-  width: 100%;
-  background-color: transparent;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-  border-top: none;
-  border-left: none;
-  border-right: none;
-  font-size: 16px;
-  line-height: 1.6;
-  color: #fff;
-  outline: none;
-  cursor: pointer;
-}
-
-.your-name,
-.phone,
-.labelForm,
-.inputError {
-  display: block;
-}
-
-@media screen and (max-width: 767px) {
-  .your-name,
-  .phone,
-  .labelForm,
-  .inputError {
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .your-name {
-    margin-bottom: 7px;
-  }
-}
-
-.inputError {
-  color: #ef7f1a;
-  font-size: 9px;
-  line-height: 1.6;
-}
-
-.nameInput {
-  position: absolute;
-  left: 5px;
-  top: 0;
-  -webkit-transform: translateY(9px);
-          transform: translateY(9px);
-  -webkit-transition: -webkit-transform 250ms linear;
-  transition: -webkit-transform 250ms linear;
-  transition: transform 250ms linear;
-  transition: transform 250ms linear, -webkit-transform 250ms linear;
-  font-size: 16px;
-}
-
-.labelForm:focus-within > .nameInput {
-  -webkit-transform: translateY(-100%);
-          transform: translateY(-100%);
-  font-size: 9px;
-}
-
-.measuring__button {
-  width: 286px;
-  height: 78px;
-  margin: 20px 0 0 0;
-  padding: 0;
-  font-size: 20px;
-  line-height: 24px;
-}
-
-@media screen and (min-width: 768px) and (max-width: 991px) {
-  .measuring__button {
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-
 @media screen and (max-width: 767px) {
   .galery .inner {
     padding-top: 51px;
@@ -2844,37 +2884,6 @@ html {
     padding: 0 30px;
     margin-bottom: 60px;
     font-size: 25px;
-  }
-}
-
-.assortiment__input {
-  height: 34px;
-  width: 286px;
-  background-color: transparent;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-  border-top: none;
-  border-left: none;
-  border-right: none;
-  font-size: 16px;
-  line-height: 1.6;
-  color: #fff;
-  outline: none;
-  cursor: pointer;
-}
-
-.assortiment__button {
-  width: 286px;
-  height: 78px;
-  margin: 20px 0 0 0;
-  padding: 0;
-  font-size: 20px;
-  line-height: 24px;
-}
-
-@media screen and (min-width: 768px) and (max-width: 991px) {
-  .assortiment__button {
-    margin-left: auto;
-    margin-right: auto;
   }
 }
 
