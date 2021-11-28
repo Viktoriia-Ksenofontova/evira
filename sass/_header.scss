@@ -79,7 +79,7 @@
   @media screen and (min-width: 320px) and (max-width: 767px) {
     margin-bottom: 20px;
   }
-  @media screen and (min-width: 767px) and (max-width: 1319px) {
+  @media screen and (min-width: 768px) and (max-width: 1319px) {
     margin-bottom: 52px;
   }
   @media screen and (min-width: 1320px) {
@@ -154,13 +154,16 @@
   line-height: 1.25px;
   color: #ffffff;
   border-bottom: 1px dashed;
-  @media screen and (min-width: 1320px) {
-    margin: 0 0 0 auto;
-  }
+
   @media screen and (max-width: 1319px) {
     margin-right: auto;
     margin-left: auto;
   }
+
+  @media screen and (min-width: 1320px) {
+    margin: 0 0 0 auto;
+  }
+
   &:hover,
   &:focus {
     color: #ef7f1a;
@@ -184,11 +187,11 @@
       stroke: #fff;
     }
   }
-  @media screen and (max-width: 991px) {
+  @media screen and (max-width: 767px) {
     width: 39px;
     height: 24px;
   }
-  @media screen and (min-width: 992px) {
+  @media screen and (min-width: 768px) {
     width: 60px;
     height: 38px;
   }

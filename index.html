@@ -797,12 +797,26 @@
 <link href="css/slick-theme.min.css" rel="stylesheet">
 <link href="css/animate.min.css" rel="stylesheet">
 <link href="css/style.css" rel="stylesheet">
-
 <script src="js/jquery.min.js"></script>
-<script src="js/slick.min.js"></script>
 <script src="js/jquery.maskedinput.min.js"></script>
 <script src="js/jquery.validate.min.js"></script>
 <script src="js/jquery.viewportchecker.js"></script>
+<script>
+    (function () {
+        if (typeof EventTarget !== 'undefined') {
+            var func = EventTarget.prototype.addEventListener;
+
+            EventTarget.prototype.addEventListener = function (type, fn, capture) {
+                this.func = func;
+                capture = capture || {};
+                capture.passive = false;
+                this.func(type, fn, capture);
+            }};
+        } ());
+</script>
+
+<script src="js/slick.min.js"></script>
+
 <script src="js/popup.js"></script>
 <script src="js/main.js"></script>
 <script src="js/menu-button.js"></script>

@@ -8,17 +8,17 @@ $(document).ready(function () {
       $("body").toggleClass("overflowed");
     }
   }
-
-  $('.menu__button').click(toggleClassIsOpen);
-
-  $('.navbar__link').click(toggleClassIsOpen);
   
-  $('.nav__contacts__telephone').click(toggleClassIsOpen);
+    $('.menu__button').click(toggleClassIsOpen);
+
+    $('.navbar__link').click(toggleClassIsOpen);
   
-  $('.nav__contacts__button').click(toggleClassIsOpen);
+    $('.nav__contacts__telephone').click(toggleClassIsOpen);
+  
+    $('.nav__contacts__button').click(toggleClassIsOpen);
+  
 
-
-// Scroll to bottom logic
+  // Scroll to bottom logic
   let rootElement = document.documentElement;
 
   function scrollToBottom() {
@@ -56,7 +56,7 @@ $(document).ready(function () {
   $( window ).scroll(handleScroll);
   
 
-// galery logic
+  // galery logic
   let imageClicked;
 
   $(".galery_image").click(function () {

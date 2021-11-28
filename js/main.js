@@ -1,6 +1,6 @@
 $(document).ready(function () {
 	/* Phone validation */
-	$(".wpcf7-validates-as-tel").mask("+7 (999) 999-9999");
+	$(".wpcf7-validates-as-tel").mask("+8 (999) 999-9999");
 
 	/* Popup initialize */
 	popupInitialize();

@@ -35,8 +35,8 @@ function showPopup(id) {
 	$('#' + id).fadeIn();
 	$('#' + id).find('.popup__content').addClass(animatedIn);
 
-	$('.category__list').slick('slickPause');
-	$('.galery__imagesList').slick('slickPause');
+	 $('.category__list').slick('slickPause');
+	 $('.galery__imagesList').slick('slickPause');
 	 $('.reviews__list').slick('slickPause');
 }
 
