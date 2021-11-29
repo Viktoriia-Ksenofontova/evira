@@ -989,9 +989,12 @@ main {
     margin-bottom: 21px;
   }
   @media screen and (min-width: 768px) {
+    font-size: 40px;
     margin-bottom: 48px;
-    font-size: 50px;
     line-height: 1.22;
+  }
+  @media screen and (min-width: 992px) {
+    font-size: 50px;
   }
   @media screen and (min-width: 1290px) {
     margin-bottom: 60px;
@@ -1146,18 +1149,27 @@ main {
 // Clients reviews section
 .reviews {
   position: relative;
+  padding-left: 15px;
   .inner {
-    @media screen and (max-width: 767px) {
+    position: relative;
+    z-index: 1;
+  }
+  @media screen and (max-width: 767px) {
+    padding-bottom: 60px;
+    .inner {
       padding-top: 52px;
-      padding-bottom: 60px;
     }
-    @media screen and (min-width: 768px) {
+  }
+  @media screen and (min-width: 768px) {
+    padding-bottom: 87px;
+    .inner {
       padding-top: 75px;
-      padding-bottom: 87px;
     }
-    @media screen and (min-width: 1290px) {
+  }
+  @media screen and (min-width: 1290px) {
+    padding-bottom: 110px;
+    .inner {
       padding-top: 96px;
-      padding-bottom: 110px;
     }
   }
 }
@@ -1165,7 +1177,7 @@ main {
   position: absolute;
   left: 0px;
   top: 0;
-  z-index: -1;
+  // z-index: -1;
   background: #ffffff;
   height: 100%;
   @media screen and (max-width: 767px) {
@@ -1273,6 +1285,8 @@ main {
   }
 }
 .reviews_button {
+  position: relative;
+  z-index: 1;
   margin: 23px auto 0 auto;
   width: 286px;
   height: 78px;
@@ -1290,6 +1304,7 @@ main {
 
 .about {
   color: #0f0f0f;
+  position: relative;
   .inner {
     @media screen and (max-width: 767px) {
       padding-top: 52px;
@@ -1307,28 +1322,30 @@ main {
 
 .about__background {
   position: absolute;
-  z-index: -1;
+  // z-index: -1;
   background-color: #fff;
-  left: -15px;
+  left: 0;
+  top: 0;
   @media screen and (max-width: 767px) {
-    top: -52px;
     border-radius: 0px 0 115px 0px;
-    width: calc(100% + 30px);
-    height: calc(100% + 52px);
+    width: 100%;
+    height: 560px;
   }
   @media screen and (min-width: 768px) {
-    top: -75px;
     border-radius: 0px 0 216px 0px;
-    width: calc(100% + 15px);
-    height: calc(100% + 75px);
+    width: 58%;
+    height: 848px;
   }
   @media screen and (min-width: 1290px) {
     border-radius: 0 0 312px 0;
+    width: 50%;
   }
 }
 
 .about__text {
   position: relative;
+  z-index: 1;
+
   @media screen and (max-width: 767px) {
     width: 100%;
     padding-bottom: 56px;
