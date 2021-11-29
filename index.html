@@ -50,7 +50,7 @@
         <div w3-include-html="header.html"></div> 
     </header>
    
-    <main class="main hasAnimation" data-animate="animate__zoomIn">
+    <main class="main" >
         <section class="hero"> 
             <div class="inner">
                 <div class="hero__background"> 
@@ -78,23 +78,25 @@
         <section class="category" id="production">
                 <div class="inner">
                 <h2 class="category__title">Продукция и цены</h2>
+                </div>
+
                 <div class="category__list">
                     <div class="category__list__item">
-                        <img src="/images/content/category/vertical.jpg" 
-                        alt="фото вертикальных жалюзей" />
+                        <img src="/images/content/category/vertical.jpg" alt="фото вертикальных жалюзей" />
                         <h3> Вертикальные <br> тканевые </h3>
-                        <p class="category__price"> от <span> 2000 </span> грн м2 </p>
-                        <p class="category__description"> Небольшое описание вертикальных тканевых. Небольшое описание продукции. Небольшое описание вертикальных тканевых.</p>
+                        <p class="category__price"> от <span> 2000 </span> грн м<sup>2</sup> </p>
+                        <p class="category__description"> Небольшое описание вертикальных тканевых. Небольшое описание продукции.
+                            Небольшое описание вертикальных тканевых.</p>
                         <button class="button category__button show__popup-btn" type="button" data-popup="calculatePrice">
                             Рассчитать <br>стоимость
-                        </button>                    
+                        </button>
                     </div>
                     <div class="category__list__item">
-                        <img src="/images/content/category/horizontal.jpg" 
-                        alt="фото горизонтальных жалюзей"/>
+                        <img src="/images/content/category/horizontal.jpg" alt="фото горизонтальных жалюзей" />
                         <h3> Горизонтальные <br> алюминиевыее </h3>
-                        <p class="category__price"> от <span> 2000 </span> грн м2 </p>
-                        <p class="category__description"> Небольшое описание вертикальных тканевых. Небольшое описание продукции. Небольшое описание вертикальных тканевых.
+                        <p class="category__price"> от <span> 2000 </span> грн м<sup>2</sup> </p>
+                        <p class="category__description"> Небольшое описание вертикальных тканевых. Небольшое описание продукции.
+                            Небольшое описание вертикальных тканевых.
                         </p>
                         <button class="button category__button show__popup-btn" type="button" data-popup="calculatePrice">
                             Рассчитать <br>стоимость
@@ -103,9 +105,9 @@
                     <div class="category__list__item">
                         <img src="/images/content/category/bambukovye.jpg" alt="фото горизонтальных бамбуовых жалюзей" width=396 />
                         <h3> Горизонтальные <br> бамбуковые </h3>
-                        <p class="category__price"> от <span> 2000 </span> грн м2 </p>
-                        <p class="category__description"> Небольшое описание вертикальных тканевых. Небольшое описание продукции. Небольшое описание вертикальных
-                            тканевых.
+                        <p class="category__price"> от <span> 2000 </span> грн м<sup>2</sup> </p>
+                        <p class="category__description"> Небольшое описание вертикальных тканевых. Небольшое описание продукции.
+                            Небольшое описание вертикальных тканевых.
                         </p>
                         <button class="button category__button show__popup-btn" type="button" data-popup="calculatePrice">
                             Рассчитать <br> стоимость
@@ -114,9 +116,9 @@
                     <div class="category__list__item">
                         <img src="/images/content/category/day-night.jpg" alt="фото жалюзей день-ночь" width=396 />
                         <h3> Тканевые роллеты <br>день-ночь </h3>
-                        <p class="category__price"> от <span> 2000 </span> грн м2 </p>
-                        <p class="category__description"> Небольшое описание вертикальных тканевых. Небольшое описание продукции. Небольшое описание вертикальных
-                            тканевых.
+                        <p class="category__price"> от <span> 2000 </span> грн м<sup>2</sup> </p>
+                        <p class="category__description"> Небольшое описание вертикальных тканевых. Небольшое описание продукции.
+                            Небольшое описание вертикальных тканевых.
                         </p>
                         <button class="button category__button show__popup-btn" type="button" data-popup="calculatePrice">
                             Рассчитать <br> стоимость
@@ -125,15 +127,15 @@
                     <div class="category__list__item">
                         <img src="/images/content/category/fabric.jpg" alt="фото тканевых жалюзей" width=396 />
                         <h3> Тканевые <br> роллеты </h3>
-                        <p class="category__price"> от <span> 2000 </span> грн м2 </p>
-                        <p class="category__description"> Небольшое описание вертикальных тканевых. Небольшое описание продукции. Небольшое описание вертикальных
+                        <p class="category__price"> от <span> 2000 </span> грн м<sup>2</sup> </p>
+                        <p class="category__description"> Небольшое описание вертикальных тканевых. Небольшое описание продукции.
+                            Небольшое описание вертикальных
                             тканевых.
                         </p>
                         <button class="button category__button show__popup-btn" type="button" data-popup="calculatePrice">
                             Рассчитать <br> стоимость
                         </button>
                     </div>
-                </div>
                 </div>
         </section>
             
@@ -151,7 +153,7 @@
                             <label class="labelForm">                            
                                 <input type="text" name="your-name" value="" size="40"
                                 class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required wpcf7-not-valid 
-                                measuring__input"
+                                measuring__input" placeholder=" "
                                 aria-required="true" aria-invalid="true"
                                 aria-describedby="wpcf7-f311-o4-ve-your-name">
                             <!-- <span class="wpcf7-not-valid-tip inputError" aria-hidden="true"> Поле обязательно для заполнения.</span> -->
@@ -162,7 +164,7 @@
                             <label class="labelForm">
                             <input type="tel" name="phone" value="" size="40"
                                 class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required phone wpcf7-not-valid 
-                                measuring__input"
+                                measuring__input" placeholder=" "
                                 aria-required="true" aria-invalid="true" 
                                 aria-describedby="wpcf7-f311-o4-ve-phone">
                             <!-- <span class="wpcf7-not-valid-tip inputError" aria-hidden="true"> Поле обязательно для заполнения.</span> -->
@@ -181,38 +183,34 @@
             <section class="galery" id="galery">
                 <div class="inner">
                 <h2 class="galery__title"> Галерея</h2>
+                </div>
+
                 <div class="galery__imagesList">
                     <div class="galery__imagesItem">
-                        <img src="/images/content/galery/richard.jpg" 
-                        alt="фото горионтальных жалюзей"
-                        data-source="/images/content/galery/big_size/richard.jpg"
-                        class="galery_image show__popup-btn" data-popup="popup__galery"/>
+                        <img src="/images/content/galery/richard.jpg" alt="фото горионтальных жалюзей"
+                            data-source="/images/content/galery/big_size/richard.jpg" class="galery_image show__popup-btn"
+                            data-popup="popup__galery" />
                     </div>
                     <div class="galery__imagesItem">
-                        <img src="/images/content/galery/vertical.jpg" 
-                        alt="фото вертикальных жалюзей"
-                        data-source="/images/content/galery/big_size/vertical.jpg"
-                        class="galery_image show__popup-btn" data-popup="popup__galery"/>
-                     </div>
+                        <img src="/images/content/galery/vertical.jpg" alt="фото вертикальных жалюзей"
+                            data-source="/images/content/galery/big_size/vertical.jpg" class="galery_image show__popup-btn"
+                            data-popup="popup__galery" />
+                    </div>
                     <div class="galery__imagesItem">
-                        <img src="/images/content/galery/horizontal.jpg" 
-                        alt="фото горизонтальных жалюзей"
-                        data-source="/images/content/galery/big_size/horizontal.jpg"
-                        class="galery_image show__popup-btn" data-popup="popup__galery"/>
+                        <img src="/images/content/galery/horizontal.jpg" alt="фото горизонтальных жалюзей"
+                            data-source="/images/content/galery/big_size/horizontal.jpg" class="galery_image show__popup-btn"
+                            data-popup="popup__galery" />
                     </div>
-                     <div class="galery__imagesItem">
-                         <img src="/images/content/galery/white_fabric.jpg" 
-                         alt="фото тканевых жалюзей" 
-                         data-source="/images/content/galery/big_size/white_fabric.jpg"
-                         class="galery_image show__popup-btn" data-popup="popup__galery"/>
-                        </div>
-                    <div class="galery__imagesItem"> 
-                        <img src="/images/content/galery/bheatha.jpg" 
-                        alt="фото горизонтальных жалюзей с лампой"
-                        data-source="/images/content/galery/big_size/bheatha.jpg"
-                        class="galery_image show__popup-btn" data-popup="popup__galery"/>
+                    <div class="galery__imagesItem">
+                        <img src="/images/content/galery/white_fabric.jpg" alt="фото тканевых жалюзей"
+                            data-source="/images/content/galery/big_size/white_fabric.jpg" class="galery_image show__popup-btn"
+                            data-popup="popup__galery" />
                     </div>
-                </div>
+                    <div class="galery__imagesItem">
+                        <img src="/images/content/galery/bheatha.jpg" alt="фото горизонтальных жалюзей с лампой"
+                            data-source="/images/content/galery/big_size/bheatha.jpg" class="galery_image show__popup-btn"
+                            data-popup="popup__galery" />
+                    </div>
                 </div>
             </section>
 
@@ -291,7 +289,7 @@
                             <label class="labelForm">
                         <input type="text" name="your-name" value="" size="40"
                 class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required wpcf7-not-valid 
-                assortiment__input"
+                assortiment__input" placeholder=" "
                 aria-required="true" aria-invalid="true" 
                 aria-describedby="wpcf7-f311-o4-ve-your-name">
                         <!-- <span class="wpcf7-not-valid-tip inputError" aria-hidden="true"> Поле обязательно для заполнения.</span> -->
@@ -302,7 +300,7 @@
                             <label class="labelForm">
             <input type="tel" name="phone" value="" size="40"
                 class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required phone wpcf7-not-valid 
-                assortiment__input"
+                assortiment__input" placeholder=" "
                 aria-required="true" aria-invalid="true" 
                 aria-describedby="wpcf7-f311-o4-ve-phone">
             <!-- <span class="wpcf7-not-valid-tip inputError" aria-hidden="true"> Поле обязательно для заполнения.</span> -->
@@ -495,24 +493,20 @@
                 </div>
                 </div>
             </section>
-            
-            <button type="button" class="button__free-measuring show__popup-btn" data-popup="toOrderMeasuring">
-                <svg class="icon-back">
-                    <use href="/images/icons/symbol-defs.svg#icon-measuring2"></use>
-                </svg>
-                <svg class="icon-measuring">
-                    <use href="/images/icons/symbol-defs.svg#icon-measuring" width="54px"  height= "54px"></use>
-                </svg>
-            </button>
-            <button type="button" class="button button__up hidden" id="scrollToTopBtn">
-                вверх
-                <svg>
-                    <use href="/images/icons/symbol-defs.svg#icon-arrow-up"></use>
-                </svg>
-            </button>
-        
     </main>
 
+    <button type="button" class="button__free-measuring show__popup-btn" data-popup="toOrderMeasuring">
+        <svg class="icon-back">
+            <use href="/images/icons/symbol-defs.svg#icon-measuring2"></use>
+        </svg>
+        <svg class="icon-measuring">
+            <use href="/images/icons/symbol-defs.svg#icon-measuring" width="54px" height="54px"></use>
+        </svg>
+    </button>
+    <button type="button" class="button button__up hidden" id="scrollToTopBtn">
+        <img src="/images/icons/arrow-up.svg" />
+        <p>вверх </p>
+    </button>
     
     <footer class="footer " >
         <div w3-include-html="footer.html"></div>
@@ -537,6 +531,7 @@
                         size="40" 
                         class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required wpcf7-not-valid 
                         popup__input" 
+                        placeholder=" "
                         aria-required="true" 
                         aria-invalid="true"
                         aria-describedby="wpcf7-f311-o4-ve-your-name">
@@ -551,6 +546,7 @@
                         size="40" 
                         class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required phone wpcf7-not-valid 
                         popup__input" 
+                        placeholder=" "
                         aria-required="true" 
                         aria-invalid="true"
                         aria-describedby="wpcf7-f311-o4-ve-phone">
@@ -583,7 +579,7 @@
                     <span class="wpcf7-form-control-wrap your-name">
                         <label class="label__popup">
                             <input type="text" name="your-name" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required wpcf7-not-valid 
-                                    popup__input" aria-required="true" aria-invalid="true"
+                                    popup__input" placeholder=" " aria-required="true" aria-invalid="true"
                                 aria-describedby="wpcf7-f311-o4-ve-your-name">
                             <span class="nameInput">Ваше имя *</span>
                         </label>
@@ -591,7 +587,7 @@
                     <span class="wpcf7-form-control-wrap phone">
                         <label class="label__popup">
                             <input type="tel" name="phone" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required phone wpcf7-not-valid 
-                                    popup__input" aria-required="true" aria-invalid="true"
+                                    popup__input" placeholder=" " aria-required="true" aria-invalid="true"
                                 aria-describedby="wpcf7-f311-o4-ve-phone">
                             <span class="nameInput">Ваш телефон *</span>
                         </label>
@@ -619,22 +615,36 @@
                     data-status="invalid">
                     <span class="wpcf7-form-control-wrap your-name">
                         <label class="label__popup">
-                            <input type="text" name="your-name" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required wpcf7-not-valid 
-                                                popup__input" aria-required="true" aria-invalid="true"
-                                aria-describedby="wpcf7-f311-o4-ve-your-name">
+                            <input type="text" 
+                            name="your-name" 
+                            value="" 
+                            size="40" 
+                            class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required wpcf7-not-valid popup__input" 
+                            placeholder=" " 
+                            aria-required="true" aria-invalid="true"
+                            aria-describedby="wpcf7-f311-o4-ve-your-name">
                             <span class="nameInput">Ваше имя *</span>
                         </label>
                     </span>
                     <span class="wpcf7-form-control-wrap phone">
                         <label class="label__popup">
-                            <input type="tel" name="phone" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required phone wpcf7-not-valid popup__input" aria-required="true" aria-invalid="true"
-                                aria-describedby="wpcf7-f311-o4-ve-phone">
+                            <input type="tel" 
+                            name="phone" 
+                            value="" 
+                            size="40" 
+                            class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required phone wpcf7-not-valid popup__input" aria-required="true" aria-invalid="true"
+                            placeholder=" " 
+                            aria-describedby="wpcf7-f311-o4-ve-phone">
                             <span class="nameInput">Ваш email *</span>
                         </label>
                     </span>
                     <span class="wpcf7-form-control-wrap message">
                         <label class="label__popup">
-                            <textarea name="message" rows="6" class="popup__textarea wpcf7-form-control wpcf7-text wpcf7-validates-as-required wpcf7-not-valid" value=""></textarea>
+                            <textarea name="message" 
+                            rows="6" 
+                            class="popup__textarea wpcf7-form-control wpcf7-text wpcf7-validates-as-required wpcf7-not-valid"
+                            placeholder=" "
+                            value=""></textarea>
                             <span class="nameInput">Ваш отзыв *</span>
                         </label>
                     </span>
@@ -659,25 +669,38 @@
                 data-status="invalid">
                 <span class="wpcf7-form-control-wrap your-name">
                     <label class="label__popup">
-                        <input type="text" name="your-name" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required wpcf7-not-valid 
-                                                popup__input" aria-required="true" aria-invalid="true"
-                            aria-describedby="wpcf7-f311-o4-ve-your-name">
+                        <input type="text" 
+                        name="your-name" 
+                        value="" size="40" 
+                        class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required wpcf7-not-valid popup__input" 
+                        placeholder=" " 
+                        aria-required="true" 
+                        aria-invalid="true"
+                        aria-describedby="wpcf7-f311-o4-ve-your-name">
                         <span class="nameInput">Ваше имя *</span>
                     </label>
                 </span>
                 <span class="wpcf7-form-control-wrap phone">
                     <label class="label__popup">
-                        <input type="tel" name="phone" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required phone wpcf7-not-valid 
-                                        popup__input" aria-required="true" aria-invalid="true"
-                            aria-describedby="wpcf7-f311-o4-ve-phone">
+                        <input type="tel" 
+                        name="phone" 
+                        value="" 
+                        size="40" 
+                        class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required phone wpcf7-not-valid popup__input" 
+                        placeholder=" "
+                        aria-required="true" 
+                        aria-invalid="true"
+                        aria-describedby="wpcf7-f311-o4-ve-phone">
                         <span class="nameInput">Ваш телефон *</span>
                     </label>
                 </span>
                 <span class="wpcf7-form-control-wrap message">
                     <label class="label__popup">
-                        <textarea name="message" rows="6"
-                            class="popup__textarea wpcf7-form-control wpcf7-text wpcf7-validates-as-required wpcf7-not-valid"
-                            value=""></textarea>
+                        <textarea name="message" 
+                        rows="6"
+                        placeholder=" "
+                        class="popup__textarea wpcf7-form-control wpcf7-text wpcf7-validates-as-required wpcf7-not-valid"
+                        value=""></textarea>
                         <span class="nameInput">Ваш текст *</span>
                     </label>
                 </span>
@@ -719,13 +742,27 @@
                     <div class="popup__clone">
                         <span class="wpcf7-form-control-wrap size">
                             <label htmlFor="width" class="label__popup">
-                                <input id="width" type="text" name="width" value="" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required wpcf7-not-valid popup__input" aria-required="true" aria-invalid="true"/>
+                                <input id="width" 
+                                type="text" 
+                                name="width" 
+                                value="" 
+                                class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required wpcf7-not-valid popup__input" 
+                                placeholder=" "
+                                aria-required="true" 
+                                aria-invalid="true"/>
                                 <span class="nameInput">Ширина *</span>
                             </label>
                         </span>
                         <span class="wpcf7-form-control-wrap size">
                             <label htmlFor="height" class="label__popup">
-                                <input id="height" type="text" name="height" value="" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required wpcf7-not-valid popup__input" aria-required="true" aria-invalid="true"/>
+                                <input id="height" 
+                                type="text" 
+                                name="height" 
+                                value="" 
+                                class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required wpcf7-not-valid popup__input" 
+                                placeholder=" "
+                                aria-required="true" 
+                                aria-invalid="true"/>
                                 <span class="nameInput">Длина *</span>
                             </label>
                         </span>
@@ -737,17 +774,29 @@
 
                 <span class="wpcf7-form-control-wrap your-name">
                     <label class="label__popup">
-                        <input type="text" name="your-name" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required wpcf7-not-valid 
-                        popup__input" aria-required="true" aria-invalid="true"
+                        <input type="text" 
+                        name="your-name" 
+                        value="" 
+                        size="40" 
+                        class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required wpcf7-not-valid popup__input" 
+                        placeholder=" "
+                        aria-required="true" 
+                        aria-invalid="true"
                         aria-describedby="wpcf7-f311-o4-ve-your-name">
                         <span class="nameInput">Ваше имя *</span>
                     </label>
                 </span>
                 <span class="wpcf7-form-control-wrap phone">
                     <label class="label__popup">
-                        <input type="tel" name="phone" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required phone wpcf7-not-valid 
-                            popup__input" aria-required="true" aria-invalid="true"
-                            aria-describedby="wpcf7-f311-o4-ve-phone">
+                        <input type="tel" 
+                        name="phone" 
+                        value="" 
+                        size="40" 
+                        class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required phone wpcf7-not-valid popup__input" 
+                        placeholder=" "
+                        aria-required="true" 
+                        aria-invalid="true"
+                        aria-describedby="wpcf7-f311-o4-ve-phone">
                         <span class="nameInput">Ваш телефон *</span>
                     </label>
                 </span>

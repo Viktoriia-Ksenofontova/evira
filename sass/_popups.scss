@@ -84,6 +84,10 @@
     line-height: 1.6;
     outline: none;
     cursor: pointer;
+    &:not(:placeholder-shown) + .nameInput {
+      transform: translateY(-100%);
+      font-size: 9px;
+    }
   }
   .popup__input {
     height: 34px;
@@ -244,8 +248,7 @@
     }
   }
 
-  &:hover,
-  &:focus {
+  &:hover {
     .popup__galery__icon {
       fill: #111;
     }

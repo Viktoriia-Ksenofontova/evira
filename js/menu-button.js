@@ -1,7 +1,8 @@
 $(document).ready(function () {
   // menu-button logic
   function toggleClassIsOpen() {
-    if ($(window).width() < '1320') {
+    // if ($(window).width() < '1320') {
+    if (document.documentElement.clientWidth < '1290') {
       $(".menu__button").toggleClass("is-open");
       $('.menu__container').toggleClass("is-open");
       $('.header').toggleClass("is-open");
@@ -9,7 +10,20 @@ $(document).ready(function () {
     }
   }
   
-    $('.menu__button').click(toggleClassIsOpen);
+  $('.menu__button').click(function () {
+    toggleClassIsOpen();
+   
+    // let animatedIn = $('#menu_container').data('animatedin');
+    // let animatedOut = $('#menu_container').data('animatedout');
+
+    // if ($('#menu_container').hasClass("is-open")) {
+    //   $('#menu_container').removeClass(animatedIn);
+    //   $('#menu_container').addClass(animatedOut);
+    // } else {
+    //   $('#menu_container').addClass(animatedIn);
+    //   $('#menu_container').removeClass(animatedOut);
+    // }
+  });
 
     $('.navbar__link').click(toggleClassIsOpen);
   

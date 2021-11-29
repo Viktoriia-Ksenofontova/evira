@@ -3,7 +3,7 @@ $(document).ready(function () {
     $('.category__list').slick({
         dots: true,
         // infinite: true,
-        autoplay:true,
+        // autoplay:true,
         arrows: false,
         slidesToShow: 3,
         slidesToScroll: 1,

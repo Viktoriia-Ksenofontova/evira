@@ -16,7 +16,7 @@
     padding-left: 15px;
     padding-right: 15px;
   }
-  @media screen and (min-width: 1320px) {
+  @media screen and (min-width: 1290px) {
     justify-content: center;
   }
 }
@@ -64,6 +64,15 @@
 }
 
 .labelForm:focus-within > .nameInput {
+  transform: translateY(-100%);
+  font-size: 9px;
+}
+.measuring__input:not(:placeholder-shown) + .nameInput {
+  transform: translateY(-100%);
+  font-size: 9px;
+}
+
+.assortiment__input:not(:placeholder-shown) + .nameInput {
   transform: translateY(-100%);
   font-size: 9px;
 }
