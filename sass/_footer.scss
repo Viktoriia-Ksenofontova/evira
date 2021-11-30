@@ -35,5 +35,10 @@
     background-color: transparent;
     font-size: 16px;
     border-bottom: 1px dashed #ffffff;
+    &:hover,
+    &:focus {
+      border-bottom-color: transparent;
+      color: #ef7f1a;
+    }
   }
 }

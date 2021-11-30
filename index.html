@@ -52,6 +52,7 @@
    
     <main class="main" >
         <section class="hero"> 
+            <div class="hero__background__graphics"></div>
             <div class="inner">
                 <div class="hero__background"> 
                     <button type="button" class="button__down" id="scrollToBottomBtn">
@@ -70,7 +71,6 @@
                     <p>Мы приезжаем, делаем замеры. А вы в это время занимаетесь выбором материала и цвета</p>
                     </div>
                 </div>
-                
             </div>
         </section>
 
@@ -163,7 +163,7 @@
                         <span class="wpcf7-form-control-wrap phone">
                             <label class="labelForm">
                             <input type="tel" name="phone" value="" size="40"
-                                class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required phone wpcf7-not-valid 
+                                class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required wpcf7-validates-as-tel phone wpcf7-not-valid 
                                 measuring__input" placeholder=" "
                                 aria-required="true" aria-invalid="true" 
                                 aria-describedby="wpcf7-f311-o4-ve-phone">
@@ -299,7 +299,7 @@
                         <span class="wpcf7-form-control-wrap phone">
                             <label class="labelForm">
             <input type="tel" name="phone" value="" size="40"
-                class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required phone wpcf7-not-valid 
+                class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required wpcf7-validates-as-tel phone wpcf7-not-valid 
                 assortiment__input" placeholder=" "
                 aria-required="true" aria-invalid="true" 
                 aria-describedby="wpcf7-f311-o4-ve-phone">
@@ -461,7 +461,9 @@
                         <ul class="adress__list">
                             <li class="adress__item">
                                 <button class="adress__link show__popup-btn"  data-popup="popup__map" type="button">
-                                    <img class="about__icons" src="/images/icons/icon_adress.svg" alt="геолокация" />
+                                    <svg class="about__icons">
+                                        <use href="/images/icons/symbol-defs.svg#icon-adress"></use>
+                                    </svg>
                                     <div class="address_linkToMap"><p> Херсон, ул.Нефтяников, 2</p>
                                     <span>Показать на карте</span>
                                     </div>
@@ -469,13 +471,17 @@
                             </li>
                             <li class="adress__item">
                                 <a class="adress__link" href="tel:+380507294437">
-                                    <img class="about__icons" src="/images/icons/icon_phones.svg" alt="телефонная трубка" />
+                                    <svg class="about__icons">
+                                        <use href="/images/icons/symbol-defs.svg#icon-phones"></use>
+                                    </svg>
                                     (050) 729-44-37</a>
                             </li>
                             <li class="adress__item">
                                 <a class="adress__link" href="mailto:TDEvira@ukr.net">
-                                    <img class="about__icons" src="/images/icons/icon_mail.svg" alt="конверт" />
-                                    TDEvira@ukr.net</a>
+                                    <svg class="about__icons">
+                                        <use href="/images/icons/symbol-defs.svg#icon-mail"></use>
+                                    </svg>
+                                TDEvira@ukr.net</a>
                             </li>
                         </ul>
                     </address>
@@ -516,7 +522,7 @@
         <p>вверх </p>
     </button>
     
-    <footer class="footer " >
+    <footer class="footer" >
         <div w3-include-html="footer.html"></div>
     </footer>
 
@@ -552,7 +558,7 @@
                         name="phone" 
                         value="" 
                         size="40" 
-                        class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required phone wpcf7-not-valid 
+                        class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required wpcf7-validates-as-tel phone wpcf7-not-valid 
                         popup__input" 
                         placeholder=" "
                         aria-required="true" 
@@ -594,7 +600,7 @@
                     </span>
                     <span class="wpcf7-form-control-wrap phone">
                         <label class="label__popup">
-                            <input type="tel" name="phone" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required phone wpcf7-not-valid 
+                            <input type="tel" name="phone" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required wpcf7-validates-as-tel phone wpcf7-not-valid 
                                     popup__input" placeholder=" " aria-required="true" aria-invalid="true"
                                 aria-describedby="wpcf7-f311-o4-ve-phone">
                             <span class="nameInput">Ваш телефон *</span>
@@ -668,8 +674,8 @@
         <div class="popup__content animate__animated" data-animatedin="animate__fadeInDown"
             data-animatedout="animate__fadeOutDown">
             <button class="popup__close close-popup">
-                <svg>
-                    <use href="/images/icons/symbol-defs.svg#icon-close" class="popup__close"></use>
+                <svg width="18" height="18">
+                    <use href="/images/icons/symbol-defs.svg#icon-close"></use>
                 </svg>
             </button>
             <h1 class="popup__title">Напишите нам</h1>
@@ -694,7 +700,7 @@
                         name="phone" 
                         value="" 
                         size="40" 
-                        class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required phone wpcf7-not-valid popup__input" 
+                        class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required wpcf7-validates-as-tel phone wpcf7-not-valid popup__input" 
                         placeholder=" "
                         aria-required="true" 
                         aria-invalid="true"
@@ -732,8 +738,6 @@
             <h1 class="popup__title">Рассчитать <br>стоимость</h1>
             <form action="" method="post" class="wpcf7-form invalid" autoComplete="off" novalidate="novalidate"
                 data-status="invalid">
-                <div class="options-wrapper">
-                    <div class="options-wrapper-2">
                         <select  value="" name="sistems" class="popup__select">
                             <option value="default" > Выберите систему* </option>
                             <option class="popup__option" value="Горизонтальные алюминиевые">Горизонтальные алюминиевые</option>
@@ -742,15 +746,13 @@
                             <option class="popup__option" value="Тканевые роллеты">Тканевые роллеты</option>
                             <option class="popup__option" value="Тканевые вертикальные">Тканевые вертикальные</option>
                         </select>
-                        <div class="select-arrow-down"></div>
-                    </div>
-                </div>
                 <div class="popup__size">
                     <p class="popup__size__text">Введите размеры окна:</p>
-                    <div class="popup__clone">
+                    
+                    <div class="popup__clone cloneJS">
                         <span class="wpcf7-form-control-wrap size">
                             <label htmlFor="width" class="label__popup">
-                                <input id="width" 
+                                <input  
                                 type="text" 
                                 name="width" 
                                 value="" 
@@ -763,7 +765,7 @@
                         </span>
                         <span class="wpcf7-form-control-wrap size">
                             <label htmlFor="height" class="label__popup">
-                                <input id="height" 
+                                <input 
                                 type="text" 
                                 name="height" 
                                 value="" 
@@ -775,8 +777,9 @@
                             </label>
                         </span>
                     </div>
+                
                 </div>
-                <button type="button" class="popup__addWindow" id="popup__addWindow"> 
+                <button type="button" class="popup__addWindow__button" id="popup__addWindow"> 
                     Добавить окно 
                 </button>
 
@@ -800,7 +803,7 @@
                         name="phone" 
                         value="" 
                         size="40" 
-                        class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required phone wpcf7-not-valid popup__input" 
+                        class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required wpcf7-validates-as-tel phone wpcf7-not-valid popup__input" 
                         placeholder=" "
                         aria-required="true" 
                         aria-invalid="true"
@@ -832,7 +835,7 @@
 <div class="popup" id="popup__galery">
     <div class="popup__inner">
         
-        <button class="popup__galery__button left" id="popup__galery__button__left">
+        <!-- <button class="popup__galery__button left" id="popup__galery__button__left">
             <svg class="popup__galery__icon left">
                 <use href="/images/icons/symbol-defs.svg#icon-arrow"></use>
             </svg>
@@ -840,12 +843,48 @@
         
         <img class="popup__galery__image" alt="" src=""/>
        
-        <button class="popup__galery__button right" id="popup__galery__button__right">
+       <button class="popup__galery__button right" id="popup__galery__button__right">
             <svg class="popup__galery__icon right">
                 <use href="/images/icons/symbol-defs.svg#icon-arrow"></use>
             </svg>
-        </button>
+        </button> -->
         
+
+<div class="galery__popup__imagesList">
+    <div class="galery__popup__imagesItem">
+        <img src="/images/content/galery/big_size/richard.jpg" alt="фото горионтальных жалюзей"
+            class="popup__galery__image"/>
+    </div>
+    <div class="galery__popup__imagesItem">
+        <img src="/images/content/galery/big_size/vertical.jpg" alt="фото вертикальных жалюзей"
+            class="popup__galery__image"/>
+    </div>
+    <div class="galery__popup__imagesItem">
+        <img src="/images/content/galery/big_size/horizontal.jpg" alt="фото горизонтальных жалюзей"
+            class="popup__galery__image"/>
+    </div>
+    <div class="galery__popup__imagesItem">
+        <img src="/images/content/galery/big_size/white_fabric.jpg" alt="фото тканевых жалюзей"
+            class="popup__galery__image"/>
+    </div>
+    <div class="galery__popup__imagesItem">
+        <img src="/images/content/galery/big_size/bheatha.jpg" alt="фото горизонтальных жалюзей с лампой"
+           class="popup__galery__image"/>
+    </div>
+
+    <button class="popup__galery__button left" id="popup__galery__button__left">
+        <svg class="popup__galery__icon left">
+            <use href="/images/icons/symbol-defs.svg#icon-arrow"></use>
+        </svg>
+    </button>
+<button class="popup__galery__button right" id="popup__galery__button__right">
+    <svg class="popup__galery__icon right">
+        <use href="/images/icons/symbol-defs.svg#icon-arrow"></use>
+    </svg>
+</button>
+</div>
+
+
     </div>
 </div>
 

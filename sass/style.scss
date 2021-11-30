@@ -50,10 +50,16 @@ main {
     padding-bottom: 133px;
   }
 }
+a,
+svg {
+  transition: all 0.3s ease-out;
+}
 
 // Hero
 .hero {
   background-color: #3b3b3b;
+  position: relative;
+
   @media (max-width: 767px) {
     border-radius: 0 0 252px 252px;
     padding: 0 0 20px 0;
@@ -75,9 +81,22 @@ main {
   }
 
   @media screen and (min-width: 1290px) {
-    background-repeat: no-repeat;
+    height: 740px;
+    //   background-repeat: no-repeat;
+    //   background-image: url(/images/backgrounds/hero-desk-back.png);
+    //   background-position: bottom left;
+  }
+}
+.hero__background__graphics {
+  position: absolute;
+  background-repeat: no-repeat;
+
+  @media screen and (min-width: 1290px) {
     background-image: url(/images/backgrounds/hero-desk-back.png);
-    background-position: bottom left;
+    background-position: bottom right;
+    width: 40%;
+    height: 100%;
+    // right: 60%;
   }
 }
 
@@ -111,6 +130,7 @@ main {
   }
 
   @media screen and (min-width: 1290px) {
+    height: 715px;
     top: 0;
     width: 48%;
     background-size: cover;
@@ -125,9 +145,10 @@ main {
 
 .hero__main {
   margin: 0;
-  position: relative;
+  // position: relative;
   @media screen and (max-width: 767px) {
     padding: 125px 15px 0 15px;
+    position: relative;
   }
   @media screen and (min-width: 768px) and (max-width: 1289px) {
     width: 46%;
@@ -137,7 +158,6 @@ main {
   @media screen and (min-width: 1290px) {
     width: 50%;
     padding-top: 95px;
-    height: 740px;
   }
 }
 
@@ -376,7 +396,7 @@ main {
   font-weight: 500;
   color: #111;
   span {
-    font-weight: 600;
+    font-weight: 700;
     color: #ef7f1a;
   }
   @media screen and (max-width: 991px) {
@@ -630,7 +650,7 @@ main {
       padding-top: 143px;
       padding-bottom: 161px;
     }
-    // background-size: cover;
+
     background-position: top center;
     background-image: url(/images/backgrounds/calculate-pattern_desk.png);
   }
@@ -674,7 +694,7 @@ main {
     font-size: 25px;
     padding-left: 120px;
     padding-right: 120px;
-    margin-bottom: 40px;
+    margin-bottom: 46px;
   }
 }
 .calculate__button {
@@ -1189,7 +1209,7 @@ main {
     border-radius: 0px 421px 0px 0px;
   }
   @media screen and (min-width: 1290px) {
-    width: calc(100% - 350px);
+    width: 70%;
   }
 }
 .reviews__title {
@@ -1307,8 +1327,10 @@ main {
   position: relative;
   .inner {
     @media screen and (max-width: 767px) {
-      padding-top: 52px;
+      // padding-top: 52px;
       padding-bottom: 60px;
+      padding-left: 0;
+      padding-right: 0;
     }
     @media screen and (min-width: 768px) {
       display: flex;
@@ -1321,17 +1343,11 @@ main {
 }
 
 .about__background {
-  position: absolute;
-  // z-index: -1;
-  background-color: #fff;
-  left: 0;
-  top: 0;
-  @media screen and (max-width: 767px) {
-    border-radius: 0px 0 115px 0px;
-    width: 100%;
-    height: 560px;
-  }
   @media screen and (min-width: 768px) {
+    position: absolute;
+    background-color: #fff;
+    left: 0;
+    top: 0;
     border-radius: 0px 0 216px 0px;
     width: 58%;
     height: 848px;
@@ -1347,8 +1363,14 @@ main {
   z-index: 1;
 
   @media screen and (max-width: 767px) {
-    width: 100%;
+    padding-top: 52px;
+    padding-right: 15px;
+    padding-left: 15px;
     padding-bottom: 56px;
+    background-color: #fff;
+    border-radius: 0px 0 115px 0px;
+    width: 100%;
+
     p {
       font-size: 12px;
       line-height: 1.42;
@@ -1392,6 +1414,8 @@ main {
 .about__adress {
   @media screen and (max-width: 767px) {
     padding-top: 52px;
+    padding-right: 15px;
+    padding-left: 15px;
     width: 100%;
   }
   @media screen and (min-width: 768px) {
@@ -1462,15 +1486,28 @@ main {
 }
 .adress__link:hover,
 .adress__link:focus {
+  color: #ef7f1a;
+
+  svg {
+    fill: #ef7f1a;
+  }
+
   span {
     color: #ef7f1a;
     border-bottom-color: transparent;
   }
 }
 
+.adress__link {
+  &:nth-child(1) {
+    align-items: flex-start;
+  }
+}
+
 .address_linkToMap {
   text-align: left;
 }
+
 .adress__item,
 .social__item {
   @media screen and (max-width: 767px) {
@@ -1483,13 +1520,17 @@ main {
 
 .about__icons {
   @media screen and (max-width: 767px) {
-    width: 42px;
-    height: 42px;
+    min-width: 42px;
+    min-height: 42px;
+    max-width: 42px;
+    max-height: 42px;
     margin-right: 16px;
   }
   @media screen and (min-width: 768px) {
-    width: 52px;
-    height: 52px;
+    min-width: 52px;
+    min-height: 52px;
+    max-width: 52px;
+    max-height: 52px;
     margin-right: 18px;
   }
   @media screen and (min-width: 1290px) {

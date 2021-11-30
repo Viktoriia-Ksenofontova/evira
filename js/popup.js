@@ -9,9 +9,9 @@ function popupInitialize() {
 
 
 	// popup button addNewWindow
-  $(".popup").find('#popup__addWindow').click(function () {
-	  $(".popup__clone").clone().appendTo(".popup__size"); 
-  })
+	$(".popup").find('#popup__addWindow').click(function () {
+		$(".cloneJS").clone().removeClass("cloneJS").addClass("cloneJS" + "New").appendTo(".popup__size");
+  	})
 	// 
 
 
