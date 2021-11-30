@@ -1,7 +1,8 @@
 $(document).ready(function () {
 
     $('.category__list').slick({
-        dots: true,
+      dots: true,
+       centerMode: true,
         infinite: true,
         autoplay: true,
         pauseOnFocus: true,
@@ -12,7 +13,13 @@ $(document).ready(function () {
         variableWidth: true,
        customPaging: function(slider, i) {
          return '<span class="dot"></span>';
-    },
+      },
+       responsive: [{
+      breakpoint: 1289,
+      settings: {
+         centerMode: false,
+      }
+    }]
     });
 
     $('.galery__imagesList').slick({
@@ -37,7 +44,8 @@ $(document).ready(function () {
     }]
     });
 
-    $('.reviews__list').slick({
+  $('.reviews__list').slick({
+       centerMode: false,
         infinite: true,
         autoplay:true,
         arrows: false,
@@ -45,23 +53,23 @@ $(document).ready(function () {
         slidesToScroll: 1,
         variableWidth: true,
         pauseOnFocus: true,
-        pauseOnHover:true,
+      pauseOnHover: true,
+        
     })
 
-    // if ($("#popup__galery").hasClass('opened')) {
-     $(".galery__popup__imagesList").slick({
+   
+  $(".galery__popup__imagesList").slick({
+        centerMode: true,
          autoplay: true,
          swipeToSlide: true,
-        slidesToShow: 3,
-        // adaptiveHeight: true,
+        slidesToShow: 1,
+        adaptiveHeight: true,
         infinite: true,
         slidesToScroll: 1,
         variableWidth: true,
-        arrows: true,
-        nextArrow: $(".popup__galery__button.right"),
-        prevArrow: $(".popup__galery__button.left") ,
-        lazyLoad: 'ondemand'
-     });
+        arrows: false,
+    // lazyLoad: 'ondemand'
+  });
         
         $('.popup__galery__button.left').click(function() {
        $(this).parent().find('.slick-slider').slick('slickPrev');
@@ -71,8 +79,5 @@ $(document).ready(function () {
       e.preventDefault();
       $(this).parent().find('.slick-slider').slick('slickNext');
         });
-    
-   
-    // }
 
 });

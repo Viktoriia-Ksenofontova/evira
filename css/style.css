@@ -1434,61 +1434,47 @@ button {
 }
 
 #popup__galery .popup__inner {
-  width: 100%;
+  max-width: 1290px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  padding: 0;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-@media screen and (min-width: 768px) {
-  #popup__galery .popup__inner {
-    padding: 15px;
-  }
-}
-
-#popup__galery .galery__popup__imagesList {
+#popup__galery .galery__popup__imagesItem {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 1044px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  width: calc(100% - 246px);
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin-right: 36px;
+  margin-left: 36px;
 }
 
 #popup__galery .popup__galery__image {
-  -webkit-box-shadow: 5px 5px 57px rgba(0, 0, 0, 0.72);
-          box-shadow: 5px 5px 57px rgba(0, 0, 0, 0.72);
-}
-
-@media screen and (max-width: 767px) {
-  #popup__galery .popup__galery__image {
-    width: 100%;
-    position: relative;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  #popup__galery .popup__galery__image {
-    width: 600px;
-    height: auto;
-  }
+  max-height: 600px;
 }
 
 .popup__galery__button {
+  position: absolute;
+  z-index: 100;
   background: #ffffff;
   padding: 0;
   -webkit-box-shadow: 5px 5px 17px rgba(0, 0, 0, 0.19);
           box-shadow: 5px 5px 17px rgba(0, 0, 0, 0.19);
   border-radius: 198px;
   height: 47px;
+}
+
+.popup__galery__button.right {
+  right: 20px;
+}
+
+.popup__galery__button.left {
+  left: 20px;
 }
 
 .popup__galery__button .popup__galery__icon {
@@ -1502,23 +1488,6 @@ button {
 
 .popup__galery__button:hover .popup__galery__icon {
   fill: #111;
-}
-
-@media screen and (max-width: 767px) {
-  .popup__galery__button {
-    position: absolute;
-    z-index: 100;
-    width: 36px;
-  }
-  .popup__galery__button .popup__galery__icon {
-    width: 15px;
-  }
-  .popup__galery__button.right {
-    right: 20px;
-  }
-  .popup__galery__button.left {
-    left: 20px;
-  }
 }
 
 @media screen and (min-width: 768px) {

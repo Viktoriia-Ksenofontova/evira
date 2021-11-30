@@ -228,46 +228,37 @@
 
 #popup__galery {
   .popup__inner {
-    width: 100%;
+    max-width: 1290px;
     display: flex;
-    justify-content: center;
-    padding: 0;
-    @media screen and (min-width: 768px) {
-      padding: 15px;
-    }
+    margin-left: auto;
+    margin-right: auto;
   }
-  .galery__popup__imagesList {
+  .galery__popup__imagesItem {
     display: flex;
-    width: 1044px;
-    align-items: center;
+    width: calc(100% - 246px);
     justify-content: center;
+    margin-right: 36px;
+    margin-left: 36px;
   }
   .popup__galery__image {
-    // max-height: 500px;
-    box-shadow: 5px 5px 57px rgba(0, 0, 0, 0.72);
-    @media screen and (max-width: 767px) {
-      width: 100%;
-      position: relative;
-    }
-    @media screen and (min-width: 768px) {
-      // max-width: calc(100% - 246px);
-      // margin-right: 36px;
-      // margin-left: 36px;
-      width: 600px;
-      height: auto;
-      // margin-right: calc((100% - 500px) / 2);
-      // margin-left: calc((100% - 500px) / 2);
-    }
+    max-height: 600px;
   }
 }
 
 .popup__galery__button {
+  position: absolute;
+  z-index: 100;
   background: #ffffff;
   padding: 0;
   box-shadow: 5px 5px 17px rgba(0, 0, 0, 0.19);
   border-radius: 198px;
   height: 47px;
-
+  &.right {
+    right: 20px;
+  }
+  &.left {
+    left: 20px;
+  }
   .popup__galery__icon {
     fill: #ef7f1a;
     &.right {
@@ -280,23 +271,24 @@
       fill: #111;
     }
   }
-  @media screen and (max-width: 767px) {
-    position: absolute;
-    z-index: 100;
-    width: 36px;
-    .popup__galery__icon {
-      width: 15px;
-    }
-    &.right {
-      right: 20px;
-    }
-    &.left {
-      left: 20px;
-    }
-  }
+  // @media screen and (max-width: 767px) {
+  //   position: absolute;
+  //   z-index: 100;
+  //   width: 36px;
+  //   .popup__galery__icon {
+  //     width: 15px;
+  //   }
+  //   &.right {
+  //     right: 20px;
+  //   }
+  //   &.left {
+  //     left: 20px;
+  //   }
+  // }
 
   @media screen and (min-width: 768px) {
     width: 72px;
+
     .popup__galery__icon {
       width: 30px;
     }
