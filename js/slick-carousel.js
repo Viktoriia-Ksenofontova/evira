@@ -45,39 +45,25 @@ $(document).ready(function () {
     });
 
   $('.reviews__list').slick({
-       centerMode: false,
-        infinite: true,
-        autoplay:true,
-        arrows: false,
-        slidesToShow: 2,
-        slidesToScroll: 1,
-        variableWidth: true,
-        pauseOnFocus: true,
-      pauseOnHover: true,
-        
-    })
+    focusOnSelect: false,
+    // centerMode: true,
+    // centerPadding: "120px",
+    infinite: true,
+    autoplay: true,
+    arrows: false,
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    variableWidth: true,
+    pauseOnFocus: true,
+    pauseOnHover: true,
+    // responsive: [
+    //    {
+    //      breakpoint: 1290,
+    //      settings: {
+    //       centerMode: false,
+    //     }
+    //  }
+    // ]
 
-   
-  $(".galery__popup__imagesList").slick({
-        centerMode: true,
-         autoplay: true,
-         swipeToSlide: true,
-        slidesToShow: 1,
-        adaptiveHeight: true,
-        infinite: true,
-        slidesToScroll: 1,
-        variableWidth: true,
-        arrows: false,
-    // lazyLoad: 'ondemand'
   });
-        
-        $('.popup__galery__button.left').click(function() {
-       $(this).parent().find('.slick-slider').slick('slickPrev');
-        });
-
-        $('.popup__galery__button.right').click(function(e) {
-      e.preventDefault();
-      $(this).parent().find('.slick-slider').slick('slickNext');
-        });
-
 });

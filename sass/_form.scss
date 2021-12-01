@@ -23,20 +23,25 @@
 }
 
 .labelForm {
+  display: block;
   width: 286px;
   position: relative;
   @media screen and (max-width: 767px) {
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom: 30px;
   }
   @media screen and (min-width: 768px) {
     margin-right: 30px;
   }
+  &:focus-within > .nameInput {
+    transform: translateY(-100%);
+    font-size: 9px;
+  }
 }
 
 .your-name,
-.phone,
-.labelForm,
-.inputError {
+.phone {
   display: block;
   @media screen and (max-width: 767px) {
     margin-left: auto;
@@ -53,6 +58,11 @@
   color: #ef7f1a;
   font-size: 9px;
   line-height: 1.6;
+  display: block;
+  @media screen and (max-width: 767px) {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .nameInput {
@@ -64,20 +74,6 @@
   font-size: 16px;
 }
 
-.labelForm:focus-within > .nameInput {
-  transform: translateY(-100%);
-  font-size: 9px;
-}
-.measuring__input:not(:placeholder-shown) + .nameInput {
-  transform: translateY(-100%);
-  font-size: 9px;
-}
-
-.assortiment__input:not(:placeholder-shown) + .nameInput {
-  transform: translateY(-100%);
-  font-size: 9px;
-}
-// Measuring and assortiment sections form
 .measuring__input,
 .assortiment__input {
   height: 34px;
@@ -92,6 +88,10 @@
   color: #fff;
   outline: none;
   cursor: pointer;
+  &:not(:placeholder-shown) + .nameInput {
+    transform: translateY(-100%);
+    font-size: 9px;
+  }
 }
 
 .measuring__button,
@@ -107,5 +107,8 @@
     margin-left: auto;
     margin-right: auto;
     margin-top: 20px;
+  }
+  @media screen and (min-width: 1290px) {
+    margin-bottom: -10px;
   }
 }

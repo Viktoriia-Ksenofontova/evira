@@ -8,16 +8,22 @@ function popupInitialize() {
 	});
 
 
-	// popup button addNewWindow
+	// popup button add new inputs for the sizes of Window
 	$(".popup").find('#popup__addWindow').click(function () {
 		$(".cloneJS").clone().removeClass("cloneJS").addClass("cloneJS" + "New").appendTo(".popup__size");
-  	})
+	});
+
 	// 
 
 
 	$('.popup').find('.close-popup').click(function () {
 		var idPopup = $(this).closest('.popup').attr('id');
 		hidePopup(idPopup);
+		
+		//  on close popup delete new inputs for the sizes
+		if (idPopup === "calculatePrice") {
+			$(this).closest('.popup').find(".cloneJSNew").remove();
+		}
 	});
 
 	$(document).mouseup(function (e) {

@@ -4,6 +4,12 @@ button {
   justify-content: center;
   outline: none;
   transition: all 0.3s ease-out;
+  &:hover,
+  &:focus,
+  &:focus-visible,
+  &:-moz-focusring {
+    outline: none !important;
+  }
 }
 
 .button {
@@ -16,22 +22,22 @@ button {
   outline: none;
   &:hover,
   &:focus {
-    outline: none;
     background-color: #df7e26;
   }
 }
 .button__down {
   display: none;
   @media screen and (min-width: 768px) {
+    position: absolute;
+    bottom: 25px;
+    transform: translateX(-50%);
+    left: 50%;
+    height: 162px;
+    width: 20px;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    height: 162px;
-    width: 20px;
     font-size: 16px;
     color: #ffffff;
 
@@ -45,8 +51,7 @@ button {
     }
   }
   @media screen and (min-width: 1290px) {
-    bottom: 35px;
-    transform: translateX(-150%);
+    bottom: 60px;
   }
 }
 

@@ -145,7 +145,7 @@ svg {
 
 .hero__main {
   margin: 0;
-  // position: relative;
+  position: relative;
   @media screen and (max-width: 767px) {
     padding: 125px 15px 0 15px;
     position: relative;
@@ -285,7 +285,6 @@ svg {
 
 // Category
 .category {
-  padding-left: 15px;
   .inner {
     padding-bottom: 0;
   }
@@ -387,7 +386,7 @@ svg {
     h3 {
       font-size: 25px;
       line-height: 1.2;
-      margin-bottom: 5px;
+      margin-bottom: 10px;
     }
   }
 }
@@ -540,7 +539,6 @@ svg {
 
 // Galery
 .galery {
-  padding-left: 15px;
   @media screen and (max-width: 767px) {
     padding-bottom: 48px;
     .inner {
@@ -620,6 +618,7 @@ svg {
 
 // Calculate section
 .calculate {
+  position: relative;
   background-color: #3c3c3c;
   background-repeat: no-repeat;
   text-align: center;
@@ -641,16 +640,27 @@ svg {
       padding-bottom: 100px;
     }
   }
-  @media screen and (min-width: 992px) {
+  @media screen and (min-width: 992px) and (max-width: 1289px) {
     background-image: url(/images/backgrounds/calculate_tablet.png),
       url(/images/backgrounds/pattern_tablet.png);
   }
   @media screen and (min-width: 1290px) {
+    overflow: hidden;
     .inner {
       padding-top: 143px;
       padding-bottom: 161px;
     }
-
+  }
+}
+.calculate__background {
+  @media screen and (min-width: 1290px) {
+    position: absolute;
+    width: 100%;
+    height: calc(100% + 63px);
+    top: -63px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-repeat: no-repeat;
     background-position: top center;
     background-image: url(/images/backgrounds/calculate-pattern_desk.png);
   }
@@ -763,7 +773,7 @@ svg {
 
   @media screen and (min-width: 992px) {
     top: 0;
-    width: 43%;
+    width: 40%;
     height: 100%;
     border: 4px solid #ef7f1a;
   }
@@ -789,6 +799,7 @@ svg {
 }
 
 .process__list {
+  display: block;
   @media screen and (min-width: 768px) {
     margin-left: auto;
     margin-right: auto;
@@ -796,6 +807,7 @@ svg {
 }
 
 .process__item {
+  max-width: 900px;
   &:nth-child(2n + 1) {
     text-align: left;
   }
@@ -829,6 +841,7 @@ svg {
     display: flex;
     flex-wrap: wrap;
     margin-top: -4px;
+
     font-size: 20px;
     line-height: 1.5;
     &:nth-child(1) {
@@ -841,7 +854,9 @@ svg {
     &:nth-child(2n + 1) {
       justify-content: flex-start;
       padding-left: 66px;
-      margin-left: 266px;
+      margin-left: 276px;
+      margin-right: auto;
+
       .process__decorate {
         left: 0;
         border-right: none;
@@ -859,7 +874,9 @@ svg {
     &:nth-child(2n) {
       justify-content: flex-end;
       padding-right: 66px;
-      margin-right: 244px;
+      margin-right: 276px;
+      margin-left: auto;
+      // margin-right: 244px;
       .process__decorate {
         right: 0;
         border-left: none;
@@ -877,7 +894,7 @@ svg {
   }
 
   @media screen and (min-width: 1290px) {
-    width: 886px;
+    // width: 886px;
     font-size: 25px;
     &:nth-child(1) {
       line-height: 1.56;
@@ -890,7 +907,7 @@ svg {
 
     &:nth-child(2n + 1) {
       padding-left: 72px;
-      margin-left: 300px;
+      margin-left: 358px;
       .process__subtitle {
         left: 0;
         transform: translateX(calc(-100% - 70px));
@@ -898,7 +915,7 @@ svg {
     }
     &:nth-child(2n) {
       padding-right: 72px;
-      margin-right: 300px;
+      margin-right: 358px;
       .process__subtitle {
         transform: translateX(calc(100% + 70px));
       }
@@ -1036,7 +1053,7 @@ svg {
   }
   @media screen and (min-width: 1290px) {
     padding: 0 30px;
-    margin-bottom: 60px;
+    margin-bottom: 50px;
     font-size: 25px;
   }
 }
@@ -1090,7 +1107,15 @@ svg {
 }
 .benefits__item {
   position: relative;
-  padding-bottom: 32px;
+  padding-bottom: 10px;
+  &:active,
+  &:hover,
+  &:focus,
+  &:target,
+  &:focus-visible {
+    outline: none;
+  }
+
   img {
     display: block;
     margin-right: auto;
@@ -1239,6 +1264,7 @@ svg {
   }
 }
 .reviews__item {
+  cursor: pointer;
   position: relative;
   background: #f5f5f5;
   color: #0a0a0a;

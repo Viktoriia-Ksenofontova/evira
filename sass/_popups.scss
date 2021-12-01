@@ -32,19 +32,29 @@
       position: relative;
       text-align: center;
 
+      @media (min-width: 768px) {
+        padding-left: 30px;
+        padding-right: 30px;
+      }
+      @media (min-width: 1290px) {
+        padding-left: 36px;
+        padding-right: 36px;
+      }
+
       .popup__close {
         position: absolute;
-        right: 25px;
-        top: 17px;
+        right: 20px;
+        top: 12px;
         background-color: transparent;
         padding: 0;
         margin: 0;
         z-index: 102;
-        width: 18px;
-        height: 18px;
+        width: 36px;
+        height: 36px;
 
         svg {
           width: 100%;
+          height: 100%;
           stroke: #ef7f1a;
         }
         &:hover,
@@ -75,6 +85,9 @@
     font-size: 25px;
     line-height: 1.41;
     margin-bottom: 20px;
+    @media (max-width: 767px) {
+      font-size: 20px;
+    }
   }
   .popup__input,
   .popup__textarea {
@@ -103,19 +116,6 @@
     width: 254px;
     height: 70px;
     font-size: 20px;
-  }
-
-  @media (max-width: 767px) {
-    .popup__title {
-      font-size: 20px;
-    }
-  }
-
-  @media (min-width: 768px) {
-    .popup__content {
-      padding-left: 30px;
-      padding-right: 30px;
-    }
   }
 }
 
@@ -226,71 +226,25 @@
   }
 }
 
-#popup__galery {
-  .popup__inner {
-    max-width: 1290px;
-    display: flex;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .galery__popup__imagesItem {
-    display: flex;
-    width: calc(100% - 246px);
-    justify-content: center;
-    margin-right: 36px;
-    margin-left: 36px;
-  }
-  .popup__galery__image {
-    max-height: 600px;
-  }
-}
-
-.popup__galery__button {
-  position: absolute;
-  z-index: 100;
+// button in pop-up gallery
+.carousel__button.is-prev,
+.carousel__button.is-next {
   background: #ffffff;
   padding: 0;
   box-shadow: 5px 5px 17px rgba(0, 0, 0, 0.19);
   border-radius: 198px;
   height: 47px;
-  &.right {
-    right: 20px;
+  width: 72px;
+  svg {
+    stroke: #ef7f1a;
   }
-  &.left {
-    left: 20px;
-  }
-  .popup__galery__icon {
-    fill: #ef7f1a;
-    &.right {
-      transform: rotate(-180deg);
+  &:hover,
+  &:focus {
+    svg {
+      stroke: #111;
     }
   }
-
-  &:hover {
-    .popup__galery__icon {
-      fill: #111;
-    }
-  }
-  // @media screen and (max-width: 767px) {
-  //   position: absolute;
-  //   z-index: 100;
-  //   width: 36px;
-  //   .popup__galery__icon {
-  //     width: 15px;
-  //   }
-  //   &.right {
-  //     right: 20px;
-  //   }
-  //   &.left {
-  //     left: 20px;
-  //   }
-  // }
-
-  @media screen and (min-width: 768px) {
-    width: 72px;
-
-    .popup__galery__icon {
-      width: 30px;
-    }
+  @media screen and (max-width: 767px) {
+    display: none;
   }
 }

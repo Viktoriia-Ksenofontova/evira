@@ -29,6 +29,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css" />
 
     <link href="css/preloader.css" rel="stylesheet">
     <script>
@@ -47,19 +48,63 @@
     </div>
     
     <header class="header">
-        <div w3-include-html="header.html"></div> 
+        <div class="inner">
+        <a href="index.html" class="logo animate__animated animate__fadeInLeft">
+            <img src="/images/logo.svg" alt="логотип">
+        </a>
+    
+        <button class="menu__button" type="button" aria-expanded="false" aria-controls="menu_container"
+            id="data-menu-button" data-menu-button>
+            <svg class="menu__button__icons">
+                <use href="/images/icons/symbol-defs.svg#icon-close" class="icon__close"></use>
+                <use href="/images/icons/symbol-defs.svg#icon-menu" class="icon__menu"></use>
+            </svg>
+        </button>
+    
+        <div class="menu__container animate__animated animate__fadeInRight" id="menu_container" data-menu
+            data-animatedin="animate__fadeInRight" data-animatedout="animate__fadeOutLeft">
+            <nav class="navbar">
+                <ul class="navbar__list">
+                    <li class="navbar__list__item">
+                        <a href="#production" class="navbar__link">Продукция </a>
+                    </li>
+                    <li class="navbar__list__item">
+                        <a href="#galery" class="navbar__link">Наши работы</a>
+                    </li>
+                    <li class="navbar__list__item">
+                        <a href="#process" class="navbar__link">Схема работы</a>
+                    </li>
+                    <li class="navbar__list__item">
+                        <a href="#benefits" class="navbar__link">Преимущества</a>
+                    </li>
+                    <li class="navbar__list__item">
+                        <a href="#reviews" class="navbar__link">Отзывы</a>
+                    </li>
+                    <li class="navbar__list__item">
+                        <a href="#contacts" class="navbar__link">Контакты</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="nav__contacts">
+                <a href="tel:+380505554433" class="nav__contacts__telephone"> (050) 555-44-33 </a>
+                <button type="button" class="nav__contacts__button show__popup-btn" data-popup="callMe">
+                    Перезвоните мне
+                </button>
+            </div>
+            <button class="change-lang" type="button">Перейти на українську</button>
+        </div>
+    </div>
     </header>
    
     <main class="main" >
         <section class="hero"> 
             <div class="hero__background__graphics"></div>
             <div class="inner">
-                <div class="hero__background"> 
-                    <button type="button" class="button__down" id="scrollToBottomBtn">
-                        <p>листай вниз </p>
-                        <img src="/images/icons/arrow_down.svg"/>
-                    </button>
-                </div>
+                <div class="hero__background"> </div>
+                <button type="button" class="button__down" id="scrollToBottomBtn">
+                    <p>листай вниз </p>
+                    <img src="/images/icons/arrow_down.svg" />
+                </button>
                 <div class="hero__main">
                 <h1 class="hero__title"> Жалюзи от <br> производителя <br> на заказ </h1>
                 <h2 class="hero__subtitle">Срок изготовления от 3-х до 10-ти дней</h2>
@@ -185,38 +230,45 @@
                 <h2 class="galery__title"> Галерея</h2>
                 </div>
 
-                <div class="galery__imagesList">
-                    <div class="galery__imagesItem">
-                        <img src="/images/content/galery/richard.jpg" alt="фото горионтальных жалюзей"
-                            data-source="/images/content/galery/big_size/richard.jpg" class="galery_image show__popup-btn"
-                            data-popup="popup__galery" />
+                <div class="galery__imagesList ">
+                    <div class="galery__imagesItem" data-fancybox="gallery"
+                    data-src="/images/content/galery/big_size/richard.jpg">                  
+                        <img src="/images/content/galery/richard.jpg" 
+                        alt="фото горионтальных жалюзей"
+                        class="galery_image " />
                     </div>
-                    <div class="galery__imagesItem">
-                        <img src="/images/content/galery/vertical.jpg" alt="фото вертикальных жалюзей"
-                            data-source="/images/content/galery/big_size/vertical.jpg" class="galery_image show__popup-btn"
-                            data-popup="popup__galery" />
+
+                    <div class="galery__imagesItem" data-fancybox="gallery" 
+                    data-src="/images/content/galery/big_size/vertical.jpg" >
+                        <img src="/images/content/galery/vertical.jpg" 
+                        alt="фото вертикальных жалюзей"
+                        class="galery_image"/>
                     </div>
-                    <div class="galery__imagesItem">
-                        <img src="/images/content/galery/horizontal.jpg" alt="фото горизонтальных жалюзей"
-                            data-source="/images/content/galery/big_size/horizontal.jpg" class="galery_image show__popup-btn"
-                            data-popup="popup__galery" />
+                    <div class="galery__imagesItem" data-fancybox="gallery"
+                    data-src="/images/content/galery/big_size/horizontal.jpg">
+                        <img src="/images/content/galery/horizontal.jpg" 
+                        alt="фото горизонтальных жалюзей"
+                        class="galery_image"/>
                     </div>
-                    <div class="galery__imagesItem">
-                        <img src="/images/content/galery/white_fabric.jpg" alt="фото тканевых жалюзей"
-                            data-source="/images/content/galery/big_size/white_fabric.jpg" class="galery_image show__popup-btn"
-                            data-popup="popup__galery" />
+                    <div class="galery__imagesItem" data-fancybox="gallery"
+                    data-src="/images/content/galery/big_size/white_fabric.jpg">
+                        <img src="/images/content/galery/white_fabric.jpg" 
+                        alt="фото тканевых жалюзей"
+                        class="galery_image"/>
                     </div>
-                    <div class="galery__imagesItem">
-                        <img src="/images/content/galery/bheatha.jpg" alt="фото горизонтальных жалюзей с лампой"
-                            data-source="/images/content/galery/big_size/bheatha.jpg" class="galery_image show__popup-btn"
-                            data-popup="popup__galery" />
+                    <div class="galery__imagesItem" data-fancybox="gallery"
+                    data-src="/images/content/galery/big_size/bheatha.jpg">
+                        <img src="/images/content/galery/bheatha.jpg" 
+                        alt="фото горизонтальных жалюзей с лампой"
+                        class="galery_image"/>
                     </div>
                 </div>
             </section>
 
             <!-- Calculate section -->
             <section class="calculate"> 
-                <div class="inner">
+            <div class="calculate__background"></div>
+                <div class="inner"> 
                 <h2 class="calculate__title"> Рассчитать стоимость </h2>
                 <p class="calculate__text">Мы сами производим свою продукцию, поэтому у нас дешевле.
             Воспользуйтесь формой предварительного расчета и убедитесь в этом сами.
@@ -425,6 +477,7 @@
 
             <!-- Calculate section -->
             <section class="calculate">
+                <div class="calculate__background"></div>
                 <div class="inner">
                     <h2 class="calculate__title"> Рассчитать стоимость </h2>
                     <p class="calculate__text">Мы сами производим свою продукцию, поэтому у нас дешевле.
@@ -532,7 +585,7 @@
                 data-animatedout="animate__fadeOutDown">
                 <button class="popup__close close-popup">
                     <svg>
-                        <use href="/images/icons/symbol-defs.svg#icon-close" class="popup__close"></use>
+                        <use href="/images/icons/symbol-defs.svg#icon-close" ></use>
                     </svg>
                 </button>
                 <h1 class="popup__title">Перезвоните мне</h1>
@@ -584,7 +637,7 @@
                 data-animatedout="animate__fadeOutDown">
                 <button class="popup__close close-popup">
                     <svg>
-                        <use href="/images/icons/symbol-defs.svg#icon-close" class="popup__close"></use>
+                        <use href="/images/icons/symbol-defs.svg#icon-close" ></use>
                     </svg>
                 </button>
                 <h1 class="popup__title">Заказать <br>бесплатный замер</h1>
@@ -621,7 +674,7 @@
                 data-animatedout="animate__fadeOutDown">
                 <button class="popup__close close-popup">
                     <svg>
-                        <use href="/images/icons/symbol-defs.svg#icon-close" class="popup__close"></use>
+                        <use href="/images/icons/symbol-defs.svg#icon-close"></use>
                     </svg>
                 </button>
                 <h1 class="popup__title">Оставьте <br>Ваш отзыв</h1>
@@ -732,7 +785,7 @@
             data-animatedout="animate__fadeOutDown">
             <button class="popup__close close-popup">
                 <svg>
-                    <use href="/images/icons/symbol-defs.svg#icon-close" class="popup__close"></use>
+                    <use href="/images/icons/symbol-defs.svg#icon-close"></use>
                 </svg>
             </button>
             <h1 class="popup__title">Рассчитать <br>стоимость</h1>
@@ -756,7 +809,7 @@
                                 type="text" 
                                 name="width" 
                                 value="" 
-                                class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required wpcf7-not-valid popup__input" 
+                                class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required wpcf7-not-valid wpcf7-validates-as-size popup__input" 
                                 placeholder=" "
                                 aria-required="true" 
                                 aria-invalid="true"/>
@@ -769,7 +822,7 @@
                                 type="text" 
                                 name="height" 
                                 value="" 
-                                class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required wpcf7-not-valid popup__input" 
+                                class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required wpcf7-not-valid wpcf7-validates-as-size popup__input" 
                                 placeholder=" "
                                 aria-required="true" 
                                 aria-invalid="true"/>
@@ -832,67 +885,12 @@
     </div>
 </div>
 
-<div class="popup" id="popup__galery">
-    <div class="popup__inner">
-        
-        <!-- <button class="popup__galery__button left" id="popup__galery__button__left">
-            <svg class="popup__galery__icon left">
-                <use href="/images/icons/symbol-defs.svg#icon-arrow"></use>
-            </svg>
-        </button>
-        
-        <img class="popup__galery__image" alt="" src=""/>
-       
-       <button class="popup__galery__button right" id="popup__galery__button__right">
-            <svg class="popup__galery__icon right">
-                <use href="/images/icons/symbol-defs.svg#icon-arrow"></use>
-            </svg>
-        </button> -->
-        
-<button class="popup__galery__button left" id="popup__galery__button__left">
-    <svg class="popup__galery__icon left">
-        <use href="/images/icons/symbol-defs.svg#icon-arrow"></use>
-    </svg>
-</button>
-<div class="galery__popup__imagesList">
-    <div class="galery__popup__imagesItem">
-        <img src="/images/content/galery/big_size/richard.jpg" alt="фото горионтальных жалюзей"
-            class="popup__galery__image"/>
-    </div>
-    <div class="galery__popup__imagesItem">
-        <img src="/images/content/galery/big_size/vertical.jpg" alt="фото вертикальных жалюзей"
-            class="popup__galery__image"/>
-    </div>
-    <div class="galery__popup__imagesItem">
-        <img src="/images/content/galery/big_size/horizontal.jpg" alt="фото горизонтальных жалюзей"
-            class="popup__galery__image"/>
-    </div>
-    <div class="galery__popup__imagesItem">
-        <img src="/images/content/galery/big_size/white_fabric.jpg" alt="фото тканевых жалюзей"
-            class="popup__galery__image"/>
-    </div>
-    <div class="galery__popup__imagesItem">
-        <img src="/images/content/galery/big_size/bheatha.jpg" alt="фото горизонтальных жалюзей с лампой"
-           class="popup__galery__image"/>
-    </div>
-
-</div>
-<button class="popup__galery__button right" id="popup__galery__button__right">
-    <svg class="popup__galery__icon right">
-        <use href="/images/icons/symbol-defs.svg#icon-arrow"></use>
-    </svg>
-</button>
-
-
-
-    </div>
-</div>
-
 </body>
 
 <link href="css/slick-theme.min.css" rel="stylesheet">
 <link href="css/animate.min.css" rel="stylesheet">
 <link href="css/style.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
 <script src="js/jquery.min.js"></script>
 <script src="js/jquery.maskedinput.min.js"></script>
 <script src="js/jquery.validate.min.js"></script>
@@ -912,7 +910,6 @@
 </script>
 
 <script src="js/slick.min.js"></script>
-
 <script src="js/popup.js"></script>
 <script src="js/main.js"></script>
 <script src="js/menu-button.js"></script>
