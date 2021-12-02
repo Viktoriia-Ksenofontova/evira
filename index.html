@@ -49,20 +49,19 @@
     
     <header class="header">
         <div class="inner">
-        <a href="index.html" class="logo animate__animated animate__fadeInLeft">
+        <a href="index.html" class="logo">
             <img src="/images/logo.svg" alt="логотип">
         </a>
     
         <button class="menu__button" type="button" aria-expanded="false" aria-controls="menu_container"
             id="data-menu-button" data-menu-button>
             <svg class="menu__button__icons">
-                <use href="/images/icons/symbol-defs.svg#icon-close" class="icon__close"></use>
+                <use href="/images/icons/symbol-defs.svg#icon-menu_button_close" class="icon__close"></use>
                 <use href="/images/icons/symbol-defs.svg#icon-menu" class="icon__menu"></use>
             </svg>
         </button>
     
-        <div class="menu__container animate__animated animate__fadeInRight" id="menu_container" data-menu
-            data-animatedin="animate__fadeInRight" data-animatedout="animate__fadeOutLeft">
+        <div class="menu__container animate__animated animate__fadeInLeft" id="menu_container" data-menu>
             <nav class="navbar">
                 <ul class="navbar__list">
                     <li class="navbar__list__item">
@@ -891,6 +890,7 @@
 <link href="css/animate.min.css" rel="stylesheet">
 <link href="css/style.css" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+
 <script src="js/jquery.min.js"></script>
 <script src="js/jquery.maskedinput.min.js"></script>
 <script src="js/jquery.validate.min.js"></script>
@@ -912,7 +912,8 @@
 <script src="js/slick.min.js"></script>
 <script src="js/popup.js"></script>
 <script src="js/main.js"></script>
-<script src="js/menu-button.js"></script>
+<script src="js/button.js"></script>
+<script src="js/border_animate.js"></script>
 <script src="js/slick-carousel.js"></script>
 <script>
     function includeHTML() {

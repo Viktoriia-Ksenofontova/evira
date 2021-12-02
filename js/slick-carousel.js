@@ -46,8 +46,6 @@ $(document).ready(function () {
 
   $('.reviews__list').slick({
     focusOnSelect: false,
-    // centerMode: true,
-    // centerPadding: "120px",
     infinite: true,
     autoplay: true,
     arrows: false,
@@ -56,14 +54,12 @@ $(document).ready(function () {
     variableWidth: true,
     pauseOnFocus: true,
     pauseOnHover: true,
-    // responsive: [
-    //    {
-    //      breakpoint: 1290,
-    //      settings: {
-    //       centerMode: false,
-    //     }
-    //  }
-    // ]
-
+    // responsive: [{
+    //   breakpoint: 1289,
+    //     settings: {
+    //       centerMode: true,
+    //       slidesToShow: 4,
+    //   }
+    // }]
   });
 });
