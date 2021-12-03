@@ -784,18 +784,19 @@ svg {
     // border: 4px solid #ef7f1a;
     &.animate_snake1 {
       animation: snake1 2s linear forwards;
+      animation-delay: 2s;
     }
     &.animate_snake2 {
       animation: snake2 2s linear forwards;
-      animation-delay: 2s;
+      animation-delay: 4s;
     }
     &.snake3.animate_snake1 {
       animation: snake1 2s linear forwards;
-      animation-delay: 4s;
+      animation-delay: 6s;
     }
     &.snake4.animate_snake2 {
       animation: snake2 2s linear forwards;
-      animation-delay: 6s;
+      animation-delay: 8s;
     }
   }
 }
@@ -985,7 +986,7 @@ svg {
         transform: translateX(calc(-100% - 54px));
       }
       .process__number {
-        left: -41px;
+        left: -33px;
       }
     }
     &:nth-child(2n) {
@@ -1005,7 +1006,7 @@ svg {
         transform: translateX(calc(100% + 54px));
       }
       .process__number {
-        right: -41px;
+        right: -33px;
       }
     }
   }
@@ -1042,7 +1043,7 @@ svg {
 .process__number {
   display: block;
   padding: 12px 0;
-  width: 72px;
+  width: 66px;
   height: 66px;
   border-radius: 50%;
   font-weight: bold;

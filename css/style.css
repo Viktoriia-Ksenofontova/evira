@@ -2672,24 +2672,26 @@ svg {
   .process__decorate.animate_snake1 {
     -webkit-animation: snake1 2s linear forwards;
             animation: snake1 2s linear forwards;
+    -webkit-animation-delay: 2s;
+            animation-delay: 2s;
   }
   .process__decorate.animate_snake2 {
     -webkit-animation: snake2 2s linear forwards;
             animation: snake2 2s linear forwards;
-    -webkit-animation-delay: 2s;
-            animation-delay: 2s;
+    -webkit-animation-delay: 4s;
+            animation-delay: 4s;
   }
   .process__decorate.snake3.animate_snake1 {
     -webkit-animation: snake1 2s linear forwards;
             animation: snake1 2s linear forwards;
-    -webkit-animation-delay: 4s;
-            animation-delay: 4s;
+    -webkit-animation-delay: 6s;
+            animation-delay: 6s;
   }
   .process__decorate.snake4.animate_snake2 {
     -webkit-animation: snake2 2s linear forwards;
             animation: snake2 2s linear forwards;
-    -webkit-animation-delay: 6s;
-            animation-delay: 6s;
+    -webkit-animation-delay: 8s;
+            animation-delay: 8s;
   }
 }
 
@@ -2995,7 +2997,7 @@ svg {
             transform: translateX(calc(-100% - 54px));
   }
   .process__item:nth-child(2n + 1) .process__number {
-    left: -41px;
+    left: -33px;
   }
   .process__item:nth-child(2n) {
     -webkit-box-pack: end;
@@ -3017,7 +3019,7 @@ svg {
             transform: translateX(calc(100% + 54px));
   }
   .process__item:nth-child(2n) .process__number {
-    right: -41px;
+    right: -33px;
   }
 }
 
@@ -3055,7 +3057,7 @@ svg {
 .process__number {
   display: block;
   padding: 12px 0;
-  width: 72px;
+  width: 66px;
   height: 66px;
   border-radius: 50%;
   font-weight: bold;
