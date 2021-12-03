@@ -107,7 +107,10 @@
                 <div class="hero__main">
                 <h1 class="hero__title"> Жалюзи от <br> производителя <br> на заказ </h1>
                 <h2 class="hero__subtitle">Срок изготовления от 3-х до 10-ти дней</h2>
-                <button class="button hero__button show__popup-btn" type="button" data-popup="toOrderMeasuring">Бесплатный замер</button>
+                <button class="button hero__button show__popup-btn" type="button" 
+                data-popup="calculatePrice">
+                Рассчитать стоимость
+                </button>
                 </div>
                 <div class="hero__decorate">
                     <div class="hero__text">
@@ -284,7 +287,7 @@
             <h2 class="process__title"> Как мы работаем </h2>
             <ul class="process__list">
                 <li class="process__item">
-                    <div class="process__decorate"></div>
+                    <div class="process__decorate snake1"></div>
                     <span class="process__number">01</span>
                     <h3 class="process__subtitle">Звонок</h3>
                     
@@ -297,7 +300,7 @@
                     
                 </li>
                 <li class="process__item">
-                    <div class="process__decorate"></div>
+                    <div class="process__decorate snake2"></div>
                     <span class="process__number">02</span>
                     <h3 class="process__subtitle">Замеры</h3>
                     
@@ -306,7 +309,7 @@
                     
                 </li>
                 <li class="process__item">
-                    <div class="process__decorate"></div>
+                    <div class="process__decorate snake3"></div>
                     <span class="process__number">03</span>
                     <h3 class="process__subtitle">Предоплата</h3>
                     
@@ -315,7 +318,7 @@
                    
                 </li>
                 <li class="process__item">
-                    <div class="process__decorate"></div>
+                    <div class="process__decorate snake4"></div>
                     <span class="process__number">04</span>
                     <h3 class="process__subtitle">Монтаж</h3>
                     
@@ -516,8 +519,9 @@
                                     <svg class="about__icons">
                                         <use href="/images/icons/symbol-defs.svg#icon-adress"></use>
                                     </svg>
-                                    <div class="address_linkToMap"><p> Херсон, ул.Нефтяников, 2</p>
-                                    <span>Показать на карте</span>
+                                    <div class="address_linkToMap">
+                                        <p> Херсон, ул.Нефтяников, 2</p>
+                                        <span>Показать на карте</span>
                                     </div>
                                 </button>
                             </li>
@@ -526,14 +530,16 @@
                                     <svg class="about__icons">
                                         <use href="/images/icons/symbol-defs.svg#icon-phones"></use>
                                     </svg>
-                                    (050) 729-44-37</a>
+                                    (050) 729-44-37
+                                </a>
                             </li>
                             <li class="adress__item">
                                 <a class="adress__link" href="mailto:TDEvira@ukr.net">
                                     <svg class="about__icons">
                                         <use href="/images/icons/symbol-defs.svg#icon-mail"></use>
                                     </svg>
-                                TDEvira@ukr.net</a>
+                                    TDEvira@ukr.net
+                                </a>
                             </li>
                         </ul>
                     </address>
@@ -543,14 +549,16 @@
                                 <svg class="about__icons">
                                     <use href="/images/icons/symbol-defs.svg#icon-facebook"></use>
                                 </svg>
-                            Facebook </a>
+                                Facebook 
+                            </a>
                         </li>
                         <li class="social__item"> 
                             <a class="social__link"> 
                                 <svg class="about__icons">
                                     <use href="/images/icons/symbol-defs.svg#icon-instagram"></use>
                                 </svg>
-                            Instagram </a>
+                                Instagram 
+                            </a>
                         </li>
                     </ul>
                     <button class="button about__button show__popup-btn" type="button" data-popup="writeUs">
@@ -566,7 +574,7 @@
             <use href="/images/icons/symbol-defs.svg#icon-measuring2"></use>
         </svg>
         <svg class="icon-measuring">
-            <use href="/images/icons/symbol-defs.svg#icon-measuring" width="54px" height="54px"></use>
+            <use href="/images/icons/symbol-defs.svg#icon-measuring"></use>
         </svg>
     </button>
     <button type="button" class="button button__up hidden" id="scrollToTopBtn">

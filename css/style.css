@@ -704,7 +704,7 @@ body {
 }
 
 .navbar__link:hover, .navbar__link:focus {
-  font-weight: bold;
+  color: #ef7f1a;
 }
 
 @media screen and (max-width: 1289px) {
@@ -1033,8 +1033,12 @@ button:hover, button:focus, button:focus-visible, button:-moz-focusring {
   display: none;
 }
 
-@media screen and (min-width: 1290px) {
+@media screen and (min-width: 768px) {
   .button__up {
+    position: fixed;
+    bottom: 25px;
+    right: 15px;
+    z-index: 99;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1048,19 +1052,25 @@ button:hover, button:focus, button:focus-visible, button:-moz-focusring {
             justify-content: center;
     -webkit-transition: all 0.5s ease;
     transition: all 0.5s ease;
-    position: fixed;
-    z-index: 99;
-    bottom: 116px;
-    right: 5px;
-    padding: 16px;
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
     height: 150px;
     width: 52px;
+    padding: 16px;
     border-radius: 26px;
     text-transform: uppercase;
     color: #ffffff;
     font-size: 16px;
     font-weight: 600;
     line-height: 1.25;
+  }
+}
+
+@media screen and (min-width: 1290px) {
+  .button__up {
+    bottom: 116px;
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
 }
 
@@ -1081,14 +1091,16 @@ button:hover, button:focus, button:focus-visible, button:-moz-focusring {
   display: none;
 }
 
-@media screen and (min-width: 1290px) {
+@media screen and (min-width: 768px) {
   .button__free-measuring {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     position: fixed;
-    right: 70px;
-    bottom: 116px;
+    bottom: 25px;
+    right: 75px;
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
     z-index: 99;
     padding: 0;
     width: 152px;
@@ -1100,20 +1112,12 @@ button:hover, button:focus, button:focus-visible, button:-moz-focusring {
   }
 }
 
-.button__free-measuring:after {
-  position: absolute;
-  content: '';
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  -webkit-animation-delay: 0.5s;
-          animation-delay: 0.5s;
-  -webkit-box-shadow: 0 0 0 0 #df7e26;
-          box-shadow: 0 0 0 0 #df7e26;
-  -webkit-transform: scale(1);
-          transform: scale(1);
+@media screen and (min-width: 1290px) {
+  .button__free-measuring {
+    bottom: 116px;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
 }
 
 .button__free-measuring:hover, .button__free-measuring:focus {
@@ -1131,6 +1135,8 @@ button:hover, button:focus, button:focus-visible, button:-moz-focusring {
 
 .button__free-measuring .icon-measuring {
   position: absolute;
+  width: 62px;
+  height: 54px;
   top: calc(50% - 27px);
   left: calc(50% - 27px);
 }
@@ -2660,9 +2666,220 @@ svg {
 @media screen and (min-width: 992px) {
   .process__decorate {
     top: 0;
+    border: transparent;
+    width: 40%;
+  }
+  .process__decorate.animate_snake1 {
+    -webkit-animation: snake1 2s linear forwards;
+            animation: snake1 2s linear forwards;
+  }
+  .process__decorate.animate_snake2 {
+    -webkit-animation: snake2 2s linear forwards;
+            animation: snake2 2s linear forwards;
+    -webkit-animation-delay: 2s;
+            animation-delay: 2s;
+  }
+  .process__decorate.snake3.animate_snake1 {
+    -webkit-animation: snake1 2s linear forwards;
+            animation: snake1 2s linear forwards;
+    -webkit-animation-delay: 4s;
+            animation-delay: 4s;
+  }
+  .process__decorate.snake4.animate_snake2 {
+    -webkit-animation: snake2 2s linear forwards;
+            animation: snake2 2s linear forwards;
+    -webkit-animation-delay: 6s;
+            animation-delay: 6s;
+  }
+}
+
+@-webkit-keyframes snake1 {
+  0% {
+    left: 40%;
+    width: 0;
+    height: 0%;
+    border: transparent;
+    border-radius: 0;
+  }
+  3% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    width: 3%;
+    height: 4px;
+    border-top: 4px solid #ef7f1a;
+  }
+  23% {
+    left: 0;
+    width: calc(40% - 172px);
+    height: 4px;
+    border-top: 4px solid #ef7f1a;
+    border-left: 4px solid #ef7f1a;
+    border-bottom-color: transparent;
+    border-right-color: transparent;
+  }
+  50% {
+    width: 40%;
+    height: 50%;
+    border-radius: 0;
+  }
+  66% {
+    width: 40%;
+    height: calc(100% - 4px);
+    border-top: 4px solid #ef7f1a;
+    border-left: 4px solid #ef7f1a;
+    border-bottom-color: transparent;
+    border-right-color: transparent;
+  }
+  100% {
     width: 40%;
     height: 100%;
-    border: 4px solid #ef7f1a;
+    border-top: 4px solid #ef7f1a;
+    border-left: 4px solid #ef7f1a;
+    border-bottom: 4px solid #ef7f1a;
+    border-right: transparent;
+    border-top-left-radius: 170px;
+    border-bottom-left-radius: 170px;
+  }
+}
+
+@keyframes snake1 {
+  0% {
+    left: 40%;
+    width: 0;
+    height: 0%;
+    border: transparent;
+    border-radius: 0;
+  }
+  3% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    width: 3%;
+    height: 4px;
+    border-top: 4px solid #ef7f1a;
+  }
+  23% {
+    left: 0;
+    width: calc(40% - 172px);
+    height: 4px;
+    border-top: 4px solid #ef7f1a;
+    border-left: 4px solid #ef7f1a;
+    border-bottom-color: transparent;
+    border-right-color: transparent;
+  }
+  50% {
+    width: 40%;
+    height: 50%;
+    border-radius: 0;
+  }
+  66% {
+    width: 40%;
+    height: calc(100% - 4px);
+    border-top: 4px solid #ef7f1a;
+    border-left: 4px solid #ef7f1a;
+    border-bottom-color: transparent;
+    border-right-color: transparent;
+  }
+  100% {
+    width: 40%;
+    height: 100%;
+    border-top: 4px solid #ef7f1a;
+    border-left: 4px solid #ef7f1a;
+    border-bottom: 4px solid #ef7f1a;
+    border-right: transparent;
+    border-top-left-radius: 170px;
+    border-bottom-left-radius: 170px;
+  }
+}
+
+@-webkit-keyframes snake2 {
+  0% {
+    right: 40%;
+    width: 0%;
+    height: 0%;
+    border-radius: 0;
+  }
+  3% {
+    width: 3%;
+    height: 4px;
+    border-top: 4px solid #ef7f1a;
+  }
+  23% {
+    right: 0;
+    width: calc(40% - 172px);
+    height: 4px;
+    border-top: 4px solid #ef7f1a;
+    border-right: 4px solid #ef7f1a;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+  }
+  50% {
+    width: 40%;
+    height: 50%;
+    border-radius: 0;
+  }
+  66% {
+    width: 40%;
+    height: calc(100% - 4px);
+    border-top: 4px solid #ef7f1a;
+    border-right: 4px solid #ef7f1a;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+  }
+  100% {
+    width: 40%;
+    height: 100%;
+    border-top: 4px solid #ef7f1a;
+    border-right: 4px solid #ef7f1a;
+    border-bottom: 4px solid #ef7f1a;
+    border-left-color: transparent;
+    border-top-right-radius: 170px;
+    border-bottom-right-radius: 170px;
+  }
+}
+
+@keyframes snake2 {
+  0% {
+    right: 40%;
+    width: 0%;
+    height: 0%;
+    border-radius: 0;
+  }
+  3% {
+    width: 3%;
+    height: 4px;
+    border-top: 4px solid #ef7f1a;
+  }
+  23% {
+    right: 0;
+    width: calc(40% - 172px);
+    height: 4px;
+    border-top: 4px solid #ef7f1a;
+    border-right: 4px solid #ef7f1a;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+  }
+  50% {
+    width: 40%;
+    height: 50%;
+    border-radius: 0;
+  }
+  66% {
+    width: 40%;
+    height: calc(100% - 4px);
+    border-top: 4px solid #ef7f1a;
+    border-right: 4px solid #ef7f1a;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+  }
+  100% {
+    width: 40%;
+    height: 100%;
+    border-top: 4px solid #ef7f1a;
+    border-right: 4px solid #ef7f1a;
+    border-bottom: 4px solid #ef7f1a;
+    border-left-color: transparent;
+    border-top-right-radius: 170px;
+    border-bottom-right-radius: 170px;
   }
 }
 
@@ -2706,6 +2923,7 @@ svg {
 }
 
 .process__item {
+  position: relative;
   max-width: 900px;
 }
 
@@ -3553,47 +3771,74 @@ svg {
 
 .adress__list {
   border-bottom: 1px solid #d8d8d8;
+}
+
+.adress__item {
+  margin-bottom: 18px;
   font-size: 25px;
   line-height: 1.2;
 }
 
-.adress__list span {
+.adress__item span {
   font-size: 16px;
   line-height: 1.25;
   border-bottom: 1px dashed #111111;
 }
 
-.adress__list:first-child .adress__link {
+.adress__item:first-child .adress__link {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
 }
 
+.adress__item:not(:first-child) .adress__link:hover,
+.adress__item:not(:first-child) .adress__link:focus {
+  color: #ef7f1a;
+}
+
+.adress__item:not(:first-child) .adress__link:hover svg,
+.adress__item:not(:first-child) .adress__link:focus svg {
+  fill: #ef7f1a;
+}
+
 @media screen and (min-width: 768px) {
-  .adress__list {
+  .adress__item {
+    margin-bottom: 42px;
     line-height: 1.23;
   }
-  .adress__list:first-child p {
+  .adress__item:first-child p {
     font-size: 23px;
   }
 }
 
 @media screen and (min-width: 992px) {
-  .adress__list {
+  .adress__item {
     font-size: 35px;
   }
-  .adress__list:first-child p {
+  .adress__item:first-child p {
     font-size: 30px;
   }
-  .adress__list span {
+  .adress__item:first-child span {
     font-size: 20px;
     line-height: 1.2;
   }
 }
 
 @media screen and (min-width: 1290px) {
-  .adress__list:first-child p {
+  .adress__item:first-child p {
     font-size: 35px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .social__item {
+    margin-bottom: 18px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .social__item {
+    margin-bottom: 42px;
   }
 }
 
@@ -3621,7 +3866,6 @@ svg {
   }
 }
 
-.adress__link,
 .social__link {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3633,16 +3877,23 @@ svg {
   font-weight: 500;
 }
 
-.adress__link:hover, .adress__link:focus,
-.social__link:hover,
-.social__link:focus {
+.social__link:hover, .social__link:focus {
   color: #ef7f1a;
 }
 
-.adress__link:hover svg, .adress__link:focus svg,
-.social__link:hover svg,
-.social__link:focus svg {
+.social__link:hover svg, .social__link:focus svg {
   fill: #ef7f1a;
+}
+
+.adress__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-style: normal;
+  font-weight: 500;
 }
 
 .adress__link:hover span, .adress__link:focus span {
@@ -3652,20 +3903,6 @@ svg {
 
 .address_linkToMap {
   text-align: left;
-}
-
-@media screen and (max-width: 767px) {
-  .adress__item,
-  .social__item {
-    margin-bottom: 18px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .adress__item,
-  .social__item {
-    margin-bottom: 42px;
-  }
 }
 
 @media screen and (max-width: 767px) {

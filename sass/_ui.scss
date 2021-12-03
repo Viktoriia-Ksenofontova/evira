@@ -57,25 +57,33 @@ button {
 
 .button__up {
   display: none;
-  @media screen and (min-width: 1290px) {
+  @media screen and (min-width: 768px) {
+    position: fixed;
+    bottom: 25px;
+    right: 15px;
+    z-index: 99;
+
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+
     transition: all 0.5s ease;
-    position: fixed;
-    z-index: 99;
-    bottom: 116px;
-    right: 5px;
-    padding: 16px;
+    transform: scale(0.9);
+
     height: 150px;
     width: 52px;
+    padding: 16px;
     border-radius: 26px;
     text-transform: uppercase;
     color: #ffffff;
     font-size: 16px;
     font-weight: 600;
     line-height: 1.25;
+  }
+  @media screen and (min-width: 1290px) {
+    bottom: 116px;
+    transform: scale(1);
   }
   p {
     writing-mode: vertical-rl;
@@ -89,33 +97,32 @@ button {
 
 .button__free-measuring {
   display: none;
-  @media screen and (min-width: 1290px) {
+
+  // @media screen and (max-width: 768px) {
+  //   transform: scale(0.7);
+  //   bottom: 15px;
+  //   right: 15px;
+  // }
+  @media screen and (min-width: 768px) {
     display: flex;
     position: fixed;
-    right: 70px;
-    bottom: 116px;
+    bottom: 25px;
+    right: 75px;
+    transform: scale(0.9);
     z-index: 99;
+
     padding: 0;
     width: 152px;
     height: 152px;
     border-radius: 50%;
     background-color: #ef7f1a;
     box-shadow: 0 0 0 0 rgba(239, 127, 26, 1);
-    // animation: pulse 2s infinite;
   }
-  &:after {
-    position: absolute;
-    content: '';
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    animation-delay: 0.5s;
-    box-shadow: 0 0 0 0 rgba(223, 126, 38, 1);
+  @media screen and (min-width: 1290px) {
+    bottom: 116px;
     transform: scale(1);
-    // animation: pulse2 2s infinite;
   }
+
   &:hover,
   &:focus {
     background-color: #df7e26;
@@ -129,6 +136,8 @@ button {
 
   .icon-measuring {
     position: absolute;
+    width: 62px;
+    height: 54px;
     top: calc(50% - 27px);
     left: calc(50% - 27px);
   }
@@ -179,36 +188,3 @@ button {
   background-color: #ef7f1a;
   border-radius: 17px;
 }
-
-// @keyframes pulse {
-//   0% {
-//     // transform: scale(0.95);
-//     box-shadow: 0 0 0 0 rgba(239, 127, 26, 0.7);
-//   }
-
-//   70% {
-//     // transform: scale(1);
-//     box-shadow: 0 0 0 10px rgba(239, 127, 26, 0);
-//   }
-
-//   100% {
-//     // transform: scale(0.95);
-//     box-shadow: 0 0 0 0 rgba(239, 127, 26, 0);
-//   }
-// }
-
-// @keyframes pulse2 {
-//   0% {
-//     box-shadow: 0 0 0 0 rgba(223, 126, 38, 0.7);
-//   }
-
-//   70% {
-//     // transform: scale(1);
-//     box-shadow: 0 0 0 25px rgba(223, 126, 38, 0);
-//   }
-
-//   100% {
-//     // transform: scale(0.95);
-//     box-shadow: 0 0 0 0 rgba(223, 126, 38, 0);
-//   }
-// }
