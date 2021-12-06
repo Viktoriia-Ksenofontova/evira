@@ -611,6 +611,7 @@ body {
   .menu__container {
     padding-top: 78px;
     padding-bottom: 32px;
+    height: 100vh;
   }
 }
 
@@ -786,18 +787,10 @@ body {
   border-bottom-color: transparent;
 }
 
-@media screen and (max-width: 767px) {
-  .menu__button__icons {
-    width: 39px;
-    height: 24px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .menu__button__icons {
-    width: 60px;
-    height: 38px;
-  }
+.menu__button__icons {
+  width: 100%;
+  height: 100%;
+  padding: 0;
 }
 
 .menu__button__icons .icon__menu,
@@ -809,6 +802,20 @@ body {
 .menu__button__icons:hover .icon__close, .menu__button__icons:focus .icon__menu,
 .menu__button__icons:focus .icon__close {
   fill: #fff;
+}
+
+@media screen and (max-width: 767px) {
+  .icon__menu {
+    width: 39px;
+    height: 24px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .icon__menu {
+    width: 60px;
+    height: 38px;
+  }
 }
 
 .menu__button {
@@ -851,10 +858,16 @@ body {
   display: none;
 }
 
+.menu__button.is-open {
+  position: absolute;
+}
+
 @media screen and (max-width: 767px) {
   .menu__button.is-open {
     width: 30px;
     height: 30px;
+    top: 42px;
+    right: 22px;
   }
 }
 
@@ -862,11 +875,27 @@ body {
   .menu__button.is-open {
     width: 44px;
     height: 44px;
+    top: 35px;
+    right: 25px;
   }
 }
 
 .menu__button.is-open .icon__close {
   display: block;
+}
+
+@media screen and (max-width: 767px) {
+  .menu__button.is-open .icon__close {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .menu__button.is-open .icon__close {
+    width: 44px;
+    height: 44px;
+  }
 }
 
 .menu__button.is-open .icon__menu {
@@ -1101,7 +1130,7 @@ button:hover, button:focus, button:focus-visible, button:-moz-focusring {
     right: 75px;
     -webkit-transform: scale(0.9);
             transform: scale(0.9);
-    z-index: 99;
+    z-index: 9;
     padding: 0;
     width: 152px;
     height: 152px;
