@@ -788,8 +788,6 @@ body {
 }
 
 .menu__button__icons {
-  width: 100%;
-  height: 100%;
   padding: 0;
 }
 
@@ -804,24 +802,7 @@ body {
   fill: #fff;
 }
 
-@media screen and (max-width: 767px) {
-  .icon__menu {
-    width: 39px;
-    height: 24px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .icon__menu {
-    width: 60px;
-    height: 38px;
-  }
-}
-
 .menu__button {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
   position: relative;
   z-index: 101;
   margin: 0;
@@ -836,6 +817,9 @@ body {
 
 @media screen and (max-width: 767px) {
   .menu__button {
+    position: absolute;
+    right: 15px;
+    top: 48px;
     width: 39px;
     height: 24px;
   }
@@ -873,8 +857,8 @@ body {
 
 @media screen and (min-width: 768px) {
   .menu__button.is-open {
-    width: 44px;
-    height: 44px;
+    width: 45px;
+    height: 45px;
     top: 35px;
     right: 25px;
   }
@@ -882,20 +866,6 @@ body {
 
 .menu__button.is-open .icon__close {
   display: block;
-}
-
-@media screen and (max-width: 767px) {
-  .menu__button.is-open .icon__close {
-    width: 30px;
-    height: 30px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .menu__button.is-open .icon__close {
-    width: 44px;
-    height: 44px;
-  }
 }
 
 .menu__button.is-open .icon__menu {
