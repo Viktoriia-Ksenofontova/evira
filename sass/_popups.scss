@@ -64,59 +64,74 @@
           }
         }
       }
+
       .message {
         width: 100%;
       }
-      .label__popup {
-        position: relative;
-        display: block;
-        width: 100%;
-        margin: 0 auto 20px auto;
-        font-size: 16px;
-      }
-      .label__popup:focus-within > .nameInput {
-        transform: translateY(-100%);
-        font-size: 9px;
-      }
     }
   }
-  .popup__title {
-    font-weight: bold;
-    font-size: 25px;
-    line-height: 1.41;
-    margin-bottom: 20px;
-    @media (max-width: 767px) {
-      font-size: 20px;
-    }
-  }
-  .popup__input,
-  .popup__textarea {
-    width: 100%;
-    background-color: transparent;
-    border-bottom: 1px solid #d7d7d7;
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    font-size: 16px;
-    line-height: 1.6;
-    outline: none;
-    cursor: pointer;
-    &:not(:placeholder-shown) + .nameInput {
-      transform: translateY(-100%);
-      font-size: 9px;
-    }
-  }
-  .popup__input {
-    height: 34px;
-  }
-  .popup__textarea {
-    margin: 0;
-  }
-  .popup__button {
-    width: 254px;
-    height: 70px;
+}
+.popup__title {
+  font-weight: bold;
+  font-size: 25px;
+  line-height: 1.41;
+  margin-bottom: 20px;
+  @media (max-width: 767px) {
     font-size: 20px;
   }
+}
+
+.label__popup {
+  position: relative;
+  display: block;
+  width: 100%;
+  margin: 0 auto 20px auto;
+  font-size: 16px;
+
+  .nameInput {
+    position: absolute;
+    left: 0px;
+    top: 0;
+    transform: translateY(20%);
+    transition: transform 250ms linear;
+    font-size: 16px;
+  }
+}
+
+.popup__input {
+  height: 34px;
+}
+
+.popup__textarea {
+  margin: 0;
+}
+
+.popup__input,
+.popup__textarea {
+  width: 100%;
+  background-color: transparent;
+  border-bottom: 1px solid #d7d7d7;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  font-size: 16px;
+  line-height: 1.6;
+  outline: none;
+  cursor: pointer;
+  &:not(:placeholder-shown) + .nameInput {
+    transform: translateY(-100%);
+    font-size: 9px;
+  }
+  &:focus-within + .nameInput {
+    transform: translateY(-100%);
+    font-size: 9px;
+  }
+}
+
+.popup__button {
+  width: 254px;
+  height: 70px;
+  font-size: 20px;
 }
 
 .popup__select {
