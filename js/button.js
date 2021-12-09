@@ -13,16 +13,6 @@ $(document).ready(function () {
   $('.menu__button').click(function () {
     toggleClassIsOpen();
    
-    // let animatedIn = $('#menu_container').data('animatedin');
-    // let animatedOut = $('#menu_container').data('animatedout');
-
-    // if ($('#menu_container').hasClass("is-open")) {
-    //   $('#menu_container').removeClass(animatedIn);
-    //   $('#menu_container').addClass(animatedOut);
-    // } else {
-    //   $('#menu_container').addClass(animatedIn);
-    //   $('#menu_container').removeClass(animatedOut);
-    // }
   });
 
     $('.navbar__link').click(toggleClassIsOpen);

@@ -90,7 +90,7 @@
                     Перезвоните мне
                 </button>
             </div>
-            <button class="change-lang" type="button">Перейти на українську</button>
+            <a class="change-lang" type="button">Перейти на українську</a>
         </div>
     </div>
     </header>
@@ -196,31 +196,39 @@
                 
                 <div role="form" class="wpcf7" dir="ltr" lang="ru-RU">
                     <form action="" method="post" class="wpcf7-form invalid"  autoComplete="off" novalidate="novalidate" data-status="invalid">
-                        <label class="labelForm">
+                        <label class="labelForm" for="measuringFormName">
                             <span class="wpcf7-form-control-wrap your-name">
-                                <input type="text" name="your-name" value="" size="40"
+                                <input type="text" 
+                                id="measuringFormName"
+                                name="your-name" 
+                                value="" 
+                                size="40"
                                 class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required wpcf7-not-valid 
-                                measuring__input" placeholder=" "
-                                aria-required="true" aria-invalid="true"
+                                measuring__input" 
+                                placeholder="Ваше имя *"
+                                aria-required="true" 
+                                aria-invalid="true"
                                 aria-describedby="wpcf7-f311-o4-ve-your-name">
-                            
                                 <span class="wpcf7-not-valid-tip inputError" aria-hidden="true"> Поле обязательно для заполнения.</span>
-                        
                             </span>
-                            <!-- <span class="nameInput">Ваше имя *</span> -->
+                            <span class="nameInput hidden">Ваше имя *</span>
                         </label>
-                        <label class="labelForm">
+                        <label class="labelForm" for="measuringFormTel">
                             <span class="wpcf7-form-control-wrap phone">
-                                <input type="tel" name="phone" value="" size="40"
+                                <input type="tel"
+                                id="measuringFormTel" 
+                                name="phone" 
+                                value="" 
+                                size="40"
                                 class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required wpcf7-validates-as-tel phone wpcf7-not-valid 
-                                measuring__input" placeholder=" "
-                                aria-required="true" aria-invalid="true" 
+                                measuring__input" 
+                                placeholder="Ваш телефон *"
+                                aria-required="true" 
+                                aria-invalid="true" 
                                 aria-describedby="wpcf7-f311-o4-ve-phone">
-                            
                                 <span class="wpcf7-not-valid-tip inputError" aria-hidden="true"> Поле обязательно для заполнения.</span>
-                        
                         </span>
-                        <!-- <span class="nameInput">Ваш телефон *</span> -->
+                        <span class="nameInput hidden">Ваш телефон *</span>
                         </label>
                         <input type="submit" value="Отправить"
                             class="wpcf7-form-control has-spinner wpcf7-submit btn btn-red button measuring__button">
@@ -291,7 +299,7 @@
             <h2 class="process__title"> Как мы работаем </h2>
             <ul class="process__list">
                 <li class="process__item">
-                    <div class="process__decorate snake1"></div>
+                    <div class="process__decorate"></div>
                     <span class="process__number">01</span>
                     <h3 class="process__subtitle">Звонок</h3>
                     
@@ -304,7 +312,7 @@
                     
                 </li>
                 <li class="process__item">
-                    <div class="process__decorate snake2"></div>
+                    <div class="process__decorate"></div>
                     <span class="process__number">02</span>
                     <h3 class="process__subtitle">Замеры</h3>
                     
@@ -313,7 +321,7 @@
                     
                 </li>
                 <li class="process__item">
-                    <div class="process__decorate snake3"></div>
+                    <div class="process__decorate"></div>
                     <span class="process__number">03</span>
                     <h3 class="process__subtitle">Предоплата</h3>
                     
@@ -322,7 +330,7 @@
                    
                 </li>
                 <li class="process__item">
-                    <div class="process__decorate snake4"></div>
+                    <div class="process__decorate"></div>
                     <span class="process__number">04</span>
                     <h3 class="process__subtitle">Монтаж</h3>
                     
@@ -343,30 +351,40 @@
 
                 <div role="form" class="wpcf7" dir="ltr" lang="ru-RU">
                     <form action="" method="post" class="wpcf7-form invalid" autoComplete="off" novalidate="novalidate" data-status="invalid">
-                        <label class="labelForm">
+                        <label class="labelForm" for="assortimentFormName">
                             <span class="wpcf7-form-control-wrap your-name">
-                                <input type="text" name="your-name" value="" size="40"
-                class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required wpcf7-not-valid 
-                assortiment__input" placeholder=" "
-                aria-required="true" aria-invalid="true" 
-                aria-describedby="wpcf7-f311-o4-ve-your-name">
-                            <span class="wpcf7-not-valid-tip inputError" aria-hidden="true"> Поле обязательно для заполнения.</span>
+                                <input type="text"
+                                id="assortimentFormName" 
+                                name="your-name" 
+                                value="" 
+                                size="40"
+                                class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required wpcf7-not-valid 
+                                assortiment__input" 
+                                placeholder="Ваше имя *"
+                                aria-required="true" 
+                                aria-invalid="true" 
+                                aria-describedby="wpcf7-f311-o4-ve-your-name">
+                                <span class="wpcf7-not-valid-tip inputError" aria-hidden="true"> Поле обязательно для заполнения.</span>
                             </span>
-                            <!-- <span class="nameInput">Ваше имя *</span> -->
+                            <span class="nameInput hidden">Ваше имя *</span>
                         </label>
                    
-                       
-                        <label class="labelForm">
-                        <span class="wpcf7-form-control-wrap phone">
-            <input type="tel" name="phone" value="" size="40"
-                class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required wpcf7-validates-as-tel phone wpcf7-not-valid 
-                assortiment__input" placeholder=" "
-                aria-required="true" aria-invalid="true" 
-                aria-describedby="wpcf7-f311-o4-ve-phone">
-                
-            <span class="wpcf7-not-valid-tip inputError" aria-hidden="true"> Поле обязательно для заполнения.</span>
-                        </span>
-                        <!-- <span class="nameInput">Ваш телефон *</span> -->
+                        <label class="labelForm" for="assortimentFormTel">
+                            <span class="wpcf7-form-control-wrap phone">
+                                <input type="tel"
+                                id="assortimentFormTel" 
+                                name="phone" 
+                                value="" 
+                                size="40"
+                                class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required wpcf7-validates-as-tel phone wpcf7-not-valid 
+                                assortiment__input" 
+                                placeholder="Ваш телефон *"
+                                aria-required="true" 
+                                aria-invalid="true" 
+                                aria-describedby="wpcf7-f311-o4-ve-phone">
+                                <span class="wpcf7-not-valid-tip inputError" aria-hidden="true"> Поле обязательно для заполнения.</span>
+                            </span>
+                            <span class="nameInput hidden">Ваш телефон *</span>
                         </label>
         
         <input type="submit" value="Отправить"
@@ -614,12 +632,14 @@
                         size="40" 
                         class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required wpcf7-not-valid 
                         popup__input" 
-                        placeholder=" "
+                        placeholder="Ваше имя *"
                         aria-required="true" 
                         aria-invalid="true"
                         aria-describedby="wpcf7-f311-o4-ve-your-name">
-                        <span class="nameInput">Ваше имя *</span>    
+                        <span class="wpcf7-not-valid-tip inputError" aria-hidden="true"> Поле обязательно для заполнения.</span>
+                        
                     </span>
+                    <span class="nameInput hidden">Ваше имя *</span>
                 </label>
                 
                 <label class="label__popup" for="callMeTel">
@@ -631,12 +651,14 @@
                         size="40" 
                         class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required wpcf7-validates-as-tel phone wpcf7-not-valid 
                         popup__input" 
-                        placeholder=" "
+                        placeholder="Ваш телефон *"
                         aria-required="true" 
                         aria-invalid="true"
                         aria-describedby="wpcf7-f311-o4-ve-phone">
-                        <span class="nameInput">Ваш телефон *</span>
+                        <span class="wpcf7-not-valid-tip inputError" aria-hidden="true"> Поле обязательно для заполнения.</span>
+                        
                     </span>
+                    <span class="nameInput hidden">Ваш телефон *</span>
                 </label>
                 <input type="submit" 
                 value="Отправить" 
@@ -660,26 +682,43 @@
                 <h1 class="popup__title">Заказать <br>бесплатный замер</h1>
                 <form action="" method="post" class="wpcf7-form invalid" autoComplete="off" novalidate="novalidate"
                     data-status="invalid">
-                    <span class="wpcf7-form-control-wrap your-name">
-                        <label class="label__popup">
-                            <input type="text" name="your-name" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required wpcf7-not-valid 
-                                    popup__input" placeholder=" " aria-required="true" aria-invalid="true"
-                                aria-describedby="wpcf7-f311-o4-ve-your-name">
-                            <span class="nameInput">Ваше имя *</span>
-                        </label>
-                    </span>
-                    <span class="wpcf7-form-control-wrap phone">
-                        <label class="label__popup">
-                            <input type="tel" name="phone" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required wpcf7-validates-as-tel phone wpcf7-not-valid 
-                                    popup__input" placeholder=" " aria-required="true" aria-invalid="true"
-                                aria-describedby="wpcf7-f311-o4-ve-phone">
-                            <span class="nameInput">Ваш телефон *</span>
-                        </label>
-                    </span>
+                    <label class="label__popup" for="toOrderMeasuringName">
+                        <span class="wpcf7-form-control-wrap your-name">
+                            <input type="text" 
+                            id="toOrderMeasuringName"
+                            name="your-name" 
+                            value="" 
+                            size="40" 
+                            class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required wpcf7-not-valid 
+                            popup__input" 
+                            placeholder="Ваше имя *" 
+                            aria-required="true" 
+                            aria-invalid="true"
+                            aria-describedby="wpcf7-f311-o4-ve-your-name">
+                            <span class="wpcf7-not-valid-tip inputError" aria-hidden="true"> Поле обязательно для заполнения.</span>
+                        </span>
+                        <span class="nameInput hidden">Ваше имя *</span>
+                    </label>
+                    <label class="label__popup" for="toOrderMeasuringTel">
+                        <span class="wpcf7-form-control-wrap phone">
+                            <input type="tel"
+                            id="toOrderMeasuringTel" 
+                            name="phone" 
+                            value="" 
+                            size="40" 
+                            class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required wpcf7-validates-as-tel phone wpcf7-not-valid 
+                            popup__input" 
+                            placeholder="Ваш телефон *" 
+                            aria-required="true" 
+                            aria-invalid="true"
+                            aria-describedby="wpcf7-f311-o4-ve-phone">
+                            <span class="wpcf7-not-valid-tip inputError" aria-hidden="true"> Поле обязательно для заполнения.</span>
+                        </span>
+                        <span class="nameInput hidden">Ваш телефон *</span>
+                    </label>
             
                     <input type="submit" value="Отправить" class="wpcf7-form-control has-spinner wpcf7-submit btn btn-red 
-                            button 
-                            popup__button">
+                    button popup__button">
                 </form>
             </div>
         </div>
@@ -697,41 +736,49 @@
                 <h1 class="popup__title">Оставьте <br>Ваш отзыв</h1>
                 <form action="" method="post" class="wpcf7-form invalid" autoComplete="off" novalidate="novalidate"
                     data-status="invalid">
-                    <span class="wpcf7-form-control-wrap your-name">
-                        <label class="label__popup">
-                            <input type="text" 
+                    <label class="label__popup" for="sendReviewName">
+                        <span class="wpcf7-form-control-wrap your-name">
+                            <input type="text"
+                            id="sendReviewName" 
                             name="your-name" 
                             value="" 
                             size="40" 
                             class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required wpcf7-not-valid popup__input" 
-                            placeholder=" " 
+                            placeholder="Ваше имя *" 
                             aria-required="true" aria-invalid="true"
                             aria-describedby="wpcf7-f311-o4-ve-your-name">
-                            <span class="nameInput">Ваше имя *</span>
-                        </label>
-                    </span>
-                    <span class="wpcf7-form-control-wrap phone">
-                        <label class="label__popup">
-                            <input type="tel" 
+                            <span class="wpcf7-not-valid-tip inputError" aria-hidden="true"> Поле обязательно для заполнения.</span>    
+                        </span>
+                        <span class="nameInput hidden">Ваше имя *</span>
+                    </label>
+                    <label class="label__popup" for="sendReviewTel">
+                        <span class="wpcf7-form-control-wrap phone">
+                            <input type="tel"
+                            id="sendReviewTel" 
                             name="phone" 
                             value="" 
                             size="40" 
                             class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required phone wpcf7-not-valid popup__input" aria-required="true" aria-invalid="true"
-                            placeholder=" " 
+                            placeholder="Ваш email *" 
                             aria-describedby="wpcf7-f311-o4-ve-phone">
-                            <span class="nameInput">Ваш email *</span>
-                        </label>
-                    </span>
-                    <span class="wpcf7-form-control-wrap message">
-                        <label class="label__popup">
-                            <textarea name="message" 
-                            rows="6" 
+                            <span class="wpcf7-not-valid-tip inputError" aria-hidden="true"> Поле обязательно для заполнения.</span>
+                        </span>
+                        <span class="nameInput hidden">Ваш email *</span>
+                    </label>
+                    <label class="label__popup" for="sendReviewMessage">
+                        <span class="wpcf7-form-control-wrap message">
+                            <textarea name="message"
+                            id="sendReviewMessage"
+                            value="" 
+                            rows="6"
                             class="popup__textarea wpcf7-form-control wpcf7-text wpcf7-validates-as-required wpcf7-not-valid"
-                            placeholder=" "
-                            value=""></textarea>
-                            <span class="nameInput">Ваш отзыв *</span>
-                        </label>
-                    </span>
+                            placeholder="Ваш отзыв *"
+                            aria-required="true" aria-invalid="true"
+                            ></textarea>
+                            <span class="wpcf7-not-valid-tip inputError" aria-hidden="true"> Поле обязательно для заполнения.</span>
+                        </span>
+                        <span class="nameInput hidden">Ваш отзыв *</span>
+                    </label>
                     <input type="submit" value="Отправить" class="wpcf7-form-control has-spinner wpcf7-submit btn btn-red 
                     button popup__button">
                 </form>
@@ -751,43 +798,49 @@
             <h1 class="popup__title">Напишите нам</h1>
             <form action="" method="post" class="wpcf7-form invalid" autoComplete="off" novalidate="novalidate"
                 data-status="invalid">
-                <span class="wpcf7-form-control-wrap your-name">
-                    <label class="label__popup">
-                        <input type="text" 
+                <label class="label__popup" for="writeUsName">
+                    <span class="wpcf7-form-control-wrap your-name">
+                        <input type="text"
+                        id="writeUsName" 
                         name="your-name" 
                         value="" size="40" 
                         class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required wpcf7-not-valid popup__input" 
-                        placeholder=" " 
+                        placeholder="Ваше имя *" 
                         aria-required="true" 
                         aria-invalid="true"
                         aria-describedby="wpcf7-f311-o4-ve-your-name">
-                        <span class="nameInput">Ваше имя *</span>
-                    </label>
-                </span>
-                <span class="wpcf7-form-control-wrap phone">
-                    <label class="label__popup">
+                        <span class="wpcf7-not-valid-tip inputError" aria-hidden="true"> Поле обязательно для заполнения.</span>
+                    </span>
+                    <span class="nameInput hidden">Ваше имя *</span>
+                </label>
+                <label class="label__popup" for="writeUsTel">
+                    <span class="wpcf7-form-control-wrap phone">
                         <input type="tel" 
+                        id="writeUsTel"
                         name="phone" 
                         value="" 
                         size="40" 
                         class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required wpcf7-validates-as-tel phone wpcf7-not-valid popup__input" 
-                        placeholder=" "
+                        placeholder="Ваш телефон *"
                         aria-required="true" 
                         aria-invalid="true"
                         aria-describedby="wpcf7-f311-o4-ve-phone">
-                        <span class="nameInput">Ваш телефон *</span>
-                    </label>
-                </span>
-                <span class="wpcf7-form-control-wrap message">
-                    <label class="label__popup">
+                        <span class="wpcf7-not-valid-tip inputError" aria-hidden="true"> Поле обязательно для заполнения.</span>
+                    </span>
+                    <span class="nameInput hidden">Ваш телефон *</span>
+                </label>
+                <label class="label__popup" for="writeUsMessage">
+                    <span class="wpcf7-form-control-wrap message">
                         <textarea name="message" 
+                        id="writeUsMessage"
                         rows="6"
-                        placeholder=" "
+                        placeholder="Ваш текст *"
                         class="popup__textarea wpcf7-form-control wpcf7-text wpcf7-validates-as-required wpcf7-not-valid"
                         value=""></textarea>
-                        <span class="nameInput">Ваш текст *</span>
-                    </label>
-                </span>
+                        <span class="wpcf7-not-valid-tip inputError" aria-hidden="true"> Поле обязательно для заполнения.</span>
+                    </span>
+                    <span class="nameInput hidden">Ваш текст *</span>
+                </label>
                 <input type="submit" value="Отправить" class="wpcf7-form-control has-spinner wpcf7-submit btn btn-red 
                     button popup__button">
             </form>
@@ -820,67 +873,72 @@
                     <p class="popup__size__text">Введите размеры окна:</p>
                     
                     <div class="popup__clone cloneJS">
-                        <span class="wpcf7-form-control-wrap size">
-                            <label htmlFor="width" class="label__popup">
-                                <input  
-                                type="text" 
+                        <label htmlFor="width" class="label__popup label__width" for="calculatePriceWidth1">
+                            <span class="wpcf7-form-control-wrap size">
+                                <input type="text" 
+                                id="calculatePriceWidth1" 
                                 name="width" 
                                 value="" 
-                                class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required wpcf7-not-valid wpcf7-validates-as-size popup__input" 
-                                placeholder=" "
+                                class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required wpcf7-not-valid wpcf7-validates-as-size popup__input width" 
+                                placeholder="Ширина *"
                                 aria-required="true" 
                                 aria-invalid="true"/>
-                                <span class="nameInput">Ширина *</span>
-                            </label>
-                        </span>
-                        <span class="wpcf7-form-control-wrap size">
-                            <label htmlFor="height" class="label__popup">
-                                <input 
-                                type="text" 
+                                <!-- <span class="wpcf7-not-valid-tip inputError" aria-hidden="true"> Поле обязательно для заполнения.</span> -->
+                            </span>
+                            <span class="nameInput hidden">Ширина *</span>
+                        </label>
+                        <label htmlFor="height" class="label__popup label__height" for="calculatePriceHeight1">
+                            <span class="wpcf7-form-control-wrap size">
+                                 <input type="text"
+                                id="calculatePriceHeight1" 
                                 name="height" 
                                 value="" 
-                                class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required wpcf7-not-valid wpcf7-validates-as-size popup__input" 
-                                placeholder=" "
+                                class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required wpcf7-not-valid wpcf7-validates-as-size popup__input height" 
+                                placeholder="Длина *"
                                 aria-required="true" 
                                 aria-invalid="true"/>
-                                <span class="nameInput">Длина *</span>
-                            </label>
-                        </span>
+                                <!-- <span class="wpcf7-not-valid-tip inputError" aria-hidden="true"> Поле обязательно для заполнения.</span> -->
+                            </span>
+                            <span class="nameInput hidden">Длина *</span>
+                        </label>
                     </div>
                 
                 </div>
                 <button type="button" class="popup__addWindow__button" id="popup__addWindow"> 
                     Добавить окно 
                 </button>
-
-                <span class="wpcf7-form-control-wrap your-name">
-                    <label class="label__popup">
+                <label class="label__popup" for="calculatePriceName">
+                    <span class="wpcf7-form-control-wrap your-name">
                         <input type="text" 
+                        id="calculatePriceName"
                         name="your-name" 
                         value="" 
                         size="40" 
                         class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required wpcf7-not-valid popup__input" 
-                        placeholder=" "
+                        placeholder="Ваше имя *"
                         aria-required="true" 
                         aria-invalid="true"
                         aria-describedby="wpcf7-f311-o4-ve-your-name">
-                        <span class="nameInput">Ваше имя *</span>
-                    </label>
-                </span>
-                <span class="wpcf7-form-control-wrap phone">
-                    <label class="label__popup">
+                        <span class="wpcf7-not-valid-tip inputError" aria-hidden="true"> Поле обязательно для заполнения.</span>
+                    </span>
+                    <span class="nameInput hidden">Ваше имя *</span>
+                </label>
+                <label class="label__popup" for="calculatePriceTel">
+                    <span class="wpcf7-form-control-wrap phone">
                         <input type="tel" 
+                        id="calculatePriceTel"
                         name="phone" 
                         value="" 
                         size="40" 
                         class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required wpcf7-validates-as-tel phone wpcf7-not-valid popup__input" 
-                        placeholder=" "
+                        placeholder="Ваш телефон *"
                         aria-required="true" 
                         aria-invalid="true"
                         aria-describedby="wpcf7-f311-o4-ve-phone">
-                        <span class="nameInput">Ваш телефон *</span>
-                    </label>
-                </span>
+                       <span class="wpcf7-not-valid-tip inputError" aria-hidden="true"> Поле обязательно для заполнения.</span>
+                    </span>
+                    <span class="nameInput hidden">Ваш телефон *</span>
+                </label>
                 <input type="submit" value="Отправить" class="wpcf7-form-control has-spinner wpcf7-submit btn btn-red 
                     button popup__button">
             </form>

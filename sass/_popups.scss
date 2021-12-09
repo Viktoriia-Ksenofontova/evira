@@ -40,7 +40,10 @@
         padding-left: 36px;
         padding-right: 36px;
       }
-
+      form {
+        padding-left: 0;
+        padding-right: 0;
+      }
       .popup__close {
         position: absolute;
         right: 20px;
@@ -63,10 +66,9 @@
             stroke: #000;
           }
         }
-      }
-
-      .message {
-        width: 100%;
+        @media (max-width: 767px) {
+          right: 15px;
+        }
       }
     }
   }
@@ -88,22 +90,48 @@
   margin: 0 auto 20px auto;
   font-size: 16px;
 
-  .nameInput {
+  .nameInput.visible {
     position: absolute;
     left: 0px;
     top: 0;
-    transform: translateY(20%);
+    transform: translateY(-75%);
     transition: transform 250ms linear;
-    font-size: 16px;
+    font-size: 9px;
+  }
+  .nameInput.hidden {
+    display: none;
   }
 }
 
 .popup__input {
   height: 34px;
+
+  &[type='number']::-webkit-outer-spin-button,
+  &[type='number']::-webkit-inner-spin-button {
+    -webkit-appearance: none !important;
+  }
+
+  &[type='number'],
+  &[type='number']:hover,
+  &[type='number']:focus {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none !important;
+    background-image: none;
+    // -moz-appearance: textfield;
+  }
+}
+
+.message {
+  width: 100%;
+  .inputError {
+    bottom: -17px;
+  }
 }
 
 .popup__textarea {
   margin: 0;
+  display: block;
 }
 
 .popup__input,
@@ -118,13 +146,22 @@
   line-height: 1.6;
   outline: none;
   cursor: pointer;
-  &:not(:placeholder-shown) + .nameInput {
-    transform: translateY(-100%);
-    font-size: 9px;
+  opacity: 1;
+  &:focus::-webkit-input-placeholder {
+    opacity: 0;
+    transition: opacity 0.3s ease;
   }
-  &:focus-within + .nameInput {
-    transform: translateY(-100%);
-    font-size: 9px;
+  &:focus::-moz-placeholder {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  &:focus:-moz-placeholder {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  &:focus:-ms-input-placeholder {
+    opacity: 0;
+    transition: opacity 0.3s ease;
   }
 }
 
@@ -167,6 +204,11 @@
   display: flex;
   justify-content: space-between;
   width: 100%;
+  .label__popup {
+    width: calc(50% - 10px);
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 .popup__addWindow__button {
   position: relative;
@@ -205,17 +247,19 @@
     margin-bottom: 20px;
   }
   .size {
-    width: calc(50% - 10px);
     position: relative;
     &:after {
       content: 'см';
       color: #d7d7d7;
       position: absolute;
       right: 0;
-      top: 10px;
+      bottom: 0;
     }
     & > .popup__input {
       width: 100%;
+    }
+    .inputError {
+      bottom: -34px;
     }
   }
 }
