@@ -38,7 +38,7 @@
     left: 0px;
     top: 0;
     transform: translateY(-75%);
-    transition: transform 250ms linear;
+    transition: transform 300ms linear;
     font-size: 9px;
   }
   .nameInput.hidden {
@@ -99,7 +99,7 @@
   }
 }
 
-.inputError {
+.wpcf7-not-valid-tip {
   color: #ef7f1a;
   font-size: 9px;
   line-height: 1.6;

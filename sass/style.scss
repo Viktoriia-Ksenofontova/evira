@@ -38,9 +38,9 @@
   -ms-touch-action: none;
   -webkit-overflow-scrolling: touch;
 
-  // @media (max-width: 1024px) {
-  //   padding-right: 0 !important;
-  // }
+  @media (max-width: 1024px) {
+    padding-right: 0 !important;
+  }
 }
 html {
   scroll-behavior: smooth;

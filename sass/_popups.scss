@@ -105,26 +105,11 @@
 
 .popup__input {
   height: 34px;
-
-  &[type='number']::-webkit-outer-spin-button,
-  &[type='number']::-webkit-inner-spin-button {
-    -webkit-appearance: none !important;
-  }
-
-  &[type='number'],
-  &[type='number']:hover,
-  &[type='number']:focus {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none !important;
-    background-image: none;
-    // -moz-appearance: textfield;
-  }
 }
 
 .message {
   width: 100%;
-  .inputError {
+  .wpcf7-not-valid-tip {
     bottom: -17px;
   }
 }
@@ -258,7 +243,7 @@
     & > .popup__input {
       width: 100%;
     }
-    .inputError {
+    .wpcf7-not-valid-tip {
       bottom: -34px;
     }
   }

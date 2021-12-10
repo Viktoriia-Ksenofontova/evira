@@ -1345,22 +1345,11 @@ button:hover, button:focus, button:focus-visible, button:-moz-focusring {
   height: 34px;
 }
 
-.popup__input[type='number']::-webkit-outer-spin-button, .popup__input[type='number']::-webkit-inner-spin-button {
-  -webkit-appearance: none !important;
-}
-
-.popup__input[type='number'], .popup__input[type='number']:hover, .popup__input[type='number']:focus {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none !important;
-  background-image: none;
-}
-
 .message {
   width: 100%;
 }
 
-.message .inputError {
+.message .wpcf7-not-valid-tip {
   bottom: -17px;
 }
 
@@ -1524,7 +1513,7 @@ button:hover, button:focus, button:focus-visible, button:-moz-focusring {
   width: 100%;
 }
 
-.popup__size .size .inputError {
+.popup__size .size .wpcf7-not-valid-tip {
   bottom: -34px;
 }
 
@@ -1635,10 +1624,10 @@ button:hover, button:focus, button:focus-visible, button:-moz-focusring {
   top: 0;
   -webkit-transform: translateY(-75%);
           transform: translateY(-75%);
-  -webkit-transition: -webkit-transform 250ms linear;
-  transition: -webkit-transform 250ms linear;
-  transition: transform 250ms linear;
-  transition: transform 250ms linear, -webkit-transform 250ms linear;
+  -webkit-transition: -webkit-transform 300ms linear;
+  transition: -webkit-transform 300ms linear;
+  transition: transform 300ms linear;
+  transition: transform 300ms linear, -webkit-transform 300ms linear;
   font-size: 9px;
 }
 
@@ -1734,7 +1723,7 @@ button:hover, button:focus, button:focus-visible, button:-moz-focusring {
   transition: opacity 0.3s ease;
 }
 
-.inputError {
+.wpcf7-not-valid-tip {
   color: #ef7f1a;
   font-size: 9px;
   line-height: 1.6;
@@ -1823,6 +1812,12 @@ button:hover, button:focus, button:focus-visible, button:-moz-focusring {
   touch-action: none;
   -ms-touch-action: none;
   -webkit-overflow-scrolling: touch;
+}
+
+@media (max-width: 1024px) {
+  .overflowed {
+    padding-right: 0 !important;
+  }
 }
 
 html {
